@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CV
-tags: [about]
+tags: [CV]
 date: 2017-11-20
 comments: false
 ---
