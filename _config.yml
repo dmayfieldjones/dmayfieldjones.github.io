@@ -8,8 +8,7 @@ logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://dmayfieldjones.github.io/
-
+url:                
 # Jekyll
 permalink:          /:title/
 markdown:           kramdown
@@ -50,7 +49,7 @@ linkedin:           dustin-mayfield-jones-77432a40
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              username
+#steam:              username
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
