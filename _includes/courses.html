@@ -1,0 +1,188 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+<script>
+// Create the chart
+Highcharts.chart('container', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Course History'
+    },
+    subtitle: {
+        text: 'Click the slices to view courses.'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+    series: [{
+        name: 'Subjects',
+        colorByPoint: true,
+        data: [{
+            name: 'Biology',
+            y: 24.65,
+            drilldown: 'Biology'
+        }, {
+            name: 'Chemistry',
+            y: 10.23,
+            drilldown: 'Chemistry'
+        }, {
+            name: 'Computer Science',
+            y: 4.18,
+            drilldown: 'Computer Science'
+        }, {
+            name: 'Latin American Studies',
+            y: 7.91,
+            drilldown: 'Latin American Studies'
+        }, {
+            name: 'Other',
+            y: 9.77,
+            drilldown: 'Other'
+        }, {
+            name: 'Philosophy & Religion',
+            y: 8.37,
+            drilldown: 'Philosophy & Religion'
+        }, {
+            name: 'Physics',
+            y: 3.72,
+            drilldown: 'Physics'
+        }, {
+            name: 'Research',
+            y: 21.40,
+            drilldown: 'Research'
+        }, {
+            name: 'Seminar',
+            y: 8.37,
+            drilldown: 'Seminar'
+        }, {
+            name: 'Statistics',
+            y: 1.40,
+            drilldown: 'Statistics'
+              
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'Biology',
+            id: 'Biology',
+            data: [
+                ['(107) Intro Bio I w/Lab U-TSU : A', 1.86046511627907],
+								['(108) Intro Bio II w/Lab U-TSU : A', 1.86046511627907],
+['(200) Cell Bio w/Lab U-TSU : A', 1.86046511627907],
+['(300) Genetics w/Lab U-TSU : A', 1.86046511627907],
+['(301) Ecology w/Lab U-TSU : B', 1.86046511627907],
+['(314) Plant Taxonomy w/Lab U-TSU : A', 1.86046511627907],
+['(405) Plant Physiology w/Lab U-TSU : A', 1.86046511627907],
+['(444) Plant Developmental Bio U-TSU : A', 0.930232558139535],
+['(503) Evolutionary Bio U-TSU : A', 1.3953488372093],
+['(518) Eukaryotic Molecular Genetics U-TSU : A', 1.86046511627907],
+['(518) Cancer Bio U-TSU : A', 1.3953488372093],
+['(518) Bioinformatics U-TSU : A', 1.3953488372093],
+['(545) Senior Seminar U-TSU : A', 0.465116279069767],
+['(7002) Topics Molecular Evolution G-UMC : A', 1.3953488372093],
+['(8060) Ethical Conduct G-UMC : S', 0.465116279069767],
+['(8300) Advanced Plant Genetics G-UMC : A', 1.3953488372093],
+['(8505) Intro Plant Stress G-UMC : A', 0.930232558139535]
+            ]
+        }, {
+            name: 'Chemistry',
+            id: 'Chemistry',
+            data: [
+                ['(120) Intro Chem I w/Lab U-TSU : A', 2.32558139534884],
+['(121) Intro Chem II w/Lab U-TSU : A', 2.32558139534884],
+['(329) Organic Chem I U-TSU : A', 1.3953488372093],
+['(331) Organic Chem II U-TSU : A', 1.3953488372093],
+['(333) Ogranic Chem Lab U-TSU : A', 0.930232558139535],
+['(421) Biochemistry w/Lab U-TSU : A', 1.86046511627907]
+               
+            ]
+        }, {
+            name: 'Computer Science',
+            id: 'Computer Science',
+            data: [
+                ['(170) Intro CS I U-TSU : A', 1.3953488372093],
+['(2250) Programming and Data Structures U-UMSL : B+', 1.3953488372093],
+['(7005) Bioinformatics Tools G-UMC : A', 1.3953488372093]
+            ]
+        }, {
+            name: 'Latin American Studies',
+            id: 'Latin American Studies',
+            data: [
+                ['(101) Spanish I Elementary U-TSU : A', 1.3953488372093],
+['(102) Spanish II Elementary U-TSU : B', 1.3953488372093],
+['(201) Spanish III Intermediate U-TSU : A', 1.3953488372093],
+['(338) Latino Healthcare U-TSU : A', 1.3953488372093],
+['(392) Mexican History U-TSU : A', 1.3953488372093],
+['(554) Medical Anthropology U-TSU : A', 0.930232558139535]
+            ]
+        }, {
+            name: 'Other',
+            id: 'Other',
+            data: [
+                ['(101) Truman Week U-TSU : S', 0.465116279069767],
+['(111) Information resources U-TSU : A', 0.465116279069767],
+['(151) Film Food Discussion U-TSU : S', 0.465116279069767],
+['(170) Public Speaking U-TSU : A', 1.3953488372093],
+['(191) Anthropology 1 U-TSU : A', 1.3953488372093],
+['(195) Health and Soccer U-TSU : A', 0.930232558139535],
+['(207) Jazz and American Experience U-TSU : A', 1.3953488372093],
+['(266) Environmental Writing U-TSU : A', 1.3953488372093],
+['(298) American Institutional History U-TSU : A', 0.465116279069767],
+['(350) SIC Preceptor Ethics of Food U-TSU : S', 1.3953488372093]
+            ]
+             }, {
+            name: 'Philosophy & Religion',
+            id: 'Philosophy & Religion',
+            data: [
+            ['(185) Exploring Religions U-TSU : A', 1.3953488372093],
+['(186) Intro Philosophy U-TSU : A', 1.3953488372093],
+['(337) History Philosophy II Modern U-TSU : A', 1.3953488372093],
+['(344) Psychology and Religion U-TSU : A', 1.3953488372093],
+['(365) Method & Theory Religious Studies U-TSU : A', 1.3953488372093],
+['(386) Ethics and Emotions U-TSU : S', 1.3953488372093]
+]
+  }, {
+            name: 'Physics',
+            id: 'Physics',
+            data: [
+            ['(185) Intro Physics I w/Lab U-TSU : A', 1.86046511627907],
+['(186) Intro Physics I w/Lab U-TSU : B', 1.86046511627907]
+]
+}, {
+            name: 'Research',
+            id: 'Research',
+            data: [
+            ['(7990) Research G-UMC : A', 2.7906976744186],
+['(9090) Research G-UMC : S', 18.1395348837209],
+['(4950H) Honors Research U-UMC : A', 0.465116279069767]
+]
+}, {
+            name: 'Seminar',
+            id: 'Seminar',
+            data: [
+            ['(8087) Seminar BioSci G-UMC : S', 3.25581395348837],
+['(8187) Seminar Phylogenetics G-UMC : S', 1.86046511627907],
+['(9087) Seminar Life Science Fellow G-UMC : A', 3.25581395348837]
+]
+}, {
+            name: 'Statistics',
+            id: 'Statistics',
+            data: [
+            ['(190) Basic Statistics U-TSU : A', 1.3953488372093]
+]
+      }]  
+    }
+});
+</script>
