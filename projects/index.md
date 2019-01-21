@@ -10,8 +10,8 @@ comments: false
 
 {% highlight html %}
 <figure class="half">
-    <a href="/images/b73_triarch.jpg"><img src="/images/b73_triarch.jpg"></a>
-    <a href="/images/B73_50x.tif"><img src="/images/B73_50x.tif"></a>
+    <a href="https://dmayfieldjones.github.io/assets/img/b73_triarch.jpg"><img src="/images/b73_triarch.jpg"></a>
+    <a href="https://dmayfieldjones.github.io/assets/img/B73_50x.tif"><img src="/images/B73_50x.tif"></a>
     <figcaption>B73.</figcaption>
 </figure>
 {% endhighlight %}
