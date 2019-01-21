@@ -10,13 +10,7 @@ comments: false
 {% highlight html %}
 <figure class="half">
     <a href="https://dmayfieldjones.github.io/assets/img/b73_triarch.jpg"><img src="https://dmayfieldjones.github.io/assets/img/b73_triarch.jpg"></a>
-    <a href="https://dmayfieldjones.github.io/assets/img/B73_50x.tif"><img src="https://dmayfieldjones.github.io/assets/img/B73_50x.tif"></a>
     <figcaption>B73.</figcaption>
 </figure>
 {% endhighlight %}
 
-<figure class="half">
-	<a href="http://placehold.it/1200x600.JPG"><img src="http://placehold.it/600x300.jpg"></a>
-	<a href="http://placehold.it/1200x600.jpeg"><img src="http://placehold.it/600x300.jpg"></a>
-	<figcaption>Two images.</figcaption>
-</figure>
