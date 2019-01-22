@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "B73"
+title: "Flux and boundaries at the leaf surface"
 date: 2019-01-21
 excerpt: "Computer vision and plant physiology with applications to environmental science and biological imaging"
 tags: [images, b73]
