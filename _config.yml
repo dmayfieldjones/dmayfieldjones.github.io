@@ -37,11 +37,11 @@ sass:
   #ad-slot:
 #bing-verify:
 email:              dustin@mayfieldjones.com
-twitter:            dmayfieldjones
+#twitter:            dmayfieldjones
 facebook:           dustin.mayfield
 github-url:         dmayfieldjones
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-linkedin:           dustin-mayfield-jones-77432a40
+#linkedin:           dustin-mayfield-jones-77432a40
 #xing:              username
 #instagram:         username
 #lastfm:            username
