@@ -69,6 +69,25 @@ const { createViewState, JBrowseLinearGenomeView } =
 
 
 const state = new createViewState({
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "canFam5-index",
+      "ixFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ixx",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ix",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["canFam5"]
+    }
+  ],
   configuration: {
       theme: {
         palette: {
