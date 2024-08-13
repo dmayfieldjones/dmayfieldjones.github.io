@@ -39,7 +39,7 @@ background-color: #ffffff;
   <br>
 
   <h3 class="title">
-    <a class="btn zoombtn" href="{{ site.url }}/7Sisters/">
+    <a class="btn zoombtn" href="#" onclick="navto ()">
       Agouti Signaling Protein (ASIP) 
     </a>
 </h3>
@@ -170,6 +170,21 @@ ReactDOM.render(
   domContainer,
 );
 });
+
+
+
+let newButton = document.createElement('button');
+newButton.setAttribute("id", "myNewButton");
+newButton.className = "myClassName";
+newButton.innerText = "clickMe";
+newButton.addEventListener("click", clickMe);
+document.body.appendChild(newButton);
+function clickMe(){
+  state.session.view.navToLocString("chr24:23,334,340-23,373,371");
+  state.session.view.showTrack("refGene");
+  }
+
+
 
     </script>
 <!--- </body> --->
