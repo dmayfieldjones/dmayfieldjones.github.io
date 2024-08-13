@@ -180,7 +180,8 @@ newButton.innerText = "clickMe";
 newButton.addEventListener("click", clickMe);
 document.body.appendChild(newButton);
 function clickMe(){
-  state.session.view.navToLocString("chr24:23,334,340-23,373,371");
+  state.session.view.navToLocString("chr24:23,334,340-23,373,371", "canFam5");
+
   state.session.view.showTrack("refGene");
   }
 
