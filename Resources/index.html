@@ -66,7 +66,7 @@ Compare to another breed database like soft-coated wheaten terrier. <br>JBrowse 
 const { createViewState, JBrowseLinearGenomeView } =
   JBrowseReactLinearGenomeView;
 
-const updates = document.getElementById('update');
+
 
 const state = new createViewState({
   assembly: {
@@ -358,11 +358,14 @@ document.getElementById('showviewstate').addEventListener('click', () => {
   textArea.innerHTML = JSON.stringify(state.session.view, undefined, 2);
 });
 
-const domContainer = document.getElementById('jbrowse_linear_genome_view');
+document.addEventListener("DOMContentLoaded", function(event) { 
+  const domContainer = document.getElementById('jbrowse_linear_genome_view');
 ReactDOM.render(
   React.createElement(JBrowseLinearGenomeView, { viewState: state }),
   domContainer,
 );
+});
+
     </script>
 <!--- </body> --->
 <!--- </html> -->
