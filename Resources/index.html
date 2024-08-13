@@ -92,7 +92,37 @@ const state = new createViewState({
     "name": "New Session"
   },
   "tracks": [
-    
+    {
+      "type": "FeatureTrack",
+      "trackId": "ensGene",
+      "name": "ensGene",
+      "adapter": {
+        "type": "Gff3Adapter",
+        "gffLocation": {
+          "uri": "https://jbrowse.org/genomes/canFam5/ensGene.gff",
+          "locationType": "UriLocation"
+        }
+      },
+      "assemblyNames": [
+        "canFam5"
+      ]
+    }
+    ,
+    {
+      "type": "FeatureTrack",
+      "trackId": "refGene",
+      "name": "refGene",
+      "adapter": {
+        "type": "Gff3Adapter",
+        "gffLocation": {
+          "uri": "https://jbrowse.org/genomes/canFam5/refGene.gff",
+          "locationType": "UriLocation"
+        }
+      },
+      "assemblyNames": [
+        "canFam5"
+      ]
+    }
   ]
 }
 );
