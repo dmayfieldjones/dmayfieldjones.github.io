@@ -165,18 +165,24 @@ ReactDOM.render(
   React.createElement(JBrowseLinearGenomeView, { viewState: state }),
   domContainer,
 );
+let genes=[
+  ["Agouti Signaling Protein (ASIP)","chr24:23,334,340-23,373,371"],
+  ["Agouti Signaling Protein (ASIP)2","chr24:23,334,340-23,373,371"]
+];
+for (let i=0; i<genes.length;i++){
 let area=document.getElementById('buttonarea');
 let newButton = document.createElement('button');
 newButton.setAttribute("id", "myNewButton");
 newButton.className = "myClassName";
-newButton.innerText = "Agouti Signaling Protein (ASIP)";
+newButton.innerText = genes[i][0];
 newButton.addEventListener("click", clickMe);
 area.appendChild(newButton);
 function clickMe(){
-  state.session.view.navToLocString("chr24:23,334,340-23,373,371", "canFam5");
+  state.session.view.navToLocString(genes[i][1], "canFam5");
 
   state.session.view.showTrack("refGene");
   }
+}
 });
 
 
