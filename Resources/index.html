@@ -343,17 +343,9 @@ const state = new createViewState({
 function navTo(event) {
   state.session.view.navToLocString(event.target.dataset.location);
 }
-const buttons = document.getElementsByTagName('button');
-for (const button of buttons) {
-  if (button.dataset.type === 'gene_button') {
-    button.addEventListener('click', navTo);
-  }
-}
 
-const textArea = document.getElementById('viewstate');
-document.getElementById('showviewstate').addEventListener('click', () => {
-  textArea.innerHTML = JSON.stringify(state.session.view, undefined, 2);
-});
+
+
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   const domContainer = document.getElementById('jbrowse_linear_genome_view');
