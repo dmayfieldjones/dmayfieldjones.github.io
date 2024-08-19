@@ -66,6 +66,87 @@ Time x generation time, inbreeding via CoI and ACI, Color crosses and popularity
 Compare to another breed database like soft-coated wheaten terrier. <br>JBrowse genome browswer for color genes, published. and others.
  --->
 </div>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@jbrowse/react-linear-genome-view/dist/react-linear-genome-view.umd.development.js" crossorigin></script>
+<div id="jbrowse_linear_genome_view"></div>
+
+<script>
+/* global JBrowseReactLinearGenomeView React, ReactDOM */
+const { createViewState, JBrowseLinearGenomeView } = JBrowseReactLinearGenomeView;
+
+const state = new createViewState({
+  // ... (your existing state configuration)
+});
+
+function navTo(event) {
+  state.session.view.navToLocString(event.target.dataset.location);
+}
+
+let geneCategories = {
+  "Coat Color Genes": [
+    ["A Locus Agouti Signaling Protein (ASIP)", "chr24:23,334,340-23,373,371"],
+    ["E Locus Melanocortin 1 receptor (MC1R)", "chr5:63,942,798-63,943,751"],
+    // ... (other coat color genes)
+  ],
+  "Health-Related Genes": [
+    ["Superoxide dismutase 1 (SOD1)", "chr31:26,600,785-26,608,887"],
+    ["Bridging integrator 1 (BIN1)", "chr19:23,511,496-23,564,133"],
+    // ... (other health-related genes)
+  ],
+  "Other Genes": [
+    ["General transcription factor II-I (GTF2I)", "chr6:5,468,118-5,648,755"],
+    ["General transcription factor II-I repeat domain-containing protein 1 (GTF2IRD1)", "chr6:5,695,854-5,806,538"],
+    // ... (other genes)
+  ]
+};
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  const domContainer = document.getElementById('jbrowse_linear_genome_view');
+  ReactDOM.render(
+    React.createElement(JBrowseLinearGenomeView, { viewState: state }),
+    domContainer
+  );
+
+  const categorySelect = document.getElementById('categorySelect');
+  const geneSelect = document.getElementById('geneSelect');
+
+  // Populate category dropdown
+  for (let category in geneCategories) {
+    let option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    categorySelect.appendChild(option);
+  }
+
+  // Handle category selection
+  categorySelect.addEventListener('change', function() {
+    geneSelect.innerHTML = '<option value="">Select a gene</option>';
+    if (this.value) {
+      geneSelect.disabled = false;
+      geneCategories[this.value].forEach(function(gene, index) {
+        let option = document.createElement('option');
+        option.value = index;
+        option.textContent = gene[0];
+        geneSelect.appendChild(option);
+      });
+    } else {
+      geneSelect.disabled = true;
+    }
+  });
+
+  // Handle gene selection
+  geneSelect.addEventListener('change', function() {
+    if (this.value !== "") {
+      let selectedCategory = categorySelect.value;
+      let selectedGene = geneCategories[selectedCategory][this.value];
+      state.session.view.navToLocString(selectedGene[1], "canFam5");
+      state.session.view.showTrack("refGene");
+    }
+  });
+});
+</script>
+
 <script
 document.addEventListener("DOMContentLoaded", function(event) {
   const domContainer = document.getElementById('jbrowse_linear_genome_view');
