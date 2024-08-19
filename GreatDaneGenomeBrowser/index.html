@@ -76,94 +76,7 @@ Compare to another breed database like soft-coated wheaten terrier. <br>JBrowse 
 const { createViewState, JBrowseLinearGenomeView } = JBrowseReactLinearGenomeView;
 
 const state = new createViewState({
-  const { createViewState, JBrowseLinearGenomeView } =
-  JBrowseReactLinearGenomeView;
-
-
-
-const state = new createViewState({
-  "aggregateTextSearchAdapters": [
-    {
-      "type": "TrixTextSearchAdapter",
-      "textSearchAdapterId": "canFam5-index",
-      "ixFilePath": {
-        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ix",
-        "locationType": "UriLocation"
-      },
-      "ixxFilePath": {
-        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ixx",
-        "locationType": "UriLocation"
-      },
-      "metaFilePath": {
-        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate_meta.json",
-        "locationType": "UriLocation"
-      },
-      "assemblyNames": ["canFam5"]
-    }
-  ],
-  configuration: {
-      theme: {
-        palette: {
-          primary: {
-            main: '#bf141c',
-          },
-          secondary: {
-            main: '#000',
-          },
-          tertiary: {
-            main: '#bf141c2',
-          },
-          quaternary: {
-            main: '#bf141c2',
-          },
-        },
-      },
-    },
-
-  "assembly": 
-    {
-      "name": "canFam5",
-      "sequence": {
-        "type": "ReferenceSequenceTrack",
-        "trackId": "canFam5-ReferenceSequenceTrack",
-        "adapter": {
-          "type": "TwoBitAdapter",
-
-          "chromSizesLocation": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.chrom.sizes",
-            "locationType": "UriLocation"
-          }
-          ,
-          "twoBitLocation": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit",
-            "locationType": "UriLocation"
-          }
-        }
-      }
-    }
-    ,
- 
-  "tracks": [
-    
-    {
-      "type": "FeatureTrack",
-      "trackId": "refGene",
-      "name": "refGene",
-      "adapter": {
-        "type": "Gff3Adapter",
-        "gffLocation": {
-          "uri": "https://jbrowse.org/genomes/canFam5/refGene.gff",
-          "locationType": "UriLocation"
-        }
-      },
-      "assemblyNames": [
-        "canFam5"
-      ]
-    }
-  ]
-}
-);
-
+  // ... (your existing state configuration)
 });
 
 function navTo(event) {
@@ -304,6 +217,93 @@ document.addEventListener("DOMContentLoaded", function(event) {
     <div id="jbrowse_linear_genome_view"></div>
     <script>
   /* global JBrowseReactLinearGenomeView React, ReactDOM */
+const { createViewState, JBrowseLinearGenomeView } =
+  JBrowseReactLinearGenomeView;
+
+
+
+const state = new createViewState({
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "canFam5-index",
+      "ixFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["canFam5"]
+    }
+  ],
+  configuration: {
+      theme: {
+        palette: {
+          primary: {
+            main: '#bf141c',
+          },
+          secondary: {
+            main: '#000',
+          },
+          tertiary: {
+            main: '#bf141c2',
+          },
+          quaternary: {
+            main: '#bf141c2',
+          },
+        },
+      },
+    },
+
+  "assembly": 
+    {
+      "name": "canFam5",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "canFam5-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.chrom.sizes",
+            "locationType": "UriLocation"
+          }
+          ,
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    }
+    ,
+ 
+  "tracks": [
+    
+    {
+      "type": "FeatureTrack",
+      "trackId": "refGene",
+      "name": "refGene",
+      "adapter": {
+        "type": "Gff3Adapter",
+        "gffLocation": {
+          "uri": "https://jbrowse.org/genomes/canFam5/refGene.gff",
+          "locationType": "UriLocation"
+        }
+      },
+      "assemblyNames": [
+        "canFam5"
+      ]
+    }
+  ]
+}
+);
 
 function navTo(event) {
   state.session.view.navToLocString(event.target.dataset.location);
