@@ -199,25 +199,34 @@ let geneCategories = {
         };
 
         document.addEventListener("DOMContentLoaded", function(event) { 
+          console.log("DOM fully loaded and parsed");
+
+    const categorySelect = document.getElementById('categorySelect');
+    const geneSelect = document.getElementById('geneSelect');
+
+    console.log("Category select element:", categorySelect);
+    console.log("Gene select element:", geneSelect);
+
             const domContainer = document.getElementById('jbrowse_linear_genome_view');
             ReactDOM.render(
                 React.createElement(JBrowseLinearGenomeView, { viewState: state }),
                 domContainer
             );
 
-            const categorySelect = document.getElementById('categorySelect');
-            const geneSelect = document.getElementById('geneSelect');
+        
 
-            // Populate category dropdown
-            for (let category in geneCategories) {
-                let option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categorySelect.appendChild(option);
-            }
+           // Populate category dropdown
+    for (let category in geneCategories) {
+        let option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    }
+    console.log("Categories populated");
 
             // Handle category selection
             categorySelect.addEventListener('change', function() {
+              console.log("Category changed to:", this.value);
                 geneSelect.innerHTML = '<option value="">Select a gene</option>';
                 if (this.value) {
                     geneSelect.disabled = false;
@@ -234,6 +243,7 @@ let geneCategories = {
 
             // Handle gene selection
             geneSelect.addEventListener('change', function() {
+              console.log("Gene changed to:", this.value);
                 if (this.value !== "") {
                     let selectedCategory = categorySelect.value;
                     let selectedGene = geneCategories[selectedCategory][this.value];
@@ -243,7 +253,7 @@ let geneCategories = {
             });
         });
         
-
+    
 
 
 
