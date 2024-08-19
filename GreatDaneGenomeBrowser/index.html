@@ -26,67 +26,292 @@ background-color: #ffffff;
 }
 </style>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Great Dane Genome Browser</title>
-    <style>
-        div.container {
-            background-color: #ffffff;
-        }
-        div.container p {
-            font-family: Arial;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: normal;
-            text-decoration: none;
-            text-transform: none;
-            color: #000000;
-            background-color: #ffffff;
-        }
-        #geneSelector {
-            margin-bottom: 20px;
-        }
-        #categorySelect, #geneSelect {
-            padding: 5px;
-            margin-right: 10px;
-        }
-    </style>
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@jbrowse/react-linear-genome-view/dist/react-linear-genome-view.umd.development.js" crossorigin></script>
-</head>
-<body>
-    <div class="container">
-        <p></p>
-        <img src="http://mayfieldjones.com/assets/img/Colorlogo_nobackground.png" alt="7Sisters Logo">
-        <p></p>
-        <FONT COLOR="#bf141c">7</FONT>Sisters Great Dane Genome Browser (CanFam5, UMICHZoey3.1)<br>
-        Thank you Colin Diesh for help with JBrowse2.<br>
-        <br>
-        Click a gene or locus to learn more. <br>
-        
-        <div id="geneSelector">
-            <select id="categorySelect">
-                <option value="">Select a category</option>
-            </select>
-            <select id="geneSelect" disabled>
-                <option value="">Select a gene</option>
-            </select>
-        </div>
-        <div id="buttonarea"></div>
-    </div>
+<style>
+  #geneSelector {
+    margin-bottom: 20px;
+  }
+  #categorySelect, #geneSelect {
+    padding: 5px;
+    margin-right: 10px;
+  }
+</style>
+
+<div class="container">
+
+<p></p>
+<img src="http://mayfieldjones.com/assets/img/Colorlogo_nobackground.png" alt="7Sisters Logo">
+<p></p>
+
+<FONT COLOR="#bf141c">7</FONT>Sisters Great Dane Genome Browser (CanFam5, UMICHZoey3.1)<br>
+  Thank you Colin Diesh for help with JBrowse2.<br>
+  <br>
+  Click a gene or locus to learn more. <br>
+  
+  <div id="geneSelector">
+    <select id="categorySelect">
+      <option value="">Select a category</option>
+    </select>
+    <select id="geneSelect" disabled>
+      <option value="">Select a gene</option>
+    </select>
+  </div>
+  <div id="buttonarea"></div>
+<div id="buttonarea"></div>
+  
+<!---<br>
+  <br>
+  <FONT COLOR="#bf141c">Great Dane Genome Browser (CanFam5, UMICHZoey3.1)</FONT><br>
+  <br>
+Time x generation time, inbreeding via CoI and ACI, Color crosses and popularity, litter size, popular sire. 
+Compare to another breed database like soft-coated wheaten terrier. <br>JBrowse genome browswer for color genes, published. and others.
+ --->
+</div>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@jbrowse/react-linear-genome-view/dist/react-linear-genome-view.umd.development.js" crossorigin></script>
+<div id="jbrowse_linear_genome_view"></div>
+
+<script>
+/* global JBrowseReactLinearGenomeView React, ReactDOM */
+const { createViewState, JBrowseLinearGenomeView } = JBrowseReactLinearGenomeView;
+
+const state = new createViewState({
+  // ... (your existing state configuration)
+});
+
+function navTo(event) {
+  state.session.view.navToLocString(event.target.dataset.location);
+}
+
+let geneCategories = {
+  "Coat Color Genes": [
+    ["A Locus Agouti Signaling Protein (ASIP)", "chr24:23,334,340-23,373,371"],
+    ["E Locus Melanocortin 1 receptor (MC1R)", "chr5:63,942,798-63,943,751"],
+    // ... (other coat color genes)
+  ],
+  "Health-Related Genes": [
+    ["Superoxide dismutase 1 (SOD1)", "chr31:26,600,785-26,608,887"],
+    ["Bridging integrator 1 (BIN1)", "chr19:23,511,496-23,564,133"],
+    // ... (other health-related genes)
+  ],
+  "Other Genes": [
+    ["General transcription factor II-I (GTF2I)", "chr6:5,468,118-5,648,755"],
+    ["General transcription factor II-I repeat domain-containing protein 1 (GTF2IRD1)", "chr6:5,695,854-5,806,538"],
+    // ... (other genes)
+  ]
+};
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  const domContainer = document.getElementById('jbrowse_linear_genome_view');
+  ReactDOM.render(
+    React.createElement(JBrowseLinearGenomeView, { viewState: state }),
+    domContainer
+  );
+
+  const categorySelect = document.getElementById('categorySelect');
+  const geneSelect = document.getElementById('geneSelect');
+
+  // Populate category dropdown
+  for (let category in geneCategories) {
+    let option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    categorySelect.appendChild(option);
+  }
+
+  
+  // Handle category selection
+  categorySelect.addEventListener('change', function() {
+    geneSelect.innerHTML = '<option value="">Select a gene</option>';
+    if (this.value) {
+      geneSelect.disabled = false;
+      geneCategories[this.value].forEach(function(gene, index) {
+        let option = document.createElement('option');
+        option.value = index;
+        option.textContent = gene[0];
+        geneSelect.appendChild(option);
+      });
+    } else {
+      geneSelect.disabled = true;
+    }
+  });
+
+  // Handle gene selection
+  geneSelect.addEventListener('change', function() {
+    if (this.value !== "") {
+      let selectedCategory = categorySelect.value;
+      let selectedGene = geneCategories[selectedCategory][this.value];
+      state.session.view.navToLocString(selectedGene[1], "canFam5");
+      state.session.view.showTrack("refGene");
+    }
+  });
+});
+</script>
+
+<script
+document.addEventListener("DOMContentLoaded", function(event) {
+  const domContainer = document.getElementById('jbrowse_linear_genome_view');
+  ReactDOM.render(
+    React.createElement(JBrowseLinearGenomeView, { viewState: state }),
+    domContainer,
+  );
+
+  const categorySelect = document.getElementById('categorySelect');
+  const geneSelect = document.getElementById('geneSelect');
+
+  // Populate category dropdown
+  for (let category in geneCategories) {
+    let option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    categorySelect.appendChild(option);
+  }
+
+  // Handle category selection
+  categorySelect.addEventListener('change', function() {
+    geneSelect.innerHTML = '<option value="">Select a gene</option>';
+    if (this.value) {
+      geneSelect.disabled = false;
+      geneCategories[this.value].forEach(function(gene, index) {
+        let option = document.createElement('option');
+        option.value = index;
+        option.textContent = gene[0];
+        geneSelect.appendChild(option);
+      });
+    } else {
+      geneSelect.disabled = true;
+    }
+  });
+
+  // Handle gene selection
+  geneSelect.addEventListener('change', function() {
+    if (this.value !== "") {
+      let selectedCategory = categorySelect.value;
+      let selectedGene = geneCategories[selectedCategory][this.value];
+      state.session.view.navToLocString(selectedGene[1], "canFam5");
+      state.session.view.showTrack("refGene");
+    }
+  });
+});
+
+      src="https://unpkg.com/react@17/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+
+    <script
+      src="https://unpkg.com/@jbrowse/react-linear-genome-view/dist/react-linear-genome-view.umd.development.js"
+      crossorigin
+    ></script>
     <div id="jbrowse_linear_genome_view"></div>
-
     <script>
-        /* global JBrowseReactLinearGenomeView React, ReactDOM */
-        const { createViewState, JBrowseLinearGenomeView } = JBrowseReactLinearGenomeView;
+  /* global JBrowseReactLinearGenomeView React, ReactDOM */
+const { createViewState, JBrowseLinearGenomeView } =
+  JBrowseReactLinearGenomeView;
 
-        const state = new createViewState({
-            // ... (your existing state configuration)
-        });
 
-        let geneCategories = {
+
+const state = new createViewState({
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "canFam5-index",
+      "ixFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "https://jbrowse.org/genomes/canFam5/trix/aggregate_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["canFam5"]
+    }
+  ],
+  configuration: {
+      theme: {
+        palette: {
+          primary: {
+            main: '#bf141c',
+          },
+          secondary: {
+            main: '#000',
+          },
+          tertiary: {
+            main: '#bf141c2',
+          },
+          quaternary: {
+            main: '#bf141c2',
+          },
+        },
+      },
+    },
+
+  "assembly": 
+    {
+      "name": "canFam5",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "canFam5-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.chrom.sizes",
+            "locationType": "UriLocation"
+          }
+          ,
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    }
+    ,
+ 
+  "tracks": [
+    
+    {
+      "type": "FeatureTrack",
+      "trackId": "refGene",
+      "name": "refGene",
+      "adapter": {
+        "type": "Gff3Adapter",
+        "gffLocation": {
+          "uri": "https://jbrowse.org/genomes/canFam5/refGene.gff",
+          "locationType": "UriLocation"
+        }
+      },
+      "assemblyNames": [
+        "canFam5"
+      ]
+    }
+  ]
+}
+);
+
+function navTo(event) {
+  state.session.view.navToLocString(event.target.dataset.location);
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  const domContainer = document.getElementById('jbrowse_linear_genome_view');
+ReactDOM.render(
+  React.createElement(JBrowseLinearGenomeView, { viewState: state }),
+  domContainer,
+);
+
+let geneCategories = {
   "Coat Color Genes": [
     ["A Locus Agouti Signaling Protein (ASIP)", "chr24:23,334,340-23,373,371"],
     ["E Locus Melanocortin 1 receptor (MC1R)", "chr5:63,942,798-63,943,751"],
@@ -112,53 +337,28 @@ background-color: #ffffff;
   ]
 };
 
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            const domContainer = document.getElementById('jbrowse_linear_genome_view');
-            ReactDOM.render(
-                React.createElement(JBrowseLinearGenomeView, { viewState: state }),
-                domContainer
-            );
 
-            const categorySelect = document.getElementById('categorySelect');
-            const geneSelect = document.getElementById('geneSelect');
+for (let i=0; i<genes.length;i++){
+let area=document.getElementById('buttonarea');
+let newButton = document.createElement('button');
+newButton.setAttribute("id", "myNewButton");
+newButton.className = "myClassName";
+newButton.innerText = genes[i][0];
+newButton.addEventListener("click", clickMe);
+area.appendChild(newButton);
+function clickMe(){
+  state.session.view.navToLocString(genes[i][1], "canFam5");
 
-            // Populate category dropdown
-            for (let category in geneCategories) {
-                let option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categorySelect.appendChild(option);
-            }
+  state.session.view.showTrack("refGene");
+  }
+}
+});
 
-            // Handle category selection
-            categorySelect.addEventListener('change', function() {
-                geneSelect.innerHTML = '<option value="">Select a gene</option>';
-                if (this.value) {
-                    geneSelect.disabled = false;
-                    geneCategories[this.value].forEach(function(gene, index) {
-                        let option = document.createElement('option');
-                        option.value = index;
-                        option.textContent = gene[0];
-                        geneSelect.appendChild(option);
-                    });
-                } else {
-                    geneSelect.disabled = true;
-                }
-            });
 
-            // Handle gene selection
-            geneSelect.addEventListener('change', function() {
-                if (this.value !== "") {
-                    let selectedCategory = categorySelect.value;
-                    let selectedGene = geneCategories[selectedCategory][this.value];
-                    state.session.view.navToLocString(selectedGene[1], "canFam5");
-                    state.session.view.showTrack("refGene");
-                }
-            });
-        });
+
+
+
+
     </script>
-</body>
-</html>
-
-
-
+<!--- </body> --->
+<!--- </html> -->
