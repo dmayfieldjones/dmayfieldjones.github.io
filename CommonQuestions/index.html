@@ -302,18 +302,22 @@ comments: false
     }
     
     .panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height var(--transition-speed) ease-out;
-        padding: 0 calc(var(--spacing-unit) * 1.25);
-    }
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-speed) ease-out;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0 calc(var(--spacing-unit) * 1.25);
+}
+
+.panel.active {
+    height: auto;
+    padding: calc(var(--spacing-unit) * 1.25);
+}
+
     .panel {
     background-color: var(--background-color);
     color: var(--text-color);
-    }
-    .panel.active {
-        max-height: none;
-        padding: calc(var(--spacing-unit) * 1.25);
     }
     
     .value-list, .standards-list {
@@ -382,41 +386,32 @@ comments: false
     </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const accordions = document.querySelectorAll('.accordion');
-        
-        accordions.forEach(accordion => {
-            accordion.addEventListener('click', function() {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                const panel = this.nextElementSibling;
-                
-                // Close all other panels
-                accordions.forEach(otherAccordion => {
-                    if (otherAccordion !== this) {
-                        otherAccordion.setAttribute('aria-expanded', 'false');
-                        otherAccordion.nextElementSibling.classList.remove('active');
-                        otherAccordion.nextElementSibling.style.maxHeight = null;
-                    }
-                });
-                
-                // Toggle current panel
-                this.setAttribute('aria-expanded', !isExpanded);
-                panel.classList.toggle('active');
-                
-                if (!isExpanded) {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                } else {
-                    panel.style.maxHeight = null;
-                }
-            });
-    
-            // Add keyboard support
-            accordion.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.click();
-                }
-            });
-        });
-    });
-    </script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const accordions = document.querySelectorAll('.accordion');
+      
+      accordions.forEach(button => {
+          button.addEventListener('click', () => {
+              // Get the panel that follows this button
+              const panel = button.nextElementSibling;
+              
+              // If this panel is already open, close it
+              if (panel.classList.contains('active')) {
+                  panel.classList.remove('active');
+                  button.setAttribute('aria-expanded', 'false');
+              } 
+              // If this panel is closed, close all others and open this one
+              else {
+                  // Close all panels
+                  document.querySelectorAll('.panel').forEach(p => {
+                      p.classList.remove('active');
+                      p.previousElementSibling.setAttribute('aria-expanded', 'false');
+                  });
+                  
+                  // Open this panel
+                  panel.classList.add('active');
+                  button.setAttribute('aria-expanded', 'true');
+              }
+          });
+      });
+  });
+  </script>
