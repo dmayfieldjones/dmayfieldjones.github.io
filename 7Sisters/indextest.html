@@ -31,32 +31,128 @@ comments: false
 
     <!-- Slideshow Section -->
     <section class="slideshow-container">
-        <div class="slides fade" style="display: block;">
+        <!-- Main Image Slides -->
+        <div class="slides fade">
             <img src="http://mayfieldjones.com/assets/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg" 
                  alt="2021 Lake Shore GDC Best of Winners and Best of Breed Owner Handled under Breeder Judge Mimi Kim"
                  class="slide-image"
                  loading="lazy">
             <div class="caption">2021 Lake Shore GDC Best of Winners</div>
         </div>
-
+    
+        <!-- Add more slides here. For example: -->
         <div class="slides fade">
             <img src="http://mayfieldjones.com/assets/img/2021_Sweepstakes_Ohio_Corrine_Witt.jpg" 
                  alt="2021 Ohio Best in Sweepstakes under Breeder judge Corrine Witt"
                  class="slide-image"
                  loading="lazy">
-            <div class="caption">2021 Ohio Best in Sweepstakes under Breeder judge Corrine Witt</div>
+            <div class="caption">Your second image caption</div>
         </div>
-
+    
         <!-- Navigation Arrows -->
         <button class="prev" onclick="changeSlide(-1)" aria-label="Previous slide">❮</button>
         <button class="next" onclick="changeSlide(1)" aria-label="Next slide">❯</button>
-
+    
         <!-- Navigation Dots -->
         <div class="dot-container">
             <span class="dot" onclick="currentSlide(1)" aria-label="Go to slide 1"></span>
             <span class="dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></span>
+            <!-- Add more dots for additional slides -->
         </div>
     </section>
+    
+    <!-- Add these styles to your existing style section -->
+    <style>
+    /* Add to your existing :root {} */
+    :root {
+        /* ... existing variables ... */
+        --transition-speed: 0.3s;
+    }
+    
+    .slideshow-container {
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto calc(var(--spacing-unit) * 2);
+    }
+    
+    .slides {
+        display: none;
+        animation: fade 1.5s;
+    }
+    
+    .slide-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .caption {
+        color: #666;
+        font-size: 0.9rem;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+        color: var(--accent-color);
+        font-size: 18px;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 50%;
+        transition: var(--transition-speed) ease;
+        z-index: 1;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(191, 20, 28, 0.1);
+    }
+    
+    .dot-container {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: var(--transition-speed) ease;
+    }
+    
+    .active, .dot:hover {
+        background-color: var(--accent-color);
+    }
+    
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    
+    @media (max-width: 768px) {
+        .prev, .next {
+            padding: 8px;
+            font-size: 14px;
+        }
+    }
+    </style>
 
     <!-- Introduction Section -->
     <section class="intro-section">
@@ -137,7 +233,6 @@ comments: false
     --text-color: #000000;
     --background-color: #ffffff;
     --spacing-unit: 1rem;
-    --transition-speed: 0.3s;
 }
 
 .content-wrapper {
@@ -179,82 +274,14 @@ comments: false
     transform: scale(1.05);
 }
 
-/* Slideshow styles */
-.slideshow-container {
-    max-width: 1200px;
-    position: relative;
-    margin: 0 auto calc(var(--spacing-unit) * 2);
+.featured-image {
+    margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
-.slides {
-    display: none;
-    animation: fade 1.5s;
-}
-
-.slide-image {
+.full-width-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.caption {
-    color: #666;
-    font-size: 0.9rem;
-    padding: 8px;
-    text-align: center;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: var(--accent-color);
-    font-size: 18px;
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    transition: var(--transition-speed) ease;
-    z-index: 1;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev {
-    left: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(191, 20, 28, 0.1);
-}
-
-.dot-container {
-    text-align: center;
-    padding: 15px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: var(--transition-speed) ease;
-}
-
-.active, .dot:hover {
-    background-color: var(--accent-color);
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
 }
 
 .section-title {
@@ -297,62 +324,49 @@ comments: false
     .btn.zoombtn {
         text-align: center;
     }
-
-    .prev, .next {
-        padding: 8px;
-        font-size: 14px;
-    }
 }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 1;
     let slideTimer;
-
+    
+    function autoSlide() {
+        changeSlide(1);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        showSlides(slideIndex);
+        slideTimer = setInterval(autoSlide, 5000); // Change slides every 5 seconds
+    });
+    
+    function changeSlide(n) {
+        clearInterval(slideTimer);
+        showSlides(slideIndex += n);
+        slideTimer = setInterval(autoSlide, 5000);
+    }
+    
+    function currentSlide(n) {
+        clearInterval(slideTimer);
+        showSlides(slideIndex = n);
+        slideTimer = setInterval(autoSlide, 5000);
+    }
+    
     function showSlides(n) {
         let slides = document.getElementsByClassName("slides");
         let dots = document.getElementsByClassName("dot");
-        
-        if (n > slides.length) {slideIndex = 1}
+    
+        if (n > slides.length) {slideIndex = 1}    
         if (n < 1) {slideIndex = slides.length}
-        
+    
         for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            slides[i].style.display = "none";  
         }
         for (let i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        
-        slides[slideIndex-1].style.display = "block";
+    
+        slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
     }
-
-    function changeSlide(n) {
-        clearInterval(slideTimer);
-        showSlides(slideIndex += n);
-        startTimer();
-    }
-
-    function currentSlide(n) {
-        clearInterval(slideTimer);
-        showSlides(slideIndex = n);
-        startTimer();
-    }
-
-    function startTimer() {
-        slideTimer = setInterval(() => changeSlide(1), 5000);
-    }
-
-    // Initialize the slideshow
-    showSlides(slideIndex);
-    startTimer();
-
-    // Add event listeners
-    document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => changeSlide(1));
-    document.querySelectorAll('.dot').forEach((dot, index) => {
-        dot.addEventListener('click', () => currentSlide(index + 1));
-    });
-});
-</script>
+    </script>
