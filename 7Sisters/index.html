@@ -29,34 +29,10 @@ comments: false
         <a class="btn zoombtn" href="{{ '/CommonQuestions' | relative_url }}">Common Questions</a>
     </nav>
 
-    <!-- Slideshow Section -->
-    <section class="slideshow-container">
-        <div class="slides fade" style="display: block;">
-            <img src="http://mayfieldjones.com/assets/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg" 
-                 alt="2021 Lake Shore GDC Best of Winners and Best of Breed Owner Handled under Breeder Judge Mimi Kim"
-                 class="slide-image"
-                 loading="lazy">
-            <div class="caption">2021 Lake Shore GDC Best of Winners</div>
-        </div>
-
-        <div class="slides fade">
-            <img src="http://mayfieldjones.com/assets/img/2021_Sweepstakes_Ohio_Corrine_Witt.jpg" 
-                 alt="2021 Ohio Best in Sweepstakes under Breeder judge Corrine Witt"
-                 class="slide-image"
-                 loading="lazy">
-            <div class="caption">2021 Ohio Best in Sweepstakes under Breeder judge Corrine Witt</div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button class="prev" onclick="changeSlide(-1)" aria-label="Previous slide">❮</button>
-        <button class="next" onclick="changeSlide(1)" aria-label="Next slide">❯</button>
-
-        <!-- Navigation Dots -->
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)" aria-label="Go to slide 1"></span>
-            <span class="dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></span>
-        </div>
-    </section>
+    <!-- Image Feature Section -->
+    
+        <img src="http://mayfieldjones.com/assets/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg" alt="2021 Lake Shore GDC BOW BOBOH">
+        
 
     <!-- Introduction Section -->
     <section class="intro-section">
@@ -304,55 +280,3 @@ comments: false
     }
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    let slideIndex = 1;
-    let slideTimer;
-
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("slides");
-        let dots = document.getElementsByClassName("dot");
-        
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-
-    function changeSlide(n) {
-        clearInterval(slideTimer);
-        showSlides(slideIndex += n);
-        startTimer();
-    }
-
-    function currentSlide(n) {
-        clearInterval(slideTimer);
-        showSlides(slideIndex = n);
-        startTimer();
-    }
-
-    function startTimer() {
-        slideTimer = setInterval(() => changeSlide(1), 5000);
-    }
-
-    // Initialize the slideshow
-    showSlides(slideIndex);
-    startTimer();
-
-    // Add event listeners
-    document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => changeSlide(1));
-    document.querySelectorAll('.dot').forEach((dot, index) => {
-        dot.addEventListener('click', () => currentSlide(index + 1));
-    });
-});
-</script>
