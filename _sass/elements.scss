@@ -206,3 +206,13 @@ kbd {
     font-weight: 300;
     margin-bottom: 10px;
 }
+
+// Show Date Calculator on Litter Pages
+.show-date-input {
+  font-family: var(--font-family);
+}
+
+.calculate-age-card {
+  background-color: var(--card-bg-color);
+  transition: all var(--transition-speed) ease;
+}
