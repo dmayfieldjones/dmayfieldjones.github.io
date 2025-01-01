@@ -33,7 +33,7 @@ comments: false
                 <div class="info-item">
                   <span class="label">Time Since Whelp (July 9th, 2023):</span>
                   <span class="value" id="timeSinceWhelp"></span>
-              </div>
+                </div>
                 
             </div>
         </div>
@@ -121,7 +121,7 @@ comments: false
 
 <script>
   function calculateTimeSinceWhelp() {
-      const whelpDate = new Date('2024-08-19');
+      const whelpDate = new Date('2023-07-09');
       const today = new Date();
       
       let years = today.getFullYear() - whelpDate.getFullYear();
@@ -142,7 +142,7 @@ comments: false
   
   document.getElementById('timeSinceWhelp').textContent = calculateTimeSinceWhelp();
   </script>
-  
+
 <style>
 :root {
     --primary-color: #bf141c;
