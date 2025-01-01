@@ -40,7 +40,7 @@ comments: false
               </div>
               <div class="info-item" style="grid-column: span 2;">
                   <div class="calculate-age-card" style="background-color: var(--card-bg-color); padding: var(--spacing-unit); border-radius: 8px;">
-                      <span class="label">Calculate Age on Date:</span>
+                    <span class="label">Age at Selected Date:</span>
                       <input type="date" id="showDate" class="show-date-input" style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid var(--border-color); border-radius: 4px;">
                       <div id="ageAtShow" class="value" style="margin-top: 0.5rem;"></div>
                   </div>
@@ -160,10 +160,12 @@ comments: false
   }
   
   // Initialize
-  document.getElementById('timeSinceWhelp').textContent = calculateTimeSinceWhelp();
-  document.getElementById('showDate').valueAsDate = new Date();
-  document.getElementById('showDate').addEventListener('change', updateAgeAtShow);
-  updateAgeAtShow();
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('timeSinceWhelp').textContent = calculateTimeSinceWhelp();
+    document.getElementById('showDate').valueAsDate = new Date();
+    document.getElementById('showDate').addEventListener('change', updateAgeAtShow);
+    updateAgeAtShow();
+});
   </script>
 
 <style>
@@ -322,3 +324,4 @@ comments: false
     }
 }
 </style>
+
