@@ -31,10 +31,9 @@ comments: false
                     <span class="value">WS814188</span>
                 </div>
                 <div class="info-item">
-                  <span class="label">Time Since Whelp (July 9th, 2023):</span>
-                  <span class="value" id="timeSinceWhelp"></span>
+                    <span class="label">Whelp Date:</span>
+                    <span class="value">July 9th, 2023</span>
                 </div>
-                
             </div>
         </div>
 
@@ -118,30 +117,6 @@ comments: false
         </a>
     </section>
 </main>
-
-<script>
-  function calculateTimeSinceWhelp() {
-      const whelpDate = new Date('2023-07-09');
-      const today = new Date();
-      
-      let years = today.getFullYear() - whelpDate.getFullYear();
-      let months = today.getMonth() - whelpDate.getMonth();
-      let days = today.getDate() - whelpDate.getDate();
-  
-      if (days < 0) {
-          months--;
-          days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-      }
-      if (months < 0) {
-          years--;
-          months += 12;
-      }
-  
-      return `${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}, ${days} day${days !== 1 ? 's' : ''}`;
-  }
-  
-  document.getElementById('timeSinceWhelp').textContent = calculateTimeSinceWhelp();
-  </script>
 
 <style>
 :root {
