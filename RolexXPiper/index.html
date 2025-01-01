@@ -7,300 +7,270 @@ tags: [Litters, Breeding Records, Great Danes]
 date: 2024-01-31
 comments: false
 ---
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-    <style>
-    :root {
-        --primary-color: #bf141c;
-        --text-color: #000000;
-        --background-color: #ffffff;
-        --card-bg-color: #f8f8f8;
-        --border-color: #e0e0e0;
-        --spacing-unit: 1rem;
-        --font-family: Arial, sans-serif;
-        --transition-speed: 0.3s;
-    }
 
-    .content-wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: calc(var(--spacing-unit) * 2);
-        font-family: var(--font-family);
-        line-height: 1.6;
-        color: var(--text-color);
-        background-color: var(--background-color);
-    }
+<main class="content-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img 
+            src="{{ '/assets/img/Colorlogo_nobackground.png' | relative_url }}" 
+            alt="7Sisters Farm Logo"
+            width="300"
+            height="auto"
+            class="hero-logo"
+            loading="lazy"
+        >
+    </section>
 
-    .hero-section {
-        text-align: center;
-        margin-bottom: calc(var(--spacing-unit) * 3);
-    }
+    <!-- Litter Information Section -->
+    <section class="litter-info-section">
+        <div class="litter-details">
+            <h2 class="section-title">Litter Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Litter Number:</span>
+                    <span class="value">WS814188</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Whelp Date:</span>
+                    <span class="value">July 9th, 2023</span>
+                </div>
+            </div>
+        </div>
 
-    .hero-logo {
-        max-width: 100%;
-        height: auto;
-    }
+        <!-- Parents Information -->
+        <div class="parents-info">
+            <div class="parent-card">
+                <h3 class="parent-title">Sire</h3>
+                <p class="parent-name">
+                    MBISS AM GCHS Fendanesylcrest N Diriso's This Is The Right Time 
+                    <span class="call-name">"Rolex"</span>
+                </p>
+                <p class="registration">WS66273805</p>
+            </div>
 
-    .section-title {
-        font-size: 1.75rem;
-        color: var(--primary-color);
-        margin-bottom: calc(var(--spacing-unit) * 1.5);
-    }
+            <div class="parent-card">
+                <h3 class="parent-title">Dam</h3>
+                <p class="parent-name">
+                    CH Legado N Danekraaft's How Can I Tell You? 
+                    <span class="call-name">"Piper"</span>
+                </p>
+                <p class="registration">WS69691106</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Offspring Section -->
+    <section class="offspring-section">
+        <h2 class="section-title">Offspring</h2>
+        <div class="puppies-list">
+            <div class="puppy-card">
+                <p class="puppy-reg">WS81418801</p>
+                <p class="puppy-name">
+                    <span class="brand-number">7</span>Sisters N Legado's I Wanna Dance, I Wanna Win 
+                    <span class="call-name">"Mia"</span>
+                </p>
+            </div>
+
+            <div class="puppy-card">
+                <p class="puppy-reg">WS81418802</p>
+                <p class="puppy-name">
+                    <span class="brand-number">7</span>Sisters N Legado's Final Act V Echoln 
+                    <span class="call-name">"Zee"</span>
+                </p>
+            </div>
+
+            <div class="puppy-card">
+                <p class="puppy-reg">WS81418803</p>
+                <p class="puppy-name">
+                    <span class="brand-number">7</span>Sisters N Legado's I Know A Guy At Cherryhill 
+                    <span class="call-name">"Pumpkin"</span>
+                </p>
+            </div>
+
+            <div class="puppy-card">
+                <p class="puppy-reg">WS81418804</p>
+                <p class="puppy-name">
+                    <span class="brand-number">7</span>Sisters N Legado's Gonna Get Medieval 
+                    <span class="call-name">"Wallace"</span>
+                </p>
+            </div>
+
+            <div class="puppy-card">
+                <p class="puppy-reg">WS81418805</p>
+                <p class="puppy-name">
+                    Legado N <span class="brand-number">7</span>Sisters' I Got Somethin' For You 
+                    <span class="call-name">"Captain"</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Litter Advertisement -->
+    <section class="advertisement-section">
+        <a href="{{ '/RolexXPiper' | relative_url }}" 
+           class="ad-link"
+           aria-label="View full Rolex X Piper litter details">
+            <img src="{{ '/assets/img/RolexPiper.jpg' | relative_url }}" 
+                 alt="Rolex X Piper litter advertisement"
+                 class="ad-image"
+                 loading="lazy">
+        </a>
+    </section>
+</main>
+
+<style>
+:root {
+    --primary-color: #bf141c;
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --card-bg-color: #f8f8f8;
+    --border-color: #e0e0e0;
+    --spacing-unit: 1rem;
+    --font-family: Arial, sans-serif;
+    --transition-speed: 0.3s;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.hero-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.info-grid {
+    display: grid;
+    gap: var(--spacing-unit);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.5);
+}
+
+.label {
+    font-weight: bold;
+    color: #666;
+}
+
+.parents-info {
+    display: grid;
+    gap: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.parent-card {
+    background-color: var(--card-bg-color);
+    padding: calc(var(--spacing-unit) * 1.5);
+    border-radius: 8px;
+}
+
+.parent-title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+}
+
+.parent-name {
+    font-size: 1.1rem;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.registration {
+    color: #666;
+    font-family: monospace;
+}
+
+.puppies-list {
+    display: grid;
+    gap: var(--spacing-unit);
+}
+
+.puppy-card {
+    background-color: var(--card-bg-color);
+    padding: calc(var(--spacing-unit) * 1.25);
+    border-radius: 8px;
+}
+
+.puppy-reg {
+    font-family: monospace;
+    color: #666;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.brand-number {
+    color: var(--primary-color);
+}
+
+.call-name {
+    font-style: italic;
+}
+
+.advertisement-section {
+    margin-top: calc(var(--spacing-unit) * 3);
+    text-align: center;
+}
+
+.ad-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.ad-link:hover .ad-image {
+    transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
     .info-grid {
-        display: grid;
-        gap: var(--spacing-unit);
-        margin-bottom: calc(var(--spacing-unit) * 2);
-    }
-
-    .info-item {
-        display: flex;
-        flex-direction: column;
-        gap: calc(var(--spacing-unit) * 0.5);
-    }
-
-    .label {
-        font-weight: bold;
-        color: #666;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .parents-info {
-        display: grid;
-        gap: calc(var(--spacing-unit) * 2);
-        margin-bottom: calc(var(--spacing-unit) * 3);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: var(--spacing-unit);
     }
 
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media print {
+    .puppy-card,
     .parent-card {
-        background-color: var(--card-bg-color);
-        padding: calc(var(--spacing-unit) * 1.5);
-        border-radius: 8px;
-    }
-
-    .parent-title {
-        color: var(--primary-color);
-        margin-bottom: var(--spacing-unit);
-    }
-
-    .parent-name {
-        font-size: 1.1rem;
-        margin-bottom: calc(var(--spacing-unit) * 0.5);
-    }
-
-    .registration {
-        color: #666;
-        font-family: monospace;
-    }
-
-    .puppies-list {
-        display: grid;
-        gap: var(--spacing-unit);
-    }
-
-    .puppy-card {
-        background-color: var(--card-bg-color);
-        padding: calc(var(--spacing-unit) * 1.25);
-        border-radius: 8px;
-    }
-
-    .puppy-reg {
-        font-family: monospace;
-        color: #666;
-        margin-bottom: calc(var(--spacing-unit) * 0.5);
-    }
-
-    .brand-number {
-        color: var(--primary-color);
-    }
-
-    .call-name {
-        font-style: italic;
-    }
-
-    .advertisement-section {
-        margin-top: calc(var(--spacing-unit) * 3);
-        text-align: center;
+        background-color: transparent;
+        border: 1px solid var(--border-color);
     }
 
     .ad-image {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: transform var(--transition-speed) ease;
+        max-width: 400px;
     }
-
-    .ad-link:hover .ad-image {
-        transform: scale(1.02);
-    }
-
-    @media (min-width: 768px) {
-        .info-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .parents-info {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .content-wrapper {
-            padding: var(--spacing-unit);
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media print {
-        .puppy-card,
-        .parent-card {
-            background-color: transparent;
-            border: 1px solid var(--border-color);
-        }
-
-        .ad-image {
-            max-width: 400px;
-        }
-    }
-    </style>
-</head>
-<body>
-    <main class="content-wrapper">
-        <section class="hero-section">
-            <img src="/api/placeholder/300/200" alt="7Sisters Farm Logo" width="300" height="auto" class="hero-logo">
-        </section>
-
-        <section class="litter-info-section">
-            <div class="litter-details">
-                <h2 class="section-title">Litter Information</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="label">Litter Number:</span>
-                        <span class="value">WS814188</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="label">Whelp Date:</span>
-                        <span class="value">July 9th, 2023</span>
-                    </div>
-                    <div id="age-calculator"></div>
-                </div>
-            </div>
-
-            <div class="parents-info">
-                <div class="parent-card">
-                    <h3 class="parent-title">Sire</h3>
-                    <p class="parent-name">
-                        MBISS AM GCHS Fendanesylcrest N Diriso's This Is The Right Time 
-                        <span class="call-name">"Rolex"</span>
-                    </p>
-                    <p class="registration">WS66273805</p>
-                </div>
-
-                <div class="parent-card">
-                    <h3 class="parent-title">Dam</h3>
-                    <p class="parent-name">
-                        CH Legado N Danekraaft's How Can I Tell You? 
-                        <span class="call-name">"Piper"</span>
-                    </p>
-                    <p class="registration">WS69691106</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="offspring-section">
-            <h2 class="section-title">Offspring</h2>
-            <div class="puppies-list">
-                <div class="puppy-card">
-                    <p class="puppy-reg">WS81418801</p>
-                    <p class="puppy-name">
-                        <span class="brand-number">7</span>Sisters N Legado's I Wanna Dance, I Wanna Win 
-                        <span class="call-name">"Mia"</span>
-                    </p>
-                </div>
-
-                <div class="puppy-card">
-                    <p class="puppy-reg">WS81418802</p>
-                    <p class="puppy-name">
-                        <span class="brand-number">7</span>Sisters N Legado's Final Act V Echoln 
-                        <span class="call-name">"Zee"</span>
-                    </p>
-                </div>
-
-                <div class="puppy-card">
-                    <p class="puppy-reg">WS81418803</p>
-                    <p class="puppy-name">
-                        <span class="brand-number">7</span>Sisters N Legado's I Know A Guy At Cherryhill 
-                        <span class="call-name">"Pumpkin"</span>
-                    </p>
-                </div>
-
-                <div class="puppy-card">
-                    <p class="puppy-reg">WS81418804</p>
-                    <p class="puppy-name">
-                        <span class="brand-number">7</span>Sisters N Legado's Gonna Get Medieval 
-                        <span class="call-name">"Wallace"</span>
-                    </p>
-                </div>
-
-                <div class="puppy-card">
-                    <p class="puppy-reg">WS81418805</p>
-                    <p class="puppy-name">
-                        Legado N <span class="brand-number">7</span>Sisters' I Got Somethin' For You 
-                        <span class="call-name">"Captain"</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="advertisement-section">
-            <img src="/api/placeholder/400/300" alt="Rolex X Piper litter advertisement" class="ad-image">
-        </section>
-    </main>
-
-    <script type="text/javascript">
-        const calculateAge = (whelpDate) => {
-            const today = new Date();
-            const whelp = new Date(whelpDate);
-            
-            let years = today.getFullYear() - whelp.getFullYear();
-            let months = today.getMonth() - whelp.getMonth();
-            let days = today.getDate() - whelp.getDate();
-            
-            if (days < 0) {
-                months--;
-                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-            }
-            
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
-            
-            return { years, months, days };
-        };
-
-        function updateAge() {
-            const whelpDate = "July 9, 2023";
-            const age = calculateAge(whelpDate);
-            const ageElement = document.createElement('div');
-            ageElement.className = 'info-item';
-            ageElement.innerHTML = `
-                <span class="label">Age:</span>
-                <span class="value">
-                    ${age.years > 0 ? `${age.years} year${age.years !== 1 ? 's' : ''}, ` : ''}
-                    ${age.months} month${age.months !== 1 ? 's' : ''}, 
-                    ${age.days} day${age.days !== 1 ? 's' : ''}
-                </span>
-            `;
-            
-            const container = document.getElementById('age-calculator');
-            container.innerHTML = '';
-            container.appendChild(ageElement);
-        }
-
-        // Update initially and then daily
-        updateAge();
-        setInterval(updateAge, 86400000);
-    </script>
+}
+</style>
