@@ -23,30 +23,19 @@ comments: false
 
     <!-- Litter Information Section -->
     <section class="litter-info-section">
-      <div class="litter-details">
-          <h2 class="section-title">Litter Information</h2>
-          <div class="info-grid">
-              <div class="info-item">
-                  <span class="label">Litter Number:</span>
-                  <span class="value">WS814188</span>
-              </div>
-              <div class="info-item">
-                  <span class="label">Time Since Whelp (July 9th, 2023):</span>
-                  <span class="value" id="timeSinceWhelp"></span>
-              </div>
-              <div class="info-item">
-                  <span class="label">Whelp Date:</span>
-                  <span class="value">July 9th, 2023</span>
-              </div>
-              <div class="info-item" style="grid-column: span 2;">
-                  <div class="calculate-age-card" style="background-color: var(--card-bg-color); padding: var(--spacing-unit); border-radius: 8px;">
-                    <span class="label">Age at Selected Date:</span>
-                      <input type="date" id="showDate" class="show-date-input" style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid var(--border-color); border-radius: 4px;">
-                      <div id="ageAtShow" class="value" style="margin-top: 0.5rem;"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
+        <div class="litter-details">
+            <h2 class="section-title">Litter Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Litter Number:</span>
+                    <span class="value">WS814188</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Whelp Date:</span>
+                    <span class="value">July 9th, 2023</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Parents Information -->
         <div class="parents-info">
@@ -128,45 +117,6 @@ comments: false
         </a>
     </section>
 </main>
-
-<script>
-  function calculateTimeBetweenDates(startDate, endDate) {
-      let years = endDate.getFullYear() - startDate.getFullYear();
-      let months = endDate.getMonth() - startDate.getMonth();
-      let days = endDate.getDate() - startDate.getDate();
-  
-      if (days < 0) {
-          months--;
-          days += new Date(endDate.getFullYear(), endDate.getMonth(), 0).getDate();
-      }
-      if (months < 0) {
-          years--;
-          months += 12;
-      }
-  
-      return `${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}, ${days} day${days !== 1 ? 's' : ''}`;
-  }
-  
-  function calculateTimeSinceWhelp() {
-      const whelpDate = new Date('2023-07-09');
-      const today = new Date();
-      return calculateTimeBetweenDates(whelpDate, today);
-  }
-  
-  function updateAgeAtShow() {
-      const whelpDate = new Date('2023-07-09');
-      const showDate = new Date(document.getElementById('showDate').value);
-      document.getElementById('ageAtShow').textContent = calculateTimeBetweenDates(whelpDate, showDate);
-  }
-  
-  // Initialize
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('timeSinceWhelp').textContent = calculateTimeSinceWhelp();
-    document.getElementById('showDate').valueAsDate = new Date();
-    document.getElementById('showDate').addEventListener('change', updateAgeAtShow);
-    updateAgeAtShow();
-});
-  </script>
 
 <style>
 :root {
@@ -324,4 +274,3 @@ comments: false
     }
 }
 </style>
-
