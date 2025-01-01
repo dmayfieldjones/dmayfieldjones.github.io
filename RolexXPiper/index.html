@@ -31,10 +31,7 @@ comments: false
                   <span class="label">Litter Number:</span>
                   <span class="value">WS814188</span>
               </div>
-              <div class="info-item">
-                  <span class="label">Time Since Whelp (July 9th, 2023):</span>
-                  <span class="value" id="timeSinceWhelp"></span>
-              </div>
+              
       
           </div>
       </div>
@@ -121,27 +118,65 @@ comments: false
 </main>
 
 <script>
-  function calculateTimeSinceWhelp() {
-      const whelpDate = new Date('2023-07-09');
-      const today = new Date();
-      
-      let years = today.getFullYear() - whelpDate.getFullYear();
-      let months = today.getMonth() - whelpDate.getMonth();
-      let days = today.getDate() - whelpDate.getDate();
-  
-      if (days < 0) {
-          months--;
-          days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-      }
-      if (months < 0) {
-          years--;
-          months += 12;
-      }
-  
-      return `${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}, ${days} day${days !== 1 ? 's' : ''}`;
-  }
-  
-  document.getElementById('timeSinceWhelp').textContent = calculateTimeSinceWhelp();
+  import React, { useState, useEffect } from 'react';
+
+const DogAgeCalculator = () => {
+  const whelpDate = new Date('2023-07-09');
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [age, setAge] = useState({ years: 0, months: 0, days: 0 });
+
+  const calculateAge = (date) => {
+    let years = date.getFullYear() - whelpDate.getFullYear();
+    let months = date.getMonth() - whelpDate.getMonth();
+    let days = date.getDate() - whelpDate.getDate();
+
+    if (days < 0) {
+      months--;
+      // Get days in the previous month
+      const lastMonth = new Date(date.getFullYear(), date.getMonth(), 0);
+      days += lastMonth.getDate();
+    }
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    return { years, months, days };
+  };
+
+  useEffect(() => {
+    setAge(calculateAge(selectedDate));
+  }, [selectedDate]);
+
+  const handleDateChange = (e) => {
+    const newDate = new Date(e.target.value);
+    setSelectedDate(newDate);
+  };
+
+  // Format current date as YYYY-MM-DD for input default value
+  const formatDate = (date) => {
+    return date.toISOString().split('T')[0];
+  };
+
+  return (
+    <div className="info-item p-4 bg-gray-50 rounded-lg">
+      <span className="label font-bold text-gray-600 mb-2 block">Calculate Age:</span>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <input
+          type="date"
+          value={formatDate(selectedDate)}
+          onChange={handleDateChange}
+          className="border rounded px-3 py-2 w-full sm:w-48"
+        />
+        <div className="text-gray-700">
+          Age: {age.years} year{age.years !== 1 ? 's' : ''}, {age.months} month{age.months !== 1 ? 's' : ''}, {age.days} day{age.days !== 1 ? 's' : ''}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DogAgeCalculator;
   </script>
 
 <style>
