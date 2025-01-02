@@ -126,8 +126,7 @@ comments: false
 </main>
 
 <script>
-  // Wait for the page to be fully loaded
-  window.onload = function() {
+  document.addEventListener('DOMContentLoaded', function() {
       // Get the HTML elements
       const dateInput = document.getElementById('ageCalculatorDate');
       const ageDisplay = document.getElementById('ageDisplay');
@@ -190,9 +189,9 @@ comments: false
   
       // Log initial setup complete
       console.log('Age calculator initialized');
-  };
+  });
   </script>
-  
+
 <style>
 :root {
 --primary-color: #bf141c;
