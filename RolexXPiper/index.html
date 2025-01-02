@@ -31,15 +31,15 @@ comments: false
               <span class="value">WS814188</span>
           </div>
           <div class="info-item" style="background-color: var(--card-bg-color); padding: calc(var(--spacing-unit) * 1.25); border-radius: 8px;">
-            <span class="label">Calculate Age:</span>
-            <div class="age-calculator-container">
-                <input 
-                    type="date" 
-                    id="ageCalculatorDate"
-                    style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px; width: 100%; max-width: 200px;"
-                >
-                <span class="value" id="ageDisplay"></span>
-            </div>
+              <span class="label">Calculate Age:</span>
+              <div class="age-calculator-container">
+                  <input 
+                      type="date" 
+                      id="ageCalculatorDate"
+                      style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px; width: 100%; max-width: 200px;"
+                  >
+                  <div id="ageDisplay" class="age-display"></div>
+              </div>
           </div>
         </div>
     </div>
@@ -125,231 +125,231 @@ comments: false
   </section>
 </main>
 
-<!-- Replace your current script section with this -->
-<script>
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', function() {
-      try {
-          // Initialize variables
-          const dateInput = document.getElementById('ageCalculatorDate');
-          const ageDisplay = document.getElementById('ageDisplay');
-          const whelpDate = new Date('2023-07-09');
-
-          // Check if elements exist
-          if (!dateInput || !ageDisplay) {
-              throw new Error('Required elements not found');
-          }
-
-          // Calculate age difference
-          function calculateAge(date) {
-              const diffTime = Math.abs(date - whelpDate);
-              const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-              
-              const years = Math.floor(diffDays / 365);
-              const remainingDays = diffDays % 365;
-              const months = Math.floor(remainingDays / 30);
-              const days = remainingDays % 30;
-
-              return { years, months, days };
-          }
-
-          // Format date to YYYY-MM-DD
-          function formatDate(date) {
-              return date.toISOString().slice(0, 10);
-          }
-
-          // Update the age display
-          function updateAge(date) {
-              const age = calculateAge(date);
-              ageDisplay.textContent = `${age.years} year${age.years !== 1 ? 's' : ''}, ` +
-                  `${age.months} month${age.months !== 1 ? 's' : ''}, ` +
-                  `${age.days} day${age.days !== 1 ? 's' : ''}`;
-          }
-
-          // Set initial date and calculate age
-          const today = new Date();
-          dateInput.value = formatDate(today);
-          updateAge(today);
-
-          // Add event listener for date changes
-          dateInput.addEventListener('change', function(e) {
-              const selectedDate = new Date(e.target.value);
-              updateAge(selectedDate);
-          });
-
-      } catch (error) {
-          console.error('Age calculator initialization error:', error);
-      }
-  });
-</script>
-
 <style>
-  :root {
-    --primary-color: #bf141c;
-    --text-color: #000000;
-    --background-color: #ffffff;
-    --card-bg-color: #f8f8f8;
-    --border-color: #e0e0e0;
-    --spacing-unit: 1rem;
-    --font-family: Arial, sans-serif;
-    --transition-speed: 0.3s;
+:root {
+--primary-color: #bf141c;
+--text-color: #000000;
+--background-color: #ffffff;
+--card-bg-color: #f8f8f8;
+--border-color: #e0e0e0;
+--spacing-unit: 1rem;
+--font-family: Arial, sans-serif;
+--transition-speed: 0.3s;
+}
+
+/* Age Calculator Styles */
+.age-calculator-container {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.age-display {
+font-size: 1rem;
+color: var(--text-color);
+min-width: 200px;
+}
+
+/* Main Styles */
+.content-wrapper {
+max-width: 800px;
+margin: 0 auto;
+padding: calc(var(--spacing-unit) * 2);
+font-family: var(--font-family);
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--background-color);
+}
+
+.hero-section {
+text-align: center;
+margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.hero-logo {
+max-width: 100%;
+height: auto;
+}
+
+.section-title {
+font-size: 1.75rem;
+color: var(--primary-color);
+margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.info-grid {
+display: grid;
+gap: var(--spacing-unit);
+margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.info-item {
+display: flex;
+flex-direction: column;
+gap: calc(var(--spacing-unit) * 0.5);
+}
+
+.label {
+font-weight: bold;
+color: #666;
+}
+
+.parents-info {
+display: grid;
+gap: calc(var(--spacing-unit) * 2);
+margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.parent-card {
+background-color: var(--card-bg-color);
+padding: calc(var(--spacing-unit) * 1.5);
+border-radius: 8px;
+}
+
+.parent-title {
+color: var(--primary-color);
+margin-bottom: var(--spacing-unit);
+}
+
+.parent-name {
+font-size: 1.1rem;
+margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.registration {
+color: #666;
+font-family: monospace;
+}
+
+.puppies-list {
+display: grid;
+gap: var(--spacing-unit);
+}
+
+.puppy-card {
+background-color: var(--card-bg-color);
+padding: calc(var(--spacing-unit) * 1.25);
+border-radius: 8px;
+}
+
+.puppy-reg {
+font-family: monospace;
+color: #666;
+margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.brand-number {
+color: var(--primary-color);
+}
+
+.call-name {
+font-style: italic;
+}
+
+.advertisement-section {
+margin-top: calc(var(--spacing-unit) * 3);
+text-align: center;
+}
+
+.ad-image {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+transition: transform var(--transition-speed) ease;
+}
+
+.ad-link:hover .ad-image {
+transform: scale(1.02);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+.info-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.parents-info {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.age-calculator-container {
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+}
+
+@media (max-width: 768px) {
+.content-wrapper {
+  padding: var(--spacing-unit);
+}
+
+.section-title {
+  font-size: 1.5rem;
+}
+}
+
+@media print {
+.puppy-card,
+.parent-card {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.ad-image {
+  max-width: 400px;
+}
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const dateInput = document.getElementById('ageCalculatorDate');
+  const ageDisplay = document.getElementById('ageDisplay');
+  
+  if (!dateInput || !ageDisplay) {
+      console.error('Age calculator elements not found');
+      return;
   }
-  
-  /* Age Calculator Styles */
-  .age-calculator-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+
+  const whelpDate = new Date('2023-07-09');
+
+  function calculateAge(date) {
+      const diffTime = Math.abs(date - whelpDate);
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      
+      const years = Math.floor(diffDays / 365);
+      const remainingDays = diffDays % 365;
+      const months = Math.floor(remainingDays / 30);
+      const days = remainingDays % 30;
+
+      return { years, months, days };
   }
-  
-  /* Main Styles */
-  .content-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: calc(var(--spacing-unit) * 2);
-    font-family: var(--font-family);
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+
+  function formatDate(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
   }
-  
-  .hero-section {
-    text-align: center;
-    margin-bottom: calc(var(--spacing-unit) * 3);
+
+  function updateAge(date) {
+      const age = calculateAge(date);
+      ageDisplay.textContent = `Current age: ${age.years} year${age.years !== 1 ? 's' : ''}, ` +
+          `${age.months} month${age.months !== 1 ? 's' : ''}, ` +
+          `${age.days} day${age.days !== 1 ? 's' : ''}`;
   }
-  
-  .hero-logo {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .section-title {
-    font-size: 1.75rem;
-    color: var(--primary-color);
-    margin-bottom: calc(var(--spacing-unit) * 1.5);
-  }
-  
-  .info-grid {
-    display: grid;
-    gap: var(--spacing-unit);
-    margin-bottom: calc(var(--spacing-unit) * 2);
-  }
-  
-  .info-item {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing-unit) * 0.5);
-  }
-  
-  .label {
-    font-weight: bold;
-    color: #666;
-  }
-  
-  .parents-info {
-    display: grid;
-    gap: calc(var(--spacing-unit) * 2);
-    margin-bottom: calc(var(--spacing-unit) * 3);
-  }
-  
-  .parent-card {
-    background-color: var(--card-bg-color);
-    padding: calc(var(--spacing-unit) * 1.5);
-    border-radius: 8px;
-  }
-  
-  .parent-title {
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-unit);
-  }
-  
-  .parent-name {
-    font-size: 1.1rem;
-    margin-bottom: calc(var(--spacing-unit) * 0.5);
-  }
-  
-  .registration {
-    color: #666;
-    font-family: monospace;
-  }
-  
-  .puppies-list {
-    display: grid;
-    gap: var(--spacing-unit);
-  }
-  
-  .puppy-card {
-    background-color: var(--card-bg-color);
-    padding: calc(var(--spacing-unit) * 1.25);
-    border-radius: 8px;
-  }
-  
-  .puppy-reg {
-    font-family: monospace;
-    color: #666;
-    margin-bottom: calc(var(--spacing-unit) * 0.5);
-  }
-  
-  .brand-number {
-    color: var(--primary-color);
-  }
-  
-  .call-name {
-    font-style: italic;
-  }
-  
-  .advertisement-section {
-    margin-top: calc(var(--spacing-unit) * 3);
-    text-align: center;
-  }
-  
-  .ad-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition-speed) ease;
-  }
-  
-  .ad-link:hover .ad-image {
-    transform: scale(1.02);
-  }
-  
-  /* Media Queries */
-  @media (min-width: 768px) {
-    .info-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .parents-info {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .age-calculator-container {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .content-wrapper {
-      padding: var(--spacing-unit);
-    }
-  
-    .section-title {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media print {
-    .puppy-card,
-    .parent-card {
-      background-color: transparent;
-      border: 1px solid var(--border-color);
-    }
-  
-    .ad-image {
-      max-width: 400px;
-    }
-  }
-  </style>
+
+  // Set today's date and calculate initial age
+  const today = new Date();
+  dateInput.value = formatDate(today);
+  updateAge(today);
+
+  // Update age when date changes
+  dateInput.addEventListener('change', function(e) {
+      const selectedDate = new Date(e.target.value);
+      updateAge(selectedDate);
+  });
+});
+</script>
