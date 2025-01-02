@@ -125,72 +125,62 @@ comments: false
   </section>
 </main>
 
+<!-- Replace your current script section with this -->
 <script>
+  // Wait for DOM to be ready
   document.addEventListener('DOMContentLoaded', function() {
-      // Get the HTML elements
-      const dateInput = document.getElementById('ageCalculatorDate');
-      const ageDisplay = document.getElementById('ageDisplay');
-      
-      // Check if elements are found
-      if (!dateInput || !ageDisplay) {
-          console.error('Required elements not found');
-          return;
-      }
-  
-      // Set the whelp date
-      const whelpDate = new Date('2023-07-09');
-  
-      function calculateAge(date) {
-          // Convert both dates to UTC to avoid timezone issues
-          const selectedUTC = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
-          const whelpUTC = Date.UTC(whelpDate.getFullYear(), whelpDate.getMonth(), whelpDate.getDate());
-          
-          let years = date.getFullYear() - whelpDate.getFullYear();
-          let months = date.getMonth() - whelpDate.getMonth();
-          let days = date.getDate() - whelpDate.getDate();
-  
-          if (days < 0) {
-              months--;
-              // Get days in the previous month
-              const lastMonth = new Date(date.getFullYear(), date.getMonth(), 0);
-              days += lastMonth.getDate();
-          }
-          if (months < 0) {
-              years--;
-              months += 12;
-          }
-  
-          return { years, months, days };
-      }
-  
-      function formatDate(date) {
-          return date.toISOString().split('T')[0];
-      }
-  
-      function updateAge(date) {
-          const age = calculateAge(date);
-          ageDisplay.textContent = `${age.years} year${age.years !== 1 ? 's' : ''}, ` +
-              `${age.months} month${age.months !== 1 ? 's' : ''}, ` +
-              `${age.days} day${age.days !== 1 ? 's' : ''}`;
-          console.log('Age updated:', ageDisplay.textContent); // Debug log
-      }
-  
-      // Set today's date as default and calculate initial age
-      const today = new Date();
-      dateInput.value = formatDate(today);
-      updateAge(today);
-  
-      // Add event listener for date changes
-      dateInput.addEventListener('change', function(e) {
-          console.log('Date changed to:', e.target.value); // Debug log
-          const selectedDate = new Date(e.target.value);
-          updateAge(selectedDate);
-      });
-  
-      // Log initial setup complete
-      console.log('Age calculator initialized');
-  });
+      try {
+          // Initialize variables
+          const dateInput = document.getElementById('ageCalculatorDate');
+          const ageDisplay = document.getElementById('ageDisplay');
+          const whelpDate = new Date('2023-07-09');
 
+          // Check if elements exist
+          if (!dateInput || !ageDisplay) {
+              throw new Error('Required elements not found');
+          }
+
+          // Calculate age difference
+          function calculateAge(date) {
+              const diffTime = Math.abs(date - whelpDate);
+              const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+              
+              const years = Math.floor(diffDays / 365);
+              const remainingDays = diffDays % 365;
+              const months = Math.floor(remainingDays / 30);
+              const days = remainingDays % 30;
+
+              return { years, months, days };
+          }
+
+          // Format date to YYYY-MM-DD
+          function formatDate(date) {
+              return date.toISOString().slice(0, 10);
+          }
+
+          // Update the age display
+          function updateAge(date) {
+              const age = calculateAge(date);
+              ageDisplay.textContent = `${age.years} year${age.years !== 1 ? 's' : ''}, ` +
+                  `${age.months} month${age.months !== 1 ? 's' : ''}, ` +
+                  `${age.days} day${age.days !== 1 ? 's' : ''}`;
+          }
+
+          // Set initial date and calculate age
+          const today = new Date();
+          dateInput.value = formatDate(today);
+          updateAge(today);
+
+          // Add event listener for date changes
+          dateInput.addEventListener('change', function(e) {
+              const selectedDate = new Date(e.target.value);
+              updateAge(selectedDate);
+          });
+
+      } catch (error) {
+          console.error('Age calculator initialization error:', error);
+      }
+  });
 </script>
 
 <style>
