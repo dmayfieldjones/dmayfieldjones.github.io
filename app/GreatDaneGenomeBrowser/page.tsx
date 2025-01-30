@@ -1,3 +1,4 @@
+'use client'
 import dynamic from 'next/dynamic'
 
 const DynamicComponentWithNoSSR = dynamic(() => import('./Browser'), {
@@ -7,7 +8,6 @@ const DynamicComponentWithNoSSR = dynamic(() => import('./Browser'), {
 export default function Page() {
   return (
     <div>
-      <h1>My page</h1>
       <DynamicComponentWithNoSSR />
     </div>
   )
