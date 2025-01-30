@@ -24,12 +24,12 @@ const MayfieldJonesProfile = () => {
 
         <div className="space-y-2 mb-4">
           <h3>
-            <a href="/7Sisters/" className="btn btn-zoom hover:text-red-600">
+            <a href="/7Sisters" className="btn btn-zoom hover:text-red-600">
               Great Danes
             </a>
           </h3>
           <h3>
-            <a href="/about/" className="btn btn-zoom">
+            <a href="/about" className="btn btn-zoom">
               <span className="text-red-600">7</span>Sisters Farm
             </a>
           </h3>
