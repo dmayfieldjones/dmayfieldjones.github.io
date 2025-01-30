@@ -282,6 +282,9 @@ export default function () {
                   <button onClick={() => setShowBrowser(!showBrowser)}>
                     {showBrowser ? 'Hide' : 'Show'} genome browser
                   </button>
+                  {showBrowser && geneEntry ? (
+                    <JBrowse location={geneEntry.location} />
+                  ) : null}
                 </div>
               ) : null}
             </div>
@@ -307,9 +310,6 @@ export default function () {
           </ul>
         ))}
       </div>
-      {showBrowser && geneEntry ? (
-        <JBrowse location={geneEntry.location} />
-      ) : null}
     </div>
   )
 }
