@@ -25,45 +25,26 @@ export default tseslint.config(
       },
     },
   },
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.stylisticTypeChecked,
-  ...tseslint.configs.strictTypeChecked,
-  eslintPluginReact.configs.flat.recommended,
+  //eslint.configs.recommended,
+  //...tseslint.configs.recommended,
+  //...tseslint.configs.stylisticTypeChecked,
+  //...tseslint.configs.strictTypeChecked,
+  //eslintPluginReact.configs.flat.recommended,
+  //{
+  //  plugins: {
+  //    'react-hooks': eslintPluginReactHooks,
+  //  },
+  //  rules: eslintPluginReactHooks.configs.recommended.rules,
+  //},
+  //{
+  //  // in main config for TSX/JSX source files
+  //  plugins: {
+  //    'react-refresh': eslintPluginReactRefresh,
+  //  },
+  //  rules: {},
+  //},
+  //eslintPluginUnicorn.configs['flat/recommended'],
   {
-    plugins: {
-      'react-hooks': eslintPluginReactHooks,
-    },
-    rules: eslintPluginReactHooks.configs.recommended.rules,
-  },
-  {
-    // in main config for TSX/JSX source files
-    plugins: {
-      'react-refresh': eslintPluginReactRefresh,
-    },
     rules: {},
-  },
-  eslintPluginUnicorn.configs['flat/recommended'],
-  {
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        {
-          argsIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-        },
-      ],
-      'no-console': [
-        'warn',
-        {
-          allow: ['error', 'warn'],
-        },
-      ],
-      'no-underscore-dangle': 0,
-      curly: 'error',
-      semi: ['error', 'never'],
-      'unicorn/prevent-abbreviations': 'off',
-    },
   },
 )
