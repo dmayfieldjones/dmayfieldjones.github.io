@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import geneCategories from './categories'
+import ReactIdeogram from './Ideogram'
 import {
   createViewState,
   JBrowseLinearGenomeView,
@@ -17,9 +18,13 @@ function replaceLink(str: string) {
   )
 }
 
-export default function () {
-  const [selector, setSelector] = useState('Coat Color Genes')
-  const [gene, setGene] = useState('')
+const colorMap = {
+  coatcolor: 'green',
+  hypersocial: 'red',
+  health: 'blue',
+}
+
+function JBrowse({ location }: { location: string }) {
   const [state] = useState(() =>
     createViewState({
       aggregateTextSearchAdapters: [
@@ -136,10 +141,63 @@ export default function () {
       ],
     }),
   )
-  const currentCategory =
-    geneCategories[selector as keyof typeof geneCategories]
 
-  const geneEntry = currentCategory.find(f => f.name === gene)
+  useEffect(() => {
+    state.session.view.navToLocString(location, 'canFam5')
+    state.session.view.showTrack('refGene')
+  }, [location])
+  return <JBrowseLinearGenomeView viewState={state} />
+}
+
+function Ideogram({
+  setType,
+  setGene,
+}: {
+  setType: (arg: string) => void
+  setGene: (arg: string) => void
+}) {
+  const annotations = geneCategories.map(r => {
+    const { type, location, name } = r
+    const [chr, rest] = location.split(':')
+    const [start, stop] = rest.split('-')
+    return {
+      name,
+      chr: chr.replace('chr', ''),
+      start: +start.replaceAll(',', ''),
+      color: colorMap[type],
+      stop: +stop.replaceAll(',', ''),
+    }
+  })
+  return (
+    <div id="eukaryotes-example" className="App">
+      <ReactIdeogram
+        organism="canis-lupus-familiaris"
+        rotatable={false}
+        chrWidth={10}
+        chrHeight={200}
+        rows={2}
+        showNonNuclearChromosomes={true}
+        annotations={annotations}
+        onClickAnnot={(arg: { name: string }) => {
+          const f = geneCategories?.find(f => f.name === arg.name)?.type
+          if (f) {
+            setType(f)
+            setGene(arg.name)
+          }
+        }}
+      />
+    </div>
+  )
+}
+
+export default function () {
+  const [type, setType] = useState('coatcolor')
+  const [gene, setGene] = useState('')
+  const [showBrowser, setShowBrowser] = useState(false)
+
+  const categories = [...new Set<string>(geneCategories.map(f => f.type))]
+  const currentCategory = geneCategories.filter(f => f.type === type)
+  const geneEntry = currentCategory?.find(f => f.name === gene)
   return (
     <div>
       <div>
@@ -169,12 +227,12 @@ export default function () {
             related coding sequences from Zoey, a lovely Great Dane. <br />
             <div id="geneSelector">
               <select
-                value={selector}
-                onChange={event => setSelector(event.target.value)}
+                value={type}
+                onChange={event => setType(event.target.value)}
                 id="categorySelect"
               >
                 <option value="">Select a category</option>
-                {Object.keys(geneCategories).map(category => (
+                {categories.map(category => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -188,27 +246,32 @@ export default function () {
                     f => f.name === event.target.value,
                   )
                   if (ret) {
-                    state.session.view.navToLocString(ret.location, 'canFam5')
-                    state.session.view.showTrack('refGene')
+                    //state.session.view.navToLocString(ret.location, 'canFam5')
+                    //state.session.view.showTrack('refGene')
                   }
                 }}
                 id="geneSelect"
               >
                 <option value="">Select a gene</option>
-                {geneCategories[selector as keyof typeof geneCategories].map(
-                  entry => (
-                    <option key={entry.name} value={entry.name}>
-                      {entry.name}
-                    </option>
-                  ),
-                )}
+                {currentCategory.map(entry => (
+                  <option key={entry.name} value={entry.name}>
+                    {entry.name}
+                  </option>
+                ))}
               </select>
-              <div
-                style={{ margin: 20 }}
-                dangerouslySetInnerHTML={{
-                  __html: replaceLink(geneEntry?.summary || ''),
-                }}
-              ></div>
+              {geneEntry ? (
+                <div>
+                  <div
+                    style={{ margin: 20 }}
+                    dangerouslySetInnerHTML={{
+                      __html: replaceLink(geneEntry?.summary || ''),
+                    }}
+                  ></div>
+                  <button onClick={() => setShowBrowser(!showBrowser)}>
+                    {showBrowser ? 'Hide' : 'Show'} genome browser
+                  </button>
+                </div>
+              ) : null}
             </div>
             <div id="buttonarea" /> <div id="summary" />
           </main>
@@ -216,8 +279,11 @@ export default function () {
         </div>
       </div>
       <div style={{ margin: 50 }}>
-        <JBrowseLinearGenomeView viewState={state} />
+        <Ideogram setGene={setGene} setType={setType} />
       </div>
+      {showBrowser && geneEntry ? (
+        <JBrowse location={geneEntry.location} />
+      ) : null}
     </div>
   )
 }
