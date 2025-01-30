@@ -3,9 +3,6 @@ export default function () {
     <div className="content">
       <div className="post-title ">
         <h1>7Sisters Great Dane Litters</h1>
-        <a className="btn zoombtn" href="http://mayfieldjones.com/7Sisters/">
-          <i className="fa fa-chevron-left" />
-        </a>
       </div>
       <main className="content-wrapper">
         {/* Hero Section */}
@@ -22,7 +19,7 @@ export default function () {
         {/* Club Memberships Section */}
         <section className="memberships-section">
           <p className="membership-text">
-            We are members of the Illini Great Dane Club and the
+            We are members of the Illini Great Dane Club and the{' '}
             <a
               href="https://gdca.org/"
               target="_blank"

@@ -1,10 +1,8 @@
-import Header from '@/components/header'
-import Footer from '@/components/footer'
 import './index.css'
 
 export const metadata = {
-  title: 'Misc scribblings',
-  description: 'A blog',
+  title: '7Sisters Farm',
+  description: '',
 }
 
 export default function RootLayout({
