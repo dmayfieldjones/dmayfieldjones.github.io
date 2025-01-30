@@ -77,9 +77,37 @@ export default function () {
               locationType: 'UriLocation',
             },
           },
+          refNameAliases: {
+            adapter: {
+              type: 'NcbiSequenceReportAliasAdapter',
+              location: {
+                uri: 'https://jbrowse.org/genomes/camFam5/sequence_report.tsv',
+                locationType: 'UriLocation',
+              },
+            },
+          },
         },
       },
       tracks: [
+        {
+          type: 'FeatureTrack',
+          trackId: 'ncbiRefSeq',
+          name: 'ncbiRefSeq',
+          adapter: {
+            type: 'Gff3TabixAdapter',
+            gffGzLocation: {
+              uri: 'https://jbrowse.org/genomes/camFam5/genomic.sorted.gff.gz',
+              locationType: 'UriLocation',
+            },
+            index: {
+              location: {
+                uri: 'https://jbrowse.org/genomes/camFam5/genomic.sorted.gff.gz.tbi',
+                locationType: 'UriLocation',
+              },
+            },
+          },
+          assemblyNames: ['canFam5'],
+        },
         {
           type: 'FeatureTrack',
           trackId: 'refGene',
