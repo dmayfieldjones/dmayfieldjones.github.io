@@ -30,6 +30,7 @@ export default function () {
           className={`accordion ${activeIndex === 0 ? 'active' : ''}`}
           onClick={() => toggleAccordion(0)}
         >
+          {/* @ts-expect-error */}
           <font color="#bf141c">When can we take our puppy home?</font>
         </button>
         <div className={`panel ${activeIndex === 0 ? 'panel-open' : ''}`}>
@@ -48,6 +49,7 @@ export default function () {
           className={`accordion ${activeIndex === 1 ? 'active' : ''}`}
           onClick={() => toggleAccordion(1)}
         >
+          {/* @ts-expect-error */}
           <font color="#bf141c">What value does our purchase include?</font>
         </button>
         <div className={`panel ${activeIndex === 1 ? 'panel-open' : ''}`}>
@@ -71,6 +73,7 @@ export default function () {
           className={`accordion ${activeIndex === 2 ? 'active' : ''}`}
           onClick={() => toggleAccordion(2)}
         >
+          {/* @ts-expect-error */}
           <font color="#bf141c">Why are your contracts customized?</font>
         </button>
         <div className={`panel ${activeIndex === 2 ? 'panel-open' : ''}`}>
@@ -85,6 +88,7 @@ export default function () {
           className={`accordion ${activeIndex === 3 ? 'active' : ''}`}
           onClick={() => toggleAccordion(3)}
         >
+          {/* @ts-expect-error */}
           <font color="#bf141c">What feed and how much?</font>
         </button>
         <div className={`panel ${activeIndex === 3 ? 'panel-open' : ''}`}>
@@ -108,6 +112,7 @@ export default function () {
           className={`accordion ${activeIndex === 4 ? 'active' : ''}`}
           onClick={() => toggleAccordion(4)}
         >
+          {/* @ts-expect-error */}
           <font color="#bf141c">Why and how do you crop?</font>
         </button>
         <div className={`panel ${activeIndex === 4 ? 'panel-open' : ''}`}>
@@ -148,6 +153,7 @@ export default function () {
           className={`accordion ${activeIndex === 5 ? 'active' : ''}`}
           onClick={() => toggleAccordion(5)}
         >
+          {/* @ts-expect-error */}
           <font color="#bf141c">Do you breed Euro-lines of Great Danes?</font>
         </button>
         <div className={`panel ${activeIndex === 5 ? 'panel-open' : ''}`}>

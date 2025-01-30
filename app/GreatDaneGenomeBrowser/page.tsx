@@ -182,6 +182,7 @@ function Ideogram({
   return (
     <div id="eukaryotes-example" className="App">
       <ReactIdeogram
+        // @ts-expect-error
         organism="canis-lupus-familiaris"
         rotatable={false}
         chrWidth={10}
@@ -230,6 +231,7 @@ export default function () {
               />
             </section>
             <p />
+            {/* @ts-expect-error */}
             <font color="#bf141c">7</font>Sisters Great Dane Genome Browser
             (CanFam5, UMICHZoey3.1)
             <br /> Thank you Colin Diesh for help with JBrowse2.
