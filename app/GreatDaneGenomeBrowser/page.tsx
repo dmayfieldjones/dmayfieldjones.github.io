@@ -17,11 +17,22 @@ function replaceLink(str: string) {
     },
   )
 }
+const set1 = [
+  '#377eb8',
+  '#e41a1c',
+  '#4daf4a',
+  '#984ea3',
+  '#ff7f00',
+  '#ffff33',
+  '#a65628',
+  '#f781bf',
+  '#999999',
+]
 
 const colorMap = {
-  coatcolor: 'green',
-  hypersocial: 'red',
-  health: 'blue',
+  coatcolor: set1[0],
+  hypersocial: set1[1],
+  health: set1[2],
 }
 
 function JBrowse({ location }: { location: string }) {
@@ -82,13 +93,13 @@ function JBrowse({ location }: { location: string }) {
               locationType: 'UriLocation',
             },
           },
-          refNameAliases: {
-            adapter: {
-              type: 'NcbiSequenceReportAliasAdapter',
-              location: {
-                uri: 'https://jbrowse.org/genomes/camFam5/sequence_report.tsv',
-                locationType: 'UriLocation',
-              },
+        },
+        refNameAliases: {
+          adapter: {
+            type: 'NcbiSequenceReportAliasAdapter',
+            location: {
+              uri: 'https://jbrowse.org/genomes/canFam5/sequence_report.tsv',
+              locationType: 'UriLocation',
             },
           },
         },
@@ -278,8 +289,22 @@ export default function () {
           {/*-<br> <br> <FONT COLOR="#bf141c">Great Dane Genome Browser (CanFam5, UMICHZoey3.1)</FONT><br> <br> Time x generation time, inbreeding via CoI and ACI, Color crosses and popularity, litter size, popular sire. Compare to another breed database like soft-coated wheaten terrier. <br>JBrowse genome browswer for color genes, published. and others. -*/}
         </div>
       </div>
-      <div style={{ margin: 50 }}>
+      <div>
         <Ideogram setGene={setGene} setType={setType} />
+        {Object.entries(colorMap).map(([key, val]) => (
+          <ul>
+            <li>
+              {key}
+              <div
+                style={{
+                  width: 10,
+                  height: 10,
+                  backgroundColor: val,
+                }}
+              />
+            </li>
+          </ul>
+        ))}
       </div>
       {showBrowser && geneEntry ? (
         <JBrowse location={geneEntry.location} />
