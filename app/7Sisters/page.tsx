@@ -1,3 +1,5 @@
+import './index.css'
+
 export default function () {
   return (
     <div className="content">
@@ -104,59 +106,19 @@ export default function () {
         </section>
         {/* Social Media Section */}
         <section className="social-media-section">
-          <hr className="hr-line" />
-          <h2 className="section-title">
-            <span className="accent-color">7</span>Sisters Social Media
-          </h2>
-          <hr className="hr-line" />
-          <h3 className="title" style={{ fontSize: 30 }}>
-            <a
-              className="social-btn"
-              href="mailto:dustin@mayfieldjones.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa fa-fw fa-envelope-square" />
-            </a>
-            <a
-              className="social-btn"
-              href="http://github.com/dmayfieldjones"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa fa-fw fa-github" />
-            </a>
-          </h3>
-          <div className="tiktok-embed-wrapper">
-            <blockquote
-              className="tiktok-embed"
-              cite="https://www.tiktok.com/@7sistersgreatdanes"
-              data-unique-id="7sistersgreatdanes"
-              data-embed-type="creator"
-              id="v45141625986466080"
-            >
-              <iframe
-                style={{
-                  width: '100%',
-                  height: 458,
-                  display: 'block',
-                  visibility: 'unset',
-                  maxHeight: 458,
-                }}
-                name="__tt_embed__v45141625986466080"
-                sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation allow-same-origin"
-                src="https://www.tiktok.com/embed/@7sistersgreatdanes?lang=en-US&referrer=http%3A%2F%2Fmayfieldjones.com%2F7Sisters%2F"
-              />
-            </blockquote>
+          <div className="text-center">
+            <p>
+              <span className="text-red-600">7</span>Sisters Social Media
+            </p>
+            <iframe
+              src="https://www.tiktok.com/embed/@7sistersgreatdanes"
+              className="w-full max-w-md mx-auto"
+              height="458"
+              title="7 Sisters Great Danes TikTok"
+            />
           </div>
         </section>
       </main>
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            ' :root { --accent-color: #bf141c; --text-color: #000000; --background-color: #ffffff; --spacing-unit: 1rem; } .content-wrapper { max-width: 1200px; margin: 0 auto; padding: var(--spacing-unit); font-family: Arial, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--background-color); } .hero-section { text-align: center; margin-bottom: calc(var(--spacing-unit) * 2); } .hero-logo { max-width: 100%; height: auto; } .page-navigation { display: flex; flex-wrap: wrap; gap: var(--spacing-unit); justify-content: center; margin-bottom: calc(var(--spacing-unit) * 2); } .btn.zoombtn { padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; transition: transform 0.3s ease; } .btn.zoombtn:hover { transform: scale(1.05); } .featured-image { margin-bottom: calc(var(--spacing-unit) * 2); } .full-width-image { width: 100%; height: auto; border-radius: 8px; } .section-title { font-size: 1.5rem; margin-bottom: var(--spacing-unit); } .accent-color { color: var(--accent-color); } .emphasis { font-size: 1.2rem; font-weight: 500; margin-bottom: calc(var(--spacing-unit) * 2); } .family-section, .history-section { margin-bottom: calc(var(--spacing-unit) * 3); } .social-media-section { margin-top: calc(var(--spacing-unit) * 3); } .hr-line { border: 0; height: 1px; background: rgba(0, 0, 0, 0.1); margin: calc(var(--spacing-unit) * 2) 0; } @media (max-width: 768px) { .page-navigation { flex-direction: column; align-items: stretch; } .btn.zoombtn { text-align: center; } } ',
-        }}
-      />
     </div>
   )
 }

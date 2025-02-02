@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@giscus/react": "^3.0.0",
-    "@jbrowse/react-linear-genome-view": "^2.18.0",
+    "@jbrowse/react-linear-genome-view": "^3.0.1",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "ideogram": "^1.50.0",
