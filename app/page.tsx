@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLink, Mail, Github } from 'lucide-react'
+import { Mail, Github } from 'lucide-react'
 
 const MayfieldJonesProfile = () => {
   return (
