@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1615],{81615:(e,t,a)=>{a.r(t),a.d(t,{default:()=>d});var s=a(60998),r=a(50764);class d extends r.default{async configurePre(){let e=this.getConf("htsgetBase"),t=this.getConf("htsgetTrackId"),a=new s.Wg({baseUrl:e,trackId:t}),r=this.getConf("sequenceAdapter");return r&&this.getSubAdapter?{bam:a,sequenceAdapter:(await this.getSubAdapter(r)).dataAdapter}:{bam:a}}}}}]);
-//# sourceMappingURL=1615.1e687816c1e0fa1a.js.map
