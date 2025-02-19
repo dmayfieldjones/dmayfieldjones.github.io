@@ -148,6 +148,24 @@ function JBrowse({ location }: { location: string }) {
             },
           ],
         },
+        {
+          type: 'VariantTrack',
+          trackId: 'dog10k-phase1',
+          name: 'Dog10k phase 1 variants',
+          assemblyNames: ['canFam5'],
+          adapter: {
+            type: 'VcfTabixAdapter',
+            vcfGzLocation: {
+              uri: 'https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB62420/Dog10K_phase1_merged.vcf.gz',
+            },
+            index: {
+              indexType: 'CSI',
+              location: {
+                uri: 'https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB62420/Dog10K_phase1_merged.vcf.csi',
+              },
+            },
+          },
+        },
       ],
     }),
   )
