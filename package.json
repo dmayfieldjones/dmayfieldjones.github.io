@@ -14,7 +14,7 @@
   "dependencies": {
     "@jbrowse/react-linear-genome-view": "^3.0.1",
     "ideogram": "^1.50.0",
-    "lucide-react": "^0.484.0",
+    "lucide-react": "^0.487.0",
     "next": "^15.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -22,6 +22,7 @@
     "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.9",
     "@types/jest": "^29.5.4",
     "@types/node": "^22.5.0",
     "@types/react": "^19.0.1",
@@ -37,7 +38,7 @@
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.41",
     "prettier": "^3.4.2",
-    "tailwindcss": "^3.4.16",
+    "tailwindcss": "^4.0.9",
     "typescript-eslint": "^8.2.0"
   }
 }
