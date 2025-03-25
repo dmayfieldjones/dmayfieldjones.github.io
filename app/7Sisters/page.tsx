@@ -18,21 +18,7 @@ export default function () {
             loading="lazy"
           />
         </section>
-        {/* Navigation Buttons */}
-        <nav className="page-navigation" aria-label="Page navigation">
-          <a className="btn zoombtn" href="/BreedingPhilosophy">
-            Breeding Philosophy
-          </a>
-          <a className="btn zoombtn" href="/Litters">
-            Litters
-          </a>
-          <a className="btn zoombtn" href="/Resources">
-            Resources
-          </a>
-          <a className="btn zoombtn" href="/CommonQuestions">
-            Common Questions
-          </a>
-        </nav>
+        
         {/* Featured Image */}
         <section className="featured-image">
           <img
