@@ -11,10 +11,7 @@ export default function () {
   return (
     <div className="content">
       <div className="post-title ">
-        <h1>
-          Research Resources at <span style={{ color: '#bf141c' }}>7</span>
-          Sisters Farm
-        </h1>
+        <h1>Research Resources</h1>
       </div>
       <main className="content-wrapper">
         {/* Hero Section */}
@@ -31,8 +28,7 @@ export default function () {
         {/* Genome Browser Section */}
         <section className="resource-section" aria-labelledby="genome-title">
           <h2 id="genome-title" className="section-title">
-            <span className="accent-color">7</span>Sisters Great Dane Genome
-            Browser
+            Canine Genome Browser
           </h2>
           <div className="resource-content">
             <p className="resource-description">

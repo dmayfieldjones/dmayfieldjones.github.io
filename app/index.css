@@ -67,10 +67,10 @@ hr.hr-line {
 .wrapper {
   width: 75%;
   max-width: 850px;
-  margin: 4rem auto;
+  margin: 0 auto;
   background: #fff;
   color: #383838;
-  padding: 2em;
+  padding: 0.5em;
   border-radius: 3px;
   box-shadow: 0 0 10px 0 rgba(40, 40, 40, 0.3);
   -webkit-transition: 0.5s;
@@ -78,4 +78,10 @@ hr.hr-line {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
 }
