@@ -41,18 +41,7 @@ function JBrowse({ location }: { location: string }) {
         {
           type: 'TrixTextSearchAdapter',
           textSearchAdapterId: 'canFam5-index',
-          ixFilePath: {
-            uri: 'https://jbrowse.org/genomes/canFam5/trix/aggregate.ix',
-            locationType: 'UriLocation',
-          },
-          ixxFilePath: {
-            uri: 'https://jbrowse.org/genomes/canFam5/trix/aggregate.ixx',
-            locationType: 'UriLocation',
-          },
-          metaFilePath: {
-            uri: 'https://jbrowse.org/genomes/canFam5/trix/aggregate_meta.json',
-            locationType: 'UriLocation',
-          },
+          uri: 'https://jbrowse.org/genomes/canFam5/trix/aggregate.ix',
           assemblyNames: ['canFam5'],
         },
       ],
@@ -82,24 +71,15 @@ function JBrowse({ location }: { location: string }) {
           trackId: 'canFam5-ReferenceSequenceTrack',
           adapter: {
             type: 'TwoBitAdapter',
-
-            chromSizesLocation: {
-              uri: 'https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.chrom.sizes',
-              locationType: 'UriLocation',
-            },
-            twoBitLocation: {
-              uri: 'https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit',
-              locationType: 'UriLocation',
-            },
+            chromSizes:
+              'https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.chrom.sizes',
+            uri: 'https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit',
           },
         },
         refNameAliases: {
           adapter: {
             type: 'NcbiSequenceReportAliasAdapter',
-            location: {
-              uri: 'https://jbrowse.org/genomes/canFam5/sequence_report.tsv',
-              locationType: 'UriLocation',
-            },
+            uri: 'https://jbrowse.org/genomes/canFam5/sequence_report.tsv',
           },
         },
       },
@@ -110,16 +90,7 @@ function JBrowse({ location }: { location: string }) {
           name: 'ncbiRefSeq',
           adapter: {
             type: 'Gff3TabixAdapter',
-            gffGzLocation: {
-              uri: 'https://jbrowse.org/genomes/camFam5/genomic.sorted.gff.gz',
-              locationType: 'UriLocation',
-            },
-            index: {
-              location: {
-                uri: 'https://jbrowse.org/genomes/camFam5/genomic.sorted.gff.gz.tbi',
-                locationType: 'UriLocation',
-              },
-            },
+            uri: 'https://jbrowse.org/genomes/camFam5/genomic.sorted.gff.gz',
           },
           assemblyNames: ['canFam5'],
         },
@@ -129,10 +100,7 @@ function JBrowse({ location }: { location: string }) {
           name: 'refGene',
           adapter: {
             type: 'Gff3Adapter',
-            gffLocation: {
-              uri: 'https://jbrowse.org/genomes/canFam5/refGene.gff',
-              locationType: 'UriLocation',
-            },
+            uri: 'https://jbrowse.org/genomes/canFam5/refGene.gff',
           },
           assemblyNames: ['canFam5'],
           displays: [
@@ -160,24 +128,29 @@ function JBrowse({ location }: { location: string }) {
 }
 
 function Ideogram({
+  type,
   setType,
   setGene,
 }: {
+  type: string
   setType: (arg: string) => void
   setGene: (arg: string) => void
 }) {
-  const annotations = geneCategories.map(r => {
-    const { type, location, name } = r
-    const [chr, rest] = location.split(':')
-    const [start, stop] = rest.split('-')
-    return {
-      name,
-      chr: chr.replace('chr', ''),
-      start: +start.replaceAll(',', ''),
-      color: colorMap[type],
-      stop: +stop.replaceAll(',', ''),
-    }
-  })
+  const annotations = geneCategories
+    .filter(f => f.type === type)
+    .map(r => {
+      const { type, location, name } = r
+      const [chr, rest] = location.split(':')
+      const [start, stop] = rest.split('-')
+      return {
+        name,
+        type,
+        chr: chr.replace('chr', ''),
+        start: +start.replaceAll(',', ''),
+        color: colorMap[type],
+        stop: +stop.replaceAll(',', ''),
+      }
+    })
   return (
     <div id="eukaryotes-example" className="App">
       <ReactIdeogram
@@ -202,7 +175,7 @@ function Ideogram({
 }
 
 export default function () {
-  const [type, setType] = useState('coatcolor')
+  const [type, setType] = useState('')
   const [gene, setGene] = useState('')
   const [showBrowser, setShowBrowser] = useState(false)
 
@@ -230,9 +203,8 @@ export default function () {
               />
             </section>
             <p />
-            {/* @ts-expect-error */}
-            <font color="#bf141c">7</font>Sisters Great Dane Genome Browser
-            (CanFam5, UMICHZoey3.1)
+            <span className="accent-color">7</span>Sisters Great Dane Genome
+            Browser (CanFam5, UMICHZoey3.1)
             <br /> Thank you Colin Diesh for help with JBrowse2.
             <br /> <br /> Select a category of genes, then an individual
             gene/locus to learn more about it, further reading, or download
@@ -264,7 +236,9 @@ export default function () {
                 }}
                 id="geneSelect"
               >
-                <option value="">Select a gene</option>
+                <option value="">
+                  Select a gene {type ? `(${type} related)` : ''}
+                </option>
                 {currentCategory.map(entry => (
                   <option key={entry.name} value={entry.name}>
                     {entry.name}
@@ -290,11 +264,10 @@ export default function () {
             </div>
             <div id="buttonarea" /> <div id="summary" />
           </main>
-          {/*-<br> <br> <FONT COLOR="#bf141c">Great Dane Genome Browser (CanFam5, UMICHZoey3.1)</FONT><br> <br> Time x generation time, inbreeding via CoI and ACI, Color crosses and popularity, litter size, popular sire. Compare to another breed database like soft-coated wheaten terrier. <br>JBrowse genome browser for color genes, published. and others. -*/}
         </div>
       </div>
       <div>
-        <Ideogram setGene={setGene} setType={setType} />
+        <Ideogram type={type} setGene={setGene} setType={setType} />
         {Object.entries(colorMap).map(([key, val]) => (
           <ul>
             <li>

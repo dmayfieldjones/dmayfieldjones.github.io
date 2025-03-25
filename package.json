@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "format": "prettier --write .",
     "dev": "next --turbo",
     "build": "next build",
     "start": "next dev",
@@ -13,7 +14,7 @@
   "dependencies": {
     "@jbrowse/react-linear-genome-view": "^3.0.1",
     "ideogram": "^1.50.0",
-    "lucide-react": "^0.474.0",
+    "lucide-react": "^0.484.0",
     "next": "^15.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -32,7 +33,7 @@
     "eslint-plugin-react": "^7.35.2",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.10",
-    "eslint-plugin-unicorn": "^56.0.0",
+    "eslint-plugin-unicorn": "^58.0.0",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.41",
     "prettier": "^3.4.2",
