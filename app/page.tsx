@@ -10,8 +10,7 @@ const MayfieldJonesProfile = () => {
             <img
               src="/img/logo.png"
               alt="Mayfield Jones Logo"
-              className="max-w-xs rounded-full animate-spin-slow"
-              width={300}
+              width={200}
               height="auto"
               loading="lazy"
             />

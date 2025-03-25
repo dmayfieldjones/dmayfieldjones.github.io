@@ -2,7 +2,9 @@ export default function () {
   return (
     <div className="content">
       <div className="post-title ">
-        <h1>7Sisters Great Dane Litters</h1>
+        <h1>
+          <span style={{ color: '#bf141c' }}>7</span>Sisters Great Dane Litters
+        </h1>
       </div>
       <main className="content-wrapper">
         {/* Hero Section */}

@@ -4,7 +4,9 @@ export default function Contents() {
   return (
     <div className="content">
       <div className="post-title ">
-        <h1>The Story of 7Sisters Farm</h1>
+        <h1>
+          The Story of <span style={{ color: '#bf141c' }}>7</span>Sisters Farm
+        </h1>
       </div>
       <main className="content-wrapper">
         {/* Hero Section */}
@@ -20,7 +22,7 @@ export default function Contents() {
             farm had stayed in the same family for more than 100 years until it
             was acquired in 2007 and further restored by Cathe Capel of Seven
             Sisters. Dustin and Karen were welcomed into the home in 2023, and
-            the name of the farm was modified to {' '}
+            the name of the farm was modified to{' '}
             <span className="accent-color">7</span>Sisters to reflect the new
             stewards of the property.
           </p>

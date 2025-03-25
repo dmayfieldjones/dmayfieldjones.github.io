@@ -11,7 +11,10 @@ export default function () {
   return (
     <div className="content">
       <div className="post-title ">
-        <h1>Common Questions About 7Sisters Great Danes</h1>
+        <h1>
+          Common Questions About <span style={{ color: '#bf141c' }}>7</span>
+          Sisters Great Danes
+        </h1>
       </div>
       <title>Common Questions</title>
       <section className="hero-section">
