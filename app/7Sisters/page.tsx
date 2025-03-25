@@ -73,7 +73,7 @@ export default function () {
           <p>
             Early scientists focused more on artificial selection of livestock
             and crops, but it was in fact our beloved dog companions that were
-            domesticated millenia before any other known species. Unlike these
+            domesticated millennia before any other known species. Unlike these
             others, dogs reside in our homes and live up to the name
             domesticate, coming from the Latin domicile, meaning home. Also,
             unlike other domesticates, dogs chose us. The bond between dogs and
