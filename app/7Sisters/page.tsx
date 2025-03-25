@@ -18,7 +18,7 @@ export default function () {
             loading="lazy"
           />
         </section>
-        
+
         {/* Featured Image */}
         <section className="featured-image">
           <img
