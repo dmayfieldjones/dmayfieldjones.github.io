@@ -1,28 +1,59 @@
+'use client'
+
 import './index.css'
 import './navbar.css'
-
-export const metadata = {
-  title: '7Sisters Farm',
-  description: '',
-}
+import { useState } from 'react'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <html lang="en">
       <body>
         <nav className="navbar">
-          <ul className="navbar-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/BreedingPhilosophy">Breeding Philosophy</a></li>
-            <li><a href="/Litters">Litters</a></li>
-            <li><a href="/Resources">Resources</a></li>
-            <li><a href="/CommonQuestions">Common Questions</a></li>
+          <div className="navbar-container">
+            <div className="hamburger-icon" onClick={toggleMenu}>
+              <div
+                className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}
+              ></div>
+              <div
+                className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}
+              ></div>
+              <div
+                className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}
+              ></div>
+            </div>
+          </div>
+          <ul className={`navbar-menu ${isMenuOpen ? 'show' : ''}`}>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/BreedingPhilosophy">Breeding Philosophy</a>
+            </li>
+            <li>
+              <a href="/Litters">Litters</a>
+            </li>
+            <li>
+              <a href="/Resources">Resources</a>
+            </li>
+            <li>
+              <a href="/CommonQuestions">Common Questions</a>
+            </li>
           </ul>
         </nav>
         <div className="wrapper">{children}</div>
