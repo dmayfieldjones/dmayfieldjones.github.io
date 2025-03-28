@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6591],{96591:(e,n,t)=>{t.d(n,{renderSvg:()=>l});var a=t(95155),r=t(15715),s=t(29543),i=t(67166);async function l(e,n,t){await (0,s.when)(()=>!!e.stats&&!!e.regionCannotBeRenderedText);let{graphType:l,stats:c}=e,{offsetPx:d}=(0,r.getContainingView)(e);return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)("g",{children:await t(n)}),l&&c?(0,a.jsx)("g",{transform:`translate(${Math.max(-d,0)})`,children:(0,a.jsx)(i.A,{model:e,orientation:"left"})}):null]})}}}]);
-//# sourceMappingURL=6591.3098af5b980f4f41.js.map
