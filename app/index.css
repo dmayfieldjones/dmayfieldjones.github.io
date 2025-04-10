@@ -80,6 +80,17 @@ hr.hr-line {
   transition: 0.5s;
 }
 
+.resource-image {
+  
+  width: 300px; /* Force a consistent width */
+  height: 200px; /* Force a consistent height */
+  object-fit: cover; /* Ensures the image is cropped to fit the dimensions */
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Optional: Add rounded corners for consistency */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
 @media (max-width: 768px) {
   .wrapper {
     width: 95%;
