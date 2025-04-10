@@ -1,5 +1,12 @@
 import React from 'react'
 import { Mail, Github } from 'lucide-react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '7Sisters - Home',
+  description:
+    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+}
 
 const MayfieldJonesProfile = () => {
   return (

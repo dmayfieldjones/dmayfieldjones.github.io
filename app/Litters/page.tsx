@@ -1,3 +1,11 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '7Sisters - Litters',
+  description:
+    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+}
+
 export default function () {
   return (
     <div className="content">

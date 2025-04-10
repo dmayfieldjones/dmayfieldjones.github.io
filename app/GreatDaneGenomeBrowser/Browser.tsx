@@ -1,21 +1,9 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import geneCategories from './categories'
 import ReactIdeogram from './Ideogram'
-import {
-  createViewState,
-  JBrowseLinearGenomeView,
-} from '@jbrowse/react-linear-genome-view'
+import { replaceLink } from './util'
 
-function replaceLink(str: string) {
-  return str.replace(
-    /\(([^,]+),\s*(\d{4})\)(?:.*?)?(https?:\/\/[^\s]+)/g,
-
-    function (match, author, year, url) {
-      return `<a href="${url}" target="_blank">(${author}, ${year})</a>`
-    },
-  )
-}
 const set1 = [
   '#377eb8',
   '#e41a1c',
@@ -32,99 +20,6 @@ const colorMap = {
   coatcolor: set1[0],
   hypersocial: set1[1],
   health: set1[2],
-}
-
-function JBrowse({ location }: { location: string }) {
-  const [state] = useState(() =>
-    createViewState({
-      aggregateTextSearchAdapters: [
-        {
-          type: 'TrixTextSearchAdapter',
-          textSearchAdapterId: 'canFam5-index',
-          uri: 'https://jbrowse.org/genomes/canFam5/trix/aggregate.ix',
-          assemblyNames: ['canFam5'],
-        },
-      ],
-      configuration: {
-        theme: {
-          palette: {
-            primary: {
-              main: '#bf141c',
-            },
-            secondary: {
-              main: '#000',
-            },
-            tertiary: {
-              main: '#bf141c2',
-            },
-            quaternary: {
-              main: '#bf141c2',
-            },
-          },
-        },
-      },
-
-      assembly: {
-        name: 'canFam5',
-        sequence: {
-          type: 'ReferenceSequenceTrack',
-          trackId: 'canFam5-ReferenceSequenceTrack',
-          adapter: {
-            type: 'TwoBitAdapter',
-            chromSizes:
-              'https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.chrom.sizes',
-            uri: 'https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit',
-          },
-        },
-        refNameAliases: {
-          adapter: {
-            type: 'NcbiSequenceReportAliasAdapter',
-            uri: 'https://jbrowse.org/genomes/canFam5/sequence_report.tsv',
-          },
-        },
-      },
-      tracks: [
-        {
-          type: 'FeatureTrack',
-          trackId: 'ncbiRefSeq',
-          name: 'ncbiRefSeq',
-          adapter: {
-            type: 'Gff3TabixAdapter',
-            uri: 'https://jbrowse.org/genomes/camFam5/genomic.sorted.gff.gz',
-          },
-          assemblyNames: ['canFam5'],
-        },
-        {
-          type: 'FeatureTrack',
-          trackId: 'refGene',
-          name: 'refGene',
-          adapter: {
-            type: 'Gff3Adapter',
-            uri: 'https://jbrowse.org/genomes/canFam5/refGene.gff',
-          },
-          assemblyNames: ['canFam5'],
-          displays: [
-            {
-              type: 'LinearBasicDisplay',
-              displayId: 'refGene',
-              renderer: {
-                type: 'SvgFeatureRenderer',
-                labels: {
-                  name: "jexl:get(feature,'gene_name')",
-                },
-              },
-            },
-          ],
-        },
-      ],
-    }),
-  )
-
-  useEffect(() => {
-    state.session.view.navToLocString(location, 'canFam5')
-    state.session.view.showTrack('refGene')
-  }, [location])
-  return <JBrowseLinearGenomeView viewState={state} />
 }
 
 function Ideogram({
@@ -205,7 +100,6 @@ export default function () {
             <p />
             <span className="accent-color">7</span>Sisters Great Dane Genome
             Browser (CanFam5, UMICHZoey3.1)
-            <br /> Thank you Colin Diesh for help with JBrowse2.
             <br /> <br /> Select a category of genes, then an individual
             gene/locus to learn more about it, further reading, or download
             related coding sequences from Zoey, a lovely Great Dane. <br />
@@ -226,13 +120,6 @@ export default function () {
                 value={gene}
                 onChange={event => {
                   setGene(event.target.value)
-                  const ret = currentCategory.find(
-                    f => f.name === event.target.value,
-                  )
-                  if (ret) {
-                    //state.session.view.navToLocString(ret.location, 'canFam5')
-                    //state.session.view.showTrack('refGene')
-                  }
                 }}
                 id="geneSelect"
               >
@@ -253,12 +140,24 @@ export default function () {
                       __html: replaceLink(geneEntry?.summary || ''),
                     }}
                   ></div>
-                  <button onClick={() => setShowBrowser(!showBrowser)}>
-                    {showBrowser ? 'Hide' : 'Show'} genome browser
-                  </button>
-                  {showBrowser && geneEntry ? (
-                    <JBrowse location={geneEntry.location} />
-                  ) : null}
+                  <ul>
+                    <li>
+                      <a
+                        href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam5/config.json&assembly=canFam5&loc=${geneEntry.location}&tracks=refGene`}
+                        target="_blank"
+                      >
+                        Link to JBrowse (canFam5/Great Dane)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.canFam4}&tracks=refGene`}
+                        target="_blank"
+                      >
+                        Link to JBrowse (canFam4/German Shepherd)
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               ) : null}
             </div>
@@ -271,18 +170,20 @@ export default function () {
         {Object.entries(colorMap).map(([key, val]) => (
           <ul>
             <li>
-              {key}
               <div
                 style={{
+                  display: 'inline-block',
                   width: 10,
                   height: 10,
                   backgroundColor: val,
                 }}
-              />
+              />{' '}
+              {key}
             </li>
           </ul>
         ))}
       </div>
+      <div>Thank you Colin Diesh for help with JBrowse2.</div>
     </div>
   )
 }
