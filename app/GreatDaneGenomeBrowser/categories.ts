@@ -9,6 +9,7 @@ export default [
   {
     name: 'E Locus Melanocortin 1 receptor (MC1R)',
     location: 'chr5:63,942,798-63,943,751',
+    canFam4: 'chr5:64186690..64187643',
     type: 'coatcolor',
     summary:
       'The Melanocortin 1 receptor (MC1R) gene is a key determinant of pigmentation in dogs. It controls the production of eumelanin (black/brown pigment) versus pheomelanin (red/yellow pigment) in melanocytes. Variations in the MC1R gene are responsible for different coat colors in dogs, including red, yellow, and cream. Mutations in this gene can lead to a loss of function, resulting in the production of only red/yellow pigment, as seen in Irish Setters and yellow Labrador Retrievers. The interaction between MC1R and other coat color genes, such as ASIP, contributes to the wide variety of coat colors and patterns observed in different dog breeds.',

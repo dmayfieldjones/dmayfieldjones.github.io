@@ -1,4 +1,12 @@
-export default function () {
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '7Sisters - Breeding Philosophy',
+  description:
+    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+}
+
+export default function BreedingPhilosophy() {
   return (
     <div className="content">
       <div className="post-title ">
