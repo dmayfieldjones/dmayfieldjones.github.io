@@ -74,8 +74,7 @@ export default function () {
         {/* C-BARQ Section */}
         <section className="resource-section" aria-labelledby="cbarq-title">
           <h2 id="cbarq-title" className="section-title">
-            <span className="accent-color">7</span>Sisters Great Dane Canine
-            Behavioral Assessment and Research Questionnaire
+            Canine Behavioral Assessment and Research Questionnaire
           </h2>
           <div className="resource-content">
             <p className="resource-description">
