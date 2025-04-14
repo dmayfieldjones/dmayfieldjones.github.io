@@ -72,7 +72,6 @@ function Ideogram({
 export default function () {
   const [type, setType] = useState('')
   const [gene, setGene] = useState('')
-  const [showBrowser, setShowBrowser] = useState(false)
 
   const categories = [...new Set<string>(geneCategories.map(f => f.type))]
   const currentCategory = geneCategories.filter(f => f.type === type)
@@ -81,9 +80,6 @@ export default function () {
     <div>
       <div>
         <div className="content">
-          <div className="post-title ">
-            <h1>Great Dane Genome Browser</h1>
-          </div>
           <main className="content-wrapper">
             {/* Hero Section */}
             <section className="hero-section">
@@ -98,11 +94,13 @@ export default function () {
               />
             </section>
             <p />
-            <span className="accent-color">7</span>Sisters Great Dane Genome
-            Browser (CanFam5, UMICHZoey3.1)
-            <br /> <br /> Select a category of genes, then an individual
-            gene/locus to learn more about it, further reading, or download
-            related coding sequences from Zoey, a lovely Great Dane. <br />
+            <span className="accent-color">7</span>Sisters Genome Browser
+            (CanFam4)
+            <br />
+            <br />
+            Select a category of genes, then an individual gene/locus to learn
+            more about it
+            <br />
             <div id="geneSelector">
               <select
                 value={type}
@@ -143,18 +141,10 @@ export default function () {
                   <ul>
                     <li>
                       <a
-                        href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam5/config.json&assembly=canFam5&loc=${geneEntry.location}&tracks=refGene`}
+                        href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.geneName}&tracks=refGene`}
                         target="_blank"
                       >
-                        Link to JBrowse (canFam5/Great Dane)
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.canFam4}&tracks=refGene`}
-                        target="_blank"
-                      >
-                        Link to JBrowse (canFam4/German Shepherd)
+                        Link to JBrowse (canFam4)
                       </a>
                     </li>
                   </ul>
