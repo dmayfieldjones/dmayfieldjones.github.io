@@ -9,7 +9,7 @@ function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
     <div style={{ margin: 20 }}>
       {geneEntry.name2} - {geneEntry?.summary}{' '}
       {geneEntry.citations?.split(';').map((c: any, idx: number) => (
-        <a key={c} href={geneEntry[`doi${idx + 1}`]}>
+        <a key={c} target="_blank" href={geneEntry[`doi${idx + 1}`]}>
           {c}
         </a>
       ))}
@@ -21,8 +21,14 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
   const [type, setType] = useState('')
   const [gene, setGene] = useState('')
 
-  const categories = [...new Set<string>(geneCategories.map(f => f.type))]
-  const currentCategory = geneCategories.filter(f => f.type === type)
+  const categories = [
+    'all',
+    ...new Set<string>(geneCategories.map(f => f.type)),
+  ]
+  const currentCategory =
+    type === 'all'
+      ? geneCategories
+      : geneCategories.filter(f => f.type === type)
   const geneEntry = currentCategory?.find(f => f.name === gene)
   console.log({ geneEntry })
   return (
@@ -78,7 +84,8 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                     {entry.name}
                   </option>
                 ))}
-              </select>
+              </select>{' '}
+              ({currentCategory.length} genes)
               {geneEntry ? (
                 <div>
                   <DescriptionComponent geneEntry={geneEntry} />
