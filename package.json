@@ -12,6 +12,7 @@
     "postdeploy": "git push --follow-tags"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "ideogram": "^1.50.0",
     "lucide-react": "^0.503.0",
     "next": "^15.0.4",
