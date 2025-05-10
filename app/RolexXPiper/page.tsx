@@ -1,4 +1,10 @@
+import {
+  formatDistance,
+  formatDistanceToNow,
+  formatDistanceToNowStrict,
+} from 'date-fns'
 import { Metadata } from 'next'
+import { timeSincePastDate } from '../util'
 
 export const metadata: Metadata = {
   title: '7Sisters - Rolex X Piper',
@@ -7,6 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default function () {
+  const b = new Date(2023, 6, 9)
   return (
     <div className="content">
       <div className="post-title ">
@@ -37,11 +44,9 @@ export default function () {
                 <span className="value">WS814188</span>
               </div>
               <div className="info-item">
-                <span className="label">
-                  Time Since Whelp (July 9th, 2023):
-                </span>
+                <span className="label">{b.toDateString()}</span>
                 <span className="value" id="timeSinceWhelp">
-                  1 year, 6 months, 15 days
+                  {timeSincePastDate(b)}
                 </span>
               </div>
             </div>
