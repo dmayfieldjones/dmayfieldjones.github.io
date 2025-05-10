@@ -1,19 +1,19 @@
 'use client'
 import { useState } from 'react'
-import { replaceLink } from './util'
 import MyIdeogram from './MyIdeogram'
 import { colorMap } from './colorMap'
 
 function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
-  const links = geneEntry.return(
-    <div
-      style={{ margin: 20 }}
-      dangerouslySetInnerHTML={{
-        __html: replaceLink(
-          `${geneEntry.name2} - ${geneEntry?.summary} ${geneEntry.citations}`,
-        ),
-      }}
-    />,
+  console.log({ geneEntry }, geneEntry.citations)
+  return (
+    <div style={{ margin: 20 }}>
+      {geneEntry.name2} - {geneEntry?.summary}{' '}
+      {geneEntry.citations.split(';').map((c: any, idx: number) => (
+        <a key={c} href={geneEntry[`doi${idx + 1}`]}>
+          {c}
+        </a>
+      ))}
+    </div>
   )
 }
 
@@ -80,6 +80,8 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
               </select>
               {geneEntry ? (
                 <div>
+                  <DescriptionComponent geneEntry={geneEntry} />
+
                   <ul>
                     <li>
                       <a
