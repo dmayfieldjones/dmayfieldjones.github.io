@@ -100,12 +100,12 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
         </div>
       </div>
       <div>
-        <MyIdeogram
-          type={type}
-          setGene={setGene}
-          setType={setType}
-          geneCategories={geneCategories}
-        />
+        {/* <MyIdeogram */}
+        {/*   type={type} */}
+        {/*   setGene={setGene} */}
+        {/*   setType={setType} */}
+        {/*   geneCategories={geneCategories} */}
+        {/* /> */}
         {Object.entries(colorMap).map(([key, val]) => (
           <ul key={key}>
             <li>
