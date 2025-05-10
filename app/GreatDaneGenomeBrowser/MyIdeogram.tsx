@@ -1,15 +1,6 @@
 import { colorMap } from './colorMap'
 import ReactIdeogram from './Ideogram'
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF'
-  var color = '#'
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)]
-  }
-  return color
-}
-
 export default function MyIdeogram({
   type,
   setType,
@@ -24,16 +15,16 @@ export default function MyIdeogram({
   const annotations = geneCategories
     .filter(f => f.type === type)
     .map(r => {
-      const { type, undefined: location, name } = r
+      const { type, location, name } = r
       if (location) {
         const [chr, rest] = location.split(':')
         const [start, stop] = rest.split('-')
         return {
           name,
           type,
+          color: '#984ea3',
           chr: chr.replace('chr', ''),
           start: +start.replaceAll(',', ''),
-          color: '#984ea3',
           stop: +stop.replaceAll(',', ''),
         }
       } else {

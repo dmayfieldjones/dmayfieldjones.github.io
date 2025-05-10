@@ -10,8 +10,24 @@ function makeLoc(arg?: { chr: string; start: number; end: number }) {
 }
 ;(async () => {
   const ret = {} as { chr: string; start: number; end: number }[]
+  console.log(
+    [
+      'type',
+      'name',
+      'name2',
+      'summary',
+      'location',
+      'citations',
+      'doi1',
+      'doi2',
+    ].join('\t'),
+  )
   for await (const line of rl) {
-    const [type, name, name2, summary, location, citations] = line.split('\t')
+    if (line.startsWith('#')) {
+      continue
+    }
+    const [type, name, name2, summary, location, citations, doi1, doi2] =
+      line.split('\t')
 
     console.log(
       [
@@ -19,9 +35,10 @@ function makeLoc(arg?: { chr: string; start: number; end: number }) {
         name,
         name2,
         summary,
-        location,
-        citations,
         makeLoc(geneMap[name2]),
+        citations,
+        doi1,
+        doi2,
       ].join('\t'),
     )
   }
