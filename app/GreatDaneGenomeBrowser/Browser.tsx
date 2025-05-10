@@ -1,75 +1,23 @@
 'use client'
 import { useState } from 'react'
-import geneCategories from './categories'
-import ReactIdeogram from './Ideogram'
 import { replaceLink } from './util'
+import MyIdeogram from './MyIdeogram'
+import { colorMap } from './colorMap'
 
-const set1 = [
-  '#377eb8',
-  '#e41a1c',
-  '#4daf4a',
-  '#984ea3',
-  '#ff7f00',
-  '#ffff33',
-  '#a65628',
-  '#f781bf',
-  '#999999',
-]
-
-const colorMap = {
-  coatcolor: set1[0],
-  hypersocial: set1[1],
-  health: set1[2],
-}
-
-function Ideogram({
-  type,
-  setType,
-  setGene,
-}: {
-  type: string
-  setType: (arg: string) => void
-  setGene: (arg: string) => void
-}) {
-  const annotations = geneCategories
-    .filter(f => f.type === type)
-    .map(r => {
-      const { type, location, name } = r
-      const [chr, rest] = location.split(':')
-      const [start, stop] = rest.split('-')
-      return {
-        name,
-        type,
-        chr: chr.replace('chr', ''),
-        start: +start.replaceAll(',', ''),
-        color: colorMap[type],
-        stop: +stop.replaceAll(',', ''),
-      }
-    })
-  return (
-    <div id="eukaryotes-example" className="App">
-      <ReactIdeogram
-        // @ts-expect-error
-        organism="canis-lupus-familiaris"
-        rotatable={false}
-        chrWidth={10}
-        chrHeight={200}
-        rows={2}
-        showNonNuclearChromosomes={true}
-        annotations={annotations}
-        onClickAnnot={(arg: { name: string }) => {
-          const f = geneCategories?.find(f => f.name === arg.name)?.type
-          if (f) {
-            setType(f)
-            setGene(arg.name)
-          }
-        }}
-      />
-    </div>
+function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
+  const links = geneEntry.return(
+    <div
+      style={{ margin: 20 }}
+      dangerouslySetInnerHTML={{
+        __html: replaceLink(
+          `${geneEntry.name2} - ${geneEntry?.summary} ${geneEntry.citations}`,
+        ),
+      }}
+    />,
   )
 }
 
-export default function () {
+export default function Browser({ geneCategories }: { geneCategories: any[] }) {
   const [type, setType] = useState('')
   const [gene, setGene] = useState('')
 
@@ -116,10 +64,10 @@ export default function () {
               </select>
               <select
                 value={gene}
+                id="geneSelect"
                 onChange={event => {
                   setGene(event.target.value)
                 }}
-                id="geneSelect"
               >
                 <option value="">
                   Select a gene {type ? `(${type} related)` : ''}
@@ -132,12 +80,6 @@ export default function () {
               </select>
               {geneEntry ? (
                 <div>
-                  <div
-                    style={{ margin: 20 }}
-                    dangerouslySetInnerHTML={{
-                      __html: replaceLink(geneEntry?.summary || ''),
-                    }}
-                  ></div>
                   <ul>
                     <li>
                       <a
@@ -156,9 +98,14 @@ export default function () {
         </div>
       </div>
       <div>
-        <Ideogram type={type} setGene={setGene} setType={setType} />
+        <MyIdeogram
+          type={type}
+          setGene={setGene}
+          setType={setType}
+          geneCategories={geneCategories}
+        />
         {Object.entries(colorMap).map(([key, val]) => (
-          <ul>
+          <ul key={key}>
             <li>
               <div
                 style={{

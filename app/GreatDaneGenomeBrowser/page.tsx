@@ -1,5 +1,7 @@
+import fs from 'fs'
+import path from 'path'
 import { Metadata } from 'next'
-import ClientComponents from './client'
+import Browser from './Browser'
 
 export const metadata: Metadata = {
   title: '7Sisters - Genome Browsers',
@@ -8,5 +10,21 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <ClientComponents />
+  const lines = fs
+    .readFileSync(path.join(process.cwd(), 'categories2.tsv'), 'utf8')
+    .split('\n')
+    .map(f => f.trim())
+    .filter(f => !!f)
+  const header = lines[0].split('\t')
+  return (
+    <Browser
+      geneCategories={lines
+        .slice(1)
+        .map(line =>
+          Object.fromEntries(
+            line.split('\t').map((line, idx) => [header[idx], line] as const),
+          ),
+        )}
+    />
+  )
 }
