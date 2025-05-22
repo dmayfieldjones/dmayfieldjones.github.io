@@ -123,7 +123,9 @@ export default function () {
                 </span>
               </div>
               <div className="info-item">
-                <span className="label">My dog's age on Selected (Show) Date:</span>
+                <span className="label">
+                  My dog's age on Selected (Show) Date:
+                </span>
                 <div className="age-calculator">
                   <input
                     type="date"

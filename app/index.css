@@ -83,7 +83,6 @@ hr.hr-line {
 }
 
 .resource-image {
-  
   width: 300px; /* Force a consistent width */
   height: 200px; /* Force a consistent height */
   object-fit: cover; /* Ensures the image is cropped to fit the dimensions */

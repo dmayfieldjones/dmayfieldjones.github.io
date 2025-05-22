@@ -20,7 +20,16 @@ function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
   )
 }
 
-export default function Browser({ geneCategories }: { geneCategories: any[] }) {
+export default function Browser({
+  geneCategories,
+}: {
+  geneCategories: {
+    type: string
+    name2: string
+    name: string
+    location: string
+  }[]
+}) {
   const [type, setType] = useState('')
   const [gene, setGene] = useState('')
 
@@ -32,16 +41,8 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
     type === 'all'
       ? geneCategories
       : geneCategories.filter(f => f.type === type)
-  )
-    .filter(f => !!f.location)
-    .map(f => {
-      if (f.location.includes('3')) console.log('EOEOEOEOEOEOE', f.location)
-      return {
-        ...f,
-        location: f.location.replace('92130626', '91889043'),
-      }
-    })
-    .slice(1, 20)
+  ).filter(f => !!f.location)
+  console.log({ currentCategory })
   const geneEntry = currentCategory?.find(f => f.name === gene)
   return (
     <div>
@@ -92,10 +93,10 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                   Select a gene {type ? `(${type} related)` : ''}
                 </option>
                 {currentCategory
-                  .toSorted((a, b) => a.name - b.name)
+                  .toSorted((a, b) => a.name2.localeCompare(b.name2))
                   .map(entry => (
                     <option key={entry.name} value={entry.name}>
-                      {entry.name}
+                      {entry.name2}
                     </option>
                   ))}
               </select>{' '}
@@ -130,7 +131,7 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
           <MyIdeogram
             selectedGene={gene}
             setGene={setGene}
-            geneCategories={geneCategories}
+            geneCategories={currentCategory}
           />
         ) : null}
       </div>
