@@ -3,10 +3,11 @@ import React, { useEffect } from 'react'
 import Ideogram from 'ideogram'
 
 export default function ReactIdeogram(props: Record<string, unknown>) {
+  console.log({ props })
   useEffect(() => {
     new Ideogram({
       ...props,
-      dataDir: 'https://eweitz.github.io/ideogram/dist/data/bands/native/',
+      dataDir: '/',
       container: '#ideo-container',
     })
   }, [props])

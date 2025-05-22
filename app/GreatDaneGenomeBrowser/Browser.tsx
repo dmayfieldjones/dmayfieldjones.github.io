@@ -28,10 +28,20 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
     'all',
     ...new Set<string>(geneCategories.map(f => f.type)),
   ]
-  const currentCategory =
+  const currentCategory = (
     type === 'all'
       ? geneCategories
       : geneCategories.filter(f => f.type === type)
+  )
+    .filter(f => !!f.location)
+    .map(f => {
+      if (f.location.includes('3')) console.log('EOEOEOEOEOEOE', f.location)
+      return {
+        ...f,
+        location: f.location.replace('92130626', '91889043'),
+      }
+    })
+    .slice(1, 20)
   const geneEntry = currentCategory?.find(f => f.name === gene)
   return (
     <div>
@@ -118,10 +128,8 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
       <div>
         {type ? (
           <MyIdeogram
-            type={type}
             selectedGene={gene}
             setGene={setGene}
-            setType={setType}
             geneCategories={geneCategories}
           />
         ) : null}
