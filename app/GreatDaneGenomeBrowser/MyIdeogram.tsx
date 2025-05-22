@@ -34,7 +34,7 @@ export default function MyIdeogram({
       organism="canis-lupus-familiaris"
       rotatable={false}
       chrWidth={10}
-      chrHeight={500}
+      chrHeight={Math.min(window.innerWidth - 120, 500)}
       showNonNuclearChromosomes={true}
       orientation="horizontal"
       annotations={annotations}
