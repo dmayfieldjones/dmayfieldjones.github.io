@@ -10,7 +10,7 @@ const MyIdeogram = dynamic(() => import('./MyIdeogram'), {
 function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
   return (
     <div style={{ margin: 20 }}>
-      {geneEntry.name2} - {geneEntry.location} - {geneEntry?.summary}{' '}
+      {geneEntry.name} - {geneEntry?.summary}{' '}
       {geneEntry.citations?.split(';').map((c: any, idx: number) => (
         <a key={c} target="_blank" href={geneEntry[`doi${idx + 1}`]}>
           {c}
