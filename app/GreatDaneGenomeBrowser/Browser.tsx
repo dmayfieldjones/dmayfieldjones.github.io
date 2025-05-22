@@ -1,81 +1,36 @@
 'use client'
 import { useState } from 'react'
-import geneCategories from './categories'
-import ReactIdeogram from './Ideogram'
-import { replaceLink } from './util'
+import MyIdeogram from './MyIdeogram'
+import { colorMap } from './colorMap'
 
-const set1 = [
-  '#377eb8',
-  '#e41a1c',
-  '#4daf4a',
-  '#984ea3',
-  '#ff7f00',
-  '#ffff33',
-  '#a65628',
-  '#f781bf',
-  '#999999',
-]
-
-const colorMap = {
-  coatcolor: set1[0],
-  hypersocial: set1[1],
-  health: set1[2],
-}
-
-function Ideogram({
-  type,
-  setType,
-  setGene,
-}: {
-  type: string
-  setType: (arg: string) => void
-  setGene: (arg: string) => void
-}) {
-  const annotations = geneCategories
-    .filter(f => f.type === type)
-    .map(r => {
-      const { type, location, name } = r
-      const [chr, rest] = location.split(':')
-      const [start, stop] = rest.split('-')
-      return {
-        name,
-        type,
-        chr: chr.replace('chr', ''),
-        start: +start.replaceAll(',', ''),
-        color: colorMap[type],
-        stop: +stop.replaceAll(',', ''),
-      }
-    })
+function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
+  console.log({ geneEntry }, geneEntry.citations)
   return (
-    <div id="eukaryotes-example" className="App">
-      <ReactIdeogram
-        // @ts-expect-error
-        organism="canis-lupus-familiaris"
-        rotatable={false}
-        chrWidth={10}
-        chrHeight={200}
-        rows={2}
-        showNonNuclearChromosomes={true}
-        annotations={annotations}
-        onClickAnnot={(arg: { name: string }) => {
-          const f = geneCategories?.find(f => f.name === arg.name)?.type
-          if (f) {
-            setType(f)
-            setGene(arg.name)
-          }
-        }}
-      />
+    <div style={{ margin: 20 }}>
+      {geneEntry.name2} - {geneEntry?.summary}{' '}
+      {geneEntry.citations?.split(';').map((c: any, idx: number) => (
+        <a key={c} target="_blank" href={geneEntry[`doi${idx + 1}`]}>
+          {c}
+        </a>
+      ))}
     </div>
   )
 }
 
-export default function () {
+export default function Browser({ geneCategories }: { geneCategories: any[] }) {
   const [type, setType] = useState('')
   const [gene, setGene] = useState('')
 
-  const categories = [...new Set<string>(geneCategories.map(f => f.type))]
-  const currentCategory = geneCategories.filter(f => f.type === type)
+  const categories = [
+    'all',
+    ...new Set<string>(geneCategories.map(f => f.type)),
+  ]
+  const currentCategory =
+    type === 'all'
+      ? geneCategories
+      : geneCategories.filter(f => f.type === type)
   const geneEntry = currentCategory?.find(f => f.name === gene)
+  console.log({ geneEntry })
   return (
     <div>
       <div>
@@ -116,10 +71,10 @@ export default function () {
               </select>
               <select
                 value={gene}
+                id="geneSelect"
                 onChange={event => {
                   setGene(event.target.value)
                 }}
-                id="geneSelect"
               >
                 <option value="">
                   Select a gene {type ? `(${type} related)` : ''}
@@ -129,25 +84,24 @@ export default function () {
                     {entry.name}
                   </option>
                 ))}
-              </select>
+              </select>{' '}
+              ({currentCategory.length} genes)
               {geneEntry ? (
                 <div>
-                  <div
-                    style={{ margin: 20 }}
-                    dangerouslySetInnerHTML={{
-                      __html: replaceLink(geneEntry?.summary || ''),
-                    }}
-                  ></div>
-                  <ul>
-                    <li>
-                      <a
-                        href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.geneName}&tracks=refGene`}
-                        target="_blank"
-                      >
-                        Link to JBrowse (canFam4)
-                      </a>
-                    </li>
-                  </ul>
+                  <DescriptionComponent geneEntry={geneEntry} />
+
+                  {geneEntry.location ? (
+                    <ul>
+                      <li>
+                        <a
+                          href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.location}&tracks=ncbiRefSeq`}
+                          target="_blank"
+                        >
+                          Link to JBrowse (canFam4)
+                        </a>
+                      </li>
+                    </ul>
+                  ) : null}
                 </div>
               ) : null}
             </div>
@@ -155,25 +109,30 @@ export default function () {
           </main>
         </div>
       </div>
-      <div>
-        <Ideogram type={type} setGene={setGene} setType={setType} />
-        {Object.entries(colorMap).map(([key, val]) => (
-          <ul>
-            <li>
-              <div
-                style={{
-                  display: 'inline-block',
-                  width: 10,
-                  height: 10,
-                  backgroundColor: val,
-                }}
-              />{' '}
-              {key}
-            </li>
-          </ul>
-        ))}
-      </div>
-      <div>Thank you Colin Diesh for help with JBrowse2.</div>
+      {/* <div> */}
+      {/*   <MyIdeogram */}
+      {/*     type={type} */}
+      {/*     setGene={setGene} */}
+      {/*     setType={setType} */}
+      {/*     geneCategories={geneCategories} */}
+      {/*   /> */}
+      {/*   {Object.entries(colorMap).map(([key, val]) => ( */}
+      {/*     <ul key={key}> */}
+      {/*       <li> */}
+      {/*         <div */}
+      {/*           style={{ */}
+      {/*             display: 'inline-block', */}
+      {/*             width: 10, */}
+      {/*             height: 10, */}
+      {/*             backgroundColor: val, */}
+      {/*           }} */}
+      {/*         />{' '} */}
+      {/*         {key} */}
+      {/*       </li> */}
+      {/*     </ul> */}
+      {/*   ))} */}
+      {/* </div> */}
+      {/* <div>Thank you Colin Diesh for help with JBrowse2.</div> */}
     </div>
   )
 }
