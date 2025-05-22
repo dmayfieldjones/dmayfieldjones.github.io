@@ -35,7 +35,6 @@ export default function MyIdeogram({
   return (
     <div id="eukaryotes-example" className="App">
       <ReactIdeogram
-        // @ts-expect-error
         organism="canis-lupus-familiaris"
         rotatable={false}
         chrWidth={10}

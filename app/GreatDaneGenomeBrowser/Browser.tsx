@@ -1,7 +1,12 @@
 'use client'
 import { useState } from 'react'
-import MyIdeogram from './MyIdeogram'
 import { colorMap } from './colorMap'
+
+import dynamic from 'next/dynamic'
+
+const MyIdeogram = dynamic(() => import('./MyIdeogram'), {
+  ssr: false,
+})
 
 function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
   console.log({ geneEntry }, geneEntry.citations)
@@ -109,30 +114,29 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
           </main>
         </div>
       </div>
-      {/* <div> */}
-      {/*   <MyIdeogram */}
-      {/*     type={type} */}
-      {/*     setGene={setGene} */}
-      {/*     setType={setType} */}
-      {/*     geneCategories={geneCategories} */}
-      {/*   /> */}
-      {/*   {Object.entries(colorMap).map(([key, val]) => ( */}
-      {/*     <ul key={key}> */}
-      {/*       <li> */}
-      {/*         <div */}
-      {/*           style={{ */}
-      {/*             display: 'inline-block', */}
-      {/*             width: 10, */}
-      {/*             height: 10, */}
-      {/*             backgroundColor: val, */}
-      {/*           }} */}
-      {/*         />{' '} */}
-      {/*         {key} */}
-      {/*       </li> */}
-      {/*     </ul> */}
-      {/*   ))} */}
-      {/* </div> */}
-      {/* <div>Thank you Colin Diesh for help with JBrowse2.</div> */}
+      <div>
+        <MyIdeogram
+          type={type}
+          setGene={setGene}
+          setType={setType}
+          geneCategories={geneCategories}
+        />
+        {Object.entries(colorMap).map(([key, val]) => (
+          <ul key={key}>
+            <li>
+              <div
+                style={{
+                  display: 'inline-block',
+                  width: 10,
+                  height: 10,
+                  backgroundColor: val,
+                }}
+              />{' '}
+              {key}
+            </li>
+          </ul>
+        ))}
+      </div>
     </div>
   )
 }
