@@ -94,7 +94,7 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                     <ul>
                       <li>
                         <a
-                          href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.location}&tracks=ncbiRefSeq`}
+                          href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/canFam4/config.json&assembly=canFam4&loc=${geneEntry.location}&tracks=canFam4-ncbiRefSeq`}
                           target="_blank"
                         >
                           Link to JBrowse (canFam4)
