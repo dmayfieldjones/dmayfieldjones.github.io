@@ -1,20 +1,15 @@
 import ReactIdeogram from './Ideogram'
 
 export default function MyIdeogram({
-  type,
   selectedGene,
-  setType,
   setGene,
   geneCategories,
 }: {
-  type: string
   selectedGene?: string
-  setType: (arg: string) => void
   setGene: (arg: string) => void
   geneCategories: any[]
 }) {
   const annotations = geneCategories
-    .filter(f => f.type === type)
     .map(r => {
       const { type, location, name } = r
       if (location) {
@@ -46,7 +41,6 @@ export default function MyIdeogram({
       onClickAnnot={(arg: { name: string }) => {
         const f = geneCategories?.find(f => f.name === arg.name)?.type
         if (f) {
-          setType(f)
           setGene(arg.name)
         }
       }}
