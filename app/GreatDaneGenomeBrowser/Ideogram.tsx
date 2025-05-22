@@ -1,4 +1,3 @@
-'use client'
 import React, { useEffect } from 'react'
 
 import Ideogram from 'ideogram'
@@ -11,5 +10,5 @@ export default function ReactIdeogram(props: Record<string, unknown>) {
       container: '#ideo-container',
     })
   }, [props])
-  return <div id="ideo-container"></div>
+  return <div style={{ padding: 10, margin: 10 }} id="ideo-container"></div>
 }
