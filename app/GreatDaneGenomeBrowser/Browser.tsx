@@ -65,7 +65,7 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                 id="categorySelect"
               >
                 <option value="">Select a category</option>
-                {categories.map(category => (
+                {categories.toSorted().map(category => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -81,11 +81,13 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                 <option value="">
                   Select a gene {type ? `(${type} related)` : ''}
                 </option>
-                {currentCategory.map(entry => (
-                  <option key={entry.name} value={entry.name}>
-                    {entry.name}
-                  </option>
-                ))}
+                {currentCategory
+                  .toSorted((a, b) => a.name - b.name)
+                  .map(entry => (
+                    <option key={entry.name} value={entry.name}>
+                      {entry.name}
+                    </option>
+                  ))}
               </select>{' '}
               {currentCategory.length
                 ? `(${currentCategory.length} genes)`
