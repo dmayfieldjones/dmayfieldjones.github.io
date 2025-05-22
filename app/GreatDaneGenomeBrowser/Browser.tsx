@@ -1,13 +1,16 @@
 'use client'
 import { useState } from 'react'
-import MyIdeogram from './MyIdeogram'
-import { colorMap } from './colorMap'
+
+import dynamic from 'next/dynamic'
+
+const MyIdeogram = dynamic(() => import('./MyIdeogram'), {
+  ssr: false,
+})
 
 function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
-  console.log({ geneEntry }, geneEntry.citations)
   return (
     <div style={{ margin: 20 }}>
-      {geneEntry.name2} - {geneEntry?.summary}{' '}
+      {geneEntry.name2} - {geneEntry.location} - {geneEntry?.summary}{' '}
       {geneEntry.citations?.split(';').map((c: any, idx: number) => (
         <a key={c} target="_blank" href={geneEntry[`doi${idx + 1}`]}>
           {c}
@@ -17,7 +20,16 @@ function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
   )
 }
 
-export default function Browser({ geneCategories }: { geneCategories: any[] }) {
+export default function Browser({
+  geneCategories,
+}: {
+  geneCategories: {
+    type: string
+    name2: string
+    name: string
+    location: string
+  }[]
+}) {
   const [type, setType] = useState('')
   const [gene, setGene] = useState('')
 
@@ -25,12 +37,13 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
     'all',
     ...new Set<string>(geneCategories.map(f => f.type)),
   ]
-  const currentCategory =
+  const currentCategory = (
     type === 'all'
       ? geneCategories
       : geneCategories.filter(f => f.type === type)
+  ).filter(f => !!f.location)
+  console.log({ currentCategory })
   const geneEntry = currentCategory?.find(f => f.name === gene)
-  console.log({ geneEntry })
   return (
     <div>
       <div>
@@ -63,7 +76,7 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                 id="categorySelect"
               >
                 <option value="">Select a category</option>
-                {categories.map(category => (
+                {categories.toSorted().map(category => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -79,13 +92,17 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                 <option value="">
                   Select a gene {type ? `(${type} related)` : ''}
                 </option>
-                {currentCategory.map(entry => (
-                  <option key={entry.name} value={entry.name}>
-                    {entry.name}
-                  </option>
-                ))}
+                {currentCategory
+                  .toSorted((a, b) => a.name2.localeCompare(b.name2))
+                  .map(entry => (
+                    <option key={entry.name} value={entry.name}>
+                      {entry.name2}
+                    </option>
+                  ))}
               </select>{' '}
-              ({currentCategory.length} genes)
+              {currentCategory.length
+                ? `(${currentCategory.length} genes)`
+                : ''}
               {geneEntry ? (
                 <div>
                   <DescriptionComponent geneEntry={geneEntry} />
@@ -109,30 +126,15 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
           </main>
         </div>
       </div>
-      {/* <div> */}
-      {/*   <MyIdeogram */}
-      {/*     type={type} */}
-      {/*     setGene={setGene} */}
-      {/*     setType={setType} */}
-      {/*     geneCategories={geneCategories} */}
-      {/*   /> */}
-      {/*   {Object.entries(colorMap).map(([key, val]) => ( */}
-      {/*     <ul key={key}> */}
-      {/*       <li> */}
-      {/*         <div */}
-      {/*           style={{ */}
-      {/*             display: 'inline-block', */}
-      {/*             width: 10, */}
-      {/*             height: 10, */}
-      {/*             backgroundColor: val, */}
-      {/*           }} */}
-      {/*         />{' '} */}
-      {/*         {key} */}
-      {/*       </li> */}
-      {/*     </ul> */}
-      {/*   ))} */}
-      {/* </div> */}
-      {/* <div>Thank you Colin Diesh for help with JBrowse2.</div> */}
+      <div>
+        {type ? (
+          <MyIdeogram
+            selectedGene={gene}
+            setGene={setGene}
+            geneCategories={currentCategory}
+          />
+        ) : null}
+      </div>
     </div>
   )
 }
