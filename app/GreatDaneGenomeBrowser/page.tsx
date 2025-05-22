@@ -18,6 +18,7 @@ export default function Page() {
   const header = lines[0].split('\t')
   return (
     <Browser
+      // @ts-expect-error
       geneCategories={lines
         .slice(1)
         .map(line =>
