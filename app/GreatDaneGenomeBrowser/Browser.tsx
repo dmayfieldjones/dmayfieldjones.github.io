@@ -42,7 +42,6 @@ export default function Browser({
       ? geneCategories
       : geneCategories.filter(f => f.type === type)
   ).filter(f => !!f.location)
-  console.log({ currentCategory })
   const geneEntry = currentCategory?.find(f => f.name === gene)
   return (
     <div>
@@ -93,10 +92,10 @@ export default function Browser({
                   Select a gene {type ? `(${type} related)` : ''}
                 </option>
                 {currentCategory
-                  .toSorted((a, b) => a.name2.localeCompare(b.name2))
+                  .toSorted((a, b) => a.name.localeCompare(b.name))
                   .map(entry => (
                     <option key={entry.name} value={entry.name}>
-                      {entry.name2}
+                      {entry.name}
                     </option>
                   ))}
               </select>{' '}
