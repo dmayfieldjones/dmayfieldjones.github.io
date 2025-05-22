@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { colorMap } from './colorMap'
 
 import dynamic from 'next/dynamic'
 
@@ -9,10 +8,9 @@ const MyIdeogram = dynamic(() => import('./MyIdeogram'), {
 })
 
 function DescriptionComponent({ geneEntry }: { geneEntry: any }) {
-  console.log({ geneEntry }, geneEntry.citations)
   return (
     <div style={{ margin: 20 }}>
-      {geneEntry.name2} - {geneEntry?.summary}{' '}
+      {geneEntry.name2} - {geneEntry.location} - {geneEntry?.summary}{' '}
       {geneEntry.citations?.split(';').map((c: any, idx: number) => (
         <a key={c} target="_blank" href={geneEntry[`doi${idx + 1}`]}>
           {c}
@@ -35,7 +33,6 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
       ? geneCategories
       : geneCategories.filter(f => f.type === type)
   const geneEntry = currentCategory?.find(f => f.name === gene)
-  console.log({ geneEntry })
   return (
     <div>
       <div>
@@ -90,7 +87,9 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
                   </option>
                 ))}
               </select>{' '}
-              ({currentCategory.length} genes)
+              {currentCategory.length
+                ? `(${currentCategory.length} genes)`
+                : ''}
               {geneEntry ? (
                 <div>
                   <DescriptionComponent geneEntry={geneEntry} />
@@ -115,27 +114,15 @@ export default function Browser({ geneCategories }: { geneCategories: any[] }) {
         </div>
       </div>
       <div>
-        <MyIdeogram
-          type={type}
-          setGene={setGene}
-          setType={setType}
-          geneCategories={geneCategories}
-        />
-        {Object.entries(colorMap).map(([key, val]) => (
-          <ul key={key}>
-            <li>
-              <div
-                style={{
-                  display: 'inline-block',
-                  width: 10,
-                  height: 10,
-                  backgroundColor: val,
-                }}
-              />{' '}
-              {key}
-            </li>
-          </ul>
-        ))}
+        {type ? (
+          <MyIdeogram
+            type={type}
+            selectedGene={gene}
+            setGene={setGene}
+            setType={setType}
+            geneCategories={geneCategories}
+          />
+        ) : null}
       </div>
     </div>
   )
