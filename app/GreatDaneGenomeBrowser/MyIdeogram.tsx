@@ -35,12 +35,13 @@ export default function MyIdeogram({
     .filter(f => !!f)
   return (
     <ReactIdeogram
+      columns={2}
       organism="canis-lupus-familiaris"
       rotatable={false}
       chrWidth={10}
-      chrHeight={200}
-      rows={2}
+      chrHeight={500}
       showNonNuclearChromosomes={true}
+      orientation="horizontal"
       annotations={annotations}
       onClickAnnot={(arg: { name: string }) => {
         const f = geneCategories?.find(f => f.name === arg.name)?.type
