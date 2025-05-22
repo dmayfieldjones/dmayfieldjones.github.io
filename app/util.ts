@@ -1,13 +1,16 @@
-export function timeSincePastDate(pastDateString: string | Date) {
+export function timeSincePastDate(pastDateString: string | Date, endDate: Date = new Date()) {
   // Create Date objects for the past date and the current time
   const pastDate = new Date(pastDateString)
-  const now = new Date()
+  // Set both dates to start of day to avoid time differences
+  pastDate.setHours(0, 0, 0, 0)
+  const now = new Date(endDate)
+  now.setHours(0, 0, 0, 0)
 
   // Calculate the difference in milliseconds
   const differenceInMilliseconds = now.getTime() - pastDate.getTime()
 
   if (differenceInMilliseconds < 0) {
-    return 'The provided date is in the future.'
+    return 'Please select a date after the birth date.'
   }
 
   // Calculate the number of full years
@@ -62,5 +65,5 @@ export function timeSincePastDate(pastDateString: string | Date) {
     resultString = resultString.slice(0, -2)
   }
 
-  return resultString || '0 days' // Return "0 days" if the dates are the same
+  return resultString || '0 days'
 }
