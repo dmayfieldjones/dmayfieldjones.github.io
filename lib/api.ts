@@ -27,11 +27,10 @@ export async function getPageMarkdown(string_: string) {
   const { data, content } = matter(
     fs.readFileSync(path.join('_pages', string_), 'utf8'),
   )
-  const html = await parser.process(content)
 
   return {
     ...data,
-    html: html.value.toString(),
+    html: content,
   }
 }
 
