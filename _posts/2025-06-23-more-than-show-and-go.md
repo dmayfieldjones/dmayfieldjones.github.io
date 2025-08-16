@@ -6,6 +6,8 @@ description: "Our journey into the Illini Great Dane Club: community, responsibl
 
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
+
+
 When Pat Lawrence gathered friends around her kitchen table in 1982, she may have had no idea her vision would still be shaping Great Dane breeders four decades later. She dreamed of a "different kind of club"—one that offered education, community, and genuine relationships rather than just competition.
 Three years ago in 2022, my spouse Karen and I walked into our first Illini Great Dane Club meeting as curious newcomers. Today, we're deeply involved in a community that's taught us what responsible breeding and genuine mentorship look like. Here's our story of discovering what "more than show and go" really means, and why it matters for every family considering a Great Dane.
 

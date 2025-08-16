@@ -6,6 +6,8 @@ description: "Great Dane breeding philosophy: science, mentorship, and early pup
 
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
+
+
 When families ask us how we can predict what their puppy will be like as an adult, the answer lies in understanding genetics and pedigrees. Unlike random breeding, our approach uses proven bloodlines and careful analysis to give families the gentle giant of which they're dreaming.
 
 Our breeding program is the result of mentorship from some of America's most accomplished Great Dane breeders, combined with a scientific approach to genetics that prioritizes predictable temperament, health, and structure for family companions.
