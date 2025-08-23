@@ -195,7 +195,7 @@ Adult Great Danes typically eat **4-8 cups daily** depending on:
 ### Our Recommended Approach
 
 **What We Feed at 7Sisters:**
-We've had excellent results with Purina Pro Plan kibble combined with a varied diet of healthy additives and snacks (less than 10% by weight) for both puppies and adults. However, the brand matters less than understanding what to look for in any premium food.
+We've had excellent results with Purina Pro Plan Large Breed kibble combined with a varied diet of healthy additives and snacks (less than 10% by weight) for both puppies and adults. However, the brand matters less than understanding what to look for in any premium food.
 
 <details>
 <summary><strong>Why We Choose Purina Pro Plan for 7Sisters Great Danes</strong></summary>
