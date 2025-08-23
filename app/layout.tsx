@@ -52,6 +52,9 @@ export default function RootLayout({
               <a href="/Resources">Resources</a>
             </li>
             <li>
+              <a href="/archive">Blog</a>
+            </li>
+            <li>
               <a href="/CommonQuestions">Common Questions</a>
             </li>
           </ul>
