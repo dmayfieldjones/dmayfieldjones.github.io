@@ -442,7 +442,7 @@ Learn to assess your dog's condition through hands-on evaluation:
 <summary><strong>Working with Your Veterinarian</strong></summary>
 
 **Building the Partnership:**
-Your veterinarian or nutritionist that is knowledgeable about Greeat Danes should be your primary nutrition consultant, especially during growth phases.
+Your veterinarian or nutritionist that is knowledgeable about Great Danes should be your primary nutrition consultant, especially during growth phases.
 
 **What to Discuss:**
 - **Growth rate monitoring** - monthly weigh-ins during puppyhood
