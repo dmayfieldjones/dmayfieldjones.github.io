@@ -306,7 +306,7 @@ Great Danes have higher bloat risk than most breeds. Feeding management is criti
 - **Elevated feeding stations** to reduce air intake
 - **Smaller, frequent meals** rather than large portions
 - **Slow-feed bowls** for fast eaters
-- **No exercise immediately before or after meals** - wait 1-2 hours
+- **No vigorous exercise immediately before or after meals** - wait 1-2 hours
 - **Monitor eating speed** and intervene if necessary
 - **Consider prophylactic gastropexy** - discuss with your veterinarian
 
