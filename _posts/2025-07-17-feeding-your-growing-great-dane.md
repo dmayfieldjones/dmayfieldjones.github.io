@@ -417,28 +417,6 @@ Learn to assess your dog's condition through hands-on evaluation:
 </details>
 
 <details>
-<summary><strong>Working with Your Veterinarian</strong></summary>
-
-**Building the Partnership:**
-Your veterinarian should be your primary nutrition consultant, especially during growth phases.
-
-**What to Discuss:**
-- **Growth rate monitoring** - monthly weigh-ins during puppyhood
-- **Body condition scoring** - learn proper assessment techniques
-- **Supplement needs** - most premium foods don't require additional vitamins
-- **Life stage transitions** - timing for food changes
-- **Special circumstances** - health conditions requiring dietary modification
-
-**When to Consult:**
-- **Appetite changes** lasting more than 24-48 hours
-- **Digestive issues** that don't resolve quickly
-- **Growth concerns** - too fast or too slow
-- **Weight management** needs
-- **Senior nutrition** planning as your dog ages
-
-</details>
-
-<details>
 <summary><strong>The Real Investment</strong></summary>
 
 **Monthly Food Costs:**
@@ -464,7 +442,7 @@ Your veterinarian should be your primary nutrition consultant, especially during
 <summary><strong>Working with Your Veterinarian</strong></summary>
 
 **Building the Partnership:**
-Your veterinarian should be your primary nutrition consultant, especially during growth phases.
+Your veterinarian or nutritionist that is knowledgeable about Greeat Danes should be your primary nutrition consultant, especially during growth phases.
 
 **What to Discuss:**
 - **Growth rate monitoring** - monthly weigh-ins during puppyhood
