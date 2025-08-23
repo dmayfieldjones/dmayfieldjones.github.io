@@ -48,18 +48,7 @@ export default function ClientComponent() {
     {
       id: 'feeding',
       question: 'What feed and how much?',
-      answer: `We value healthy, affordable, safe, and convenient feed for your dog.
-        We argue there is no feed specific to a particular breed. However,
-        Great Dane puppies should not be fed many feeds labeled for puppies
-        because they contain excessively high concentrations of protein and
-        fat. Rehydrating a quality dry kibble and supporting your dog with a
-        variety of additional healthy foods (less than 10% by weight of their
-        diet) will meet the needs of most dogs and satisfy dog lovers. A
-        fresh, or raw, diet can also provide exceptional nutrition for your
-        dog. The amount your Dane will eat depends on age, sex, type of
-        food, and level of activity. Generally, our 8-12 week old puppies will
-        eat 1.5 cups for each of their 3 daily meals. Adults will eat 6-10
-        cups daily divided roughly between two meals.`
+      answer: `We value healthy, affordable, safe, and convenient feed for your dog. We argue there is no feed specific to a particular breed. However, Great Dane puppies should not be fed many feeds labeled for puppies because they contain excessively high concentrations of protein and fat. Rehydrating a quality dry kibble and supporting your dog with a variety of additional healthy foods (less than 10% by weight of their diet) will meet the needs of most dogs and satisfy dog lovers. A fresh, or raw, diet can also provide exceptional nutrition for your dog. The amount your Dane will eat depends on age, sex, type of food, and level of activity. Generally, our 8-12 week old puppies will eat 1.5 cups for each of their 3 daily meals. Adults will eat 6-10 cups daily divided roughly between two meals. <a href="/posts/2025-07-17-feeding-your-growing-great-dane">Read our comprehensive nutrition guide for detailed feeding strategies and recommendations.</a>`
     },
     {
       id: 'ear-cropping',
@@ -97,25 +86,7 @@ export default function ClientComponent() {
     {
       id: 'euro-lines',
       question: 'Do you breed Euro-lines of Great Danes?',
-      answer: `We follow the current{' '}
-        <a href="https://gdca.org/wp-content/uploads/TheGreatDane/2021-GDCA-Illustrated-Standard-10_19_21.pdf">
-          standard
-        </a>{' '}
-        as approved by the Great Dane Club of America and the American Kennel
-        Club. How this standard has evolved and how previous conformation
-        points were awarded is fascinating and telling of our breed. The
-        traits associated with Euro-lines, sometimes called hyper-exaggerated
-        features, are outside our standard, and others:{' '}
-        <a href="https://www.ukcdogs.com/docs/breeds/great-dane.pdf">UKC</a>,{' '}
-        <a href="https://www.thekennelclub.org.uk/breed-standards/working/great-dane/#:~:text=General%20appearance,grace%20of%20form%20most%20essential.">
-          KC
-        </a>
-        , and{' '}
-        <a href="https://www.fci.be/Nomenclature/Standards/235g02-en.pdf">
-          FCI
-        </a>
-        . We are happy to discuss individual features with curious potential
-        clients.`
+      answer: `We follow the current <a href="https://gdca.org/wp-content/uploads/TheGreatDane/2021-GDCA-Illustrated-Standard-10_19_21.pdf">standard</a> as approved by the Great Dane Club of America and the American Kennel Club. How this standard has evolved and how previous conformation points were awarded is fascinating and telling of our breed. The traits associated with Euro-lines, sometimes called hyper-exaggerated features, are outside our standard, and others: <a href="https://www.ukcdogs.com/docs/breeds/great-dane.pdf">UKC</a>, <a href="https://www.thekennelclub.org.uk/breed-standards/working/great-dane/#:~:text=General%20appearance,grace%20of%20form%20most%20essential.">KC</a>, and <a href="https://www.fci.be/Nomenclature/Standards/235g02-en.pdf">FCI</a>. We are happy to discuss individual features with curious potential clients.`
     }
   ]
 
