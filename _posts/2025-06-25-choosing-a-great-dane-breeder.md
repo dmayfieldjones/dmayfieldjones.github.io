@@ -25,6 +25,22 @@ This guide draws from our experience in the Great Dane community and the lessons
 
 </details>
 
+<div style="background-color: #f8f9fa; border: 2px solid #e9ecef; border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center;">
+  <h3 style="color: #2c3e50; margin-bottom: 15px;">📋 Download Your Breeder Evaluation Checklist</h3>
+  <p style="color: #6c757d; margin-bottom: 20px; font-size: 16px;">
+    Use our comprehensive checklist to evaluate potential breeders and make an informed decision.
+  </p>
+  <a href="/breeder-evaluation-checklist.pdf" 
+     style="background-color: #dc3545; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; display: inline-block; transition: background-color 0.3s;"
+     onmouseover="this.style.backgroundColor='#c82333'"
+     onmouseout="this.style.backgroundColor='#dc3545'">
+    📥 Download Checklist (PDF)
+  </a>
+  <p style="color: #6c757d; font-size: 14px; margin-top: 15px;">
+    Free resource to help you choose the right Great Dane breeder for your family.
+  </p>
+</div>
+
 ## Before You Start Your Search
 
 The best time to find a breeder is before you're emotionally attached to the idea of "getting a puppy soon." Great breeders often have waiting lists, and the best matches come from thoughtful planning, not impulse decisions. As a breeder, I think of myself as matching families with potential: the potential puppy that will become an amazing dog. It is part of the reason our website is not covered with pictures of cute puppies, but rather healthy, sound dogs that demonstrate our committment to producing excellent dogs.
