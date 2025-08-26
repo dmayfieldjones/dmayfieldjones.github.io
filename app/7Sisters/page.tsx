@@ -4,7 +4,7 @@ export default function () {
   return (
     <div className="content">
       <div className="post-title ">
-        <h1>Great Danes at 7Sisters Farm</h1>
+        <h1>Great Danes at <span style={{ color: '#bf141c' }}>7</span>Sisters Farm</h1>
       </div>
       <main className="content-wrapper">
         {/* Hero Section */}

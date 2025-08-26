@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '7Sisters - Litters',
+  title: 'Great Dane Litters',
   description:
     'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
 }
@@ -11,7 +11,7 @@ export default function () {
     <div className="content">
       <div className="post-title ">
         <h1>
-          <span style={{ color: '#bf141c' }}>7</span>Sisters Great Dane Litters
+          Great Dane Litters
         </h1>
       </div>
       <main className="content-wrapper">

@@ -2,20 +2,23 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/api'
 
 export const metadata = {
-  title: 'Great Dane Blog - Resources & Insights',
-  description: 'Comprehensive guides and insights on Great Dane breeding, care, development, and ownership from 7Sisters Farm.',
+  title: 'Great Dane Articles and Insights',
+  description: 'Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership.',
 }
 
 export default async function Page() {
   const allPosts = await getAllPosts()
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-full lg:max-w-5xl md:max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-8">Great Dane Resources & Insights</h1>
-        
+    <div className="content">
+      <div className="post-title">
+        <h1>Great Dane Articles and Insights</h1>
+      </div>
+      <main className="content-wrapper">
         <p className="text-lg text-center text-gray-600 mb-12 max-w-4xl mx-auto">
           Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership.
         </p>
+
+
 
         <section className="space-y-1">
           {allPosts.slice().reverse().map(post => {
@@ -66,7 +69,7 @@ export default async function Page() {
             )
           })}
         </section>
-      </div>
+      </main>
     </div>
   )
 }
