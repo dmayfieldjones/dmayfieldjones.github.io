@@ -50,12 +50,13 @@ export default function Navigation() {
         </li>
         <li className="nav-item-with-submenu">
           <button
-            className={`nav-button ${openSubmenu === 'breeding' ? 'expanded' : ''}`}
-            onClick={() => toggleSubmenu('breeding')}
+            className={`nav-button ${openSubmenu === 'great-danes' ? 'expanded' : ''}`}
+            onClick={() => toggleSubmenu('great-danes')}
           >
-            Breeding
+            Great Danes
           </button>
-          <ul className={`submenu ${openSubmenu === 'breeding' ? 'show' : ''}`}>
+          <ul className={`submenu ${openSubmenu === 'great-danes' ? 'show' : ''}`}>
+            <li><a href="/7Sisters">Our Great Danes</a></li>
             <li><a href="/BreedingPhilosophy">Breeding Philosophy</a></li>
             <li><a href="/Litters">Litters</a></li>
           </ul>
@@ -68,8 +69,8 @@ export default function Navigation() {
             Resources
           </button>
           <ul className={`submenu ${openSubmenu === 'resources' ? 'show' : ''}`}>
-            <li><a href="/Resources">Research Resources</a></li>
-            <li><a href="/archive">Blog</a></li>
+            <li><a href="/Resources">Great Dane Resources</a></li>
+            <li><a href="/archive">Articles</a></li>
             <li><a href="/CommonQuestions">Common Questions</a></li>
           </ul>
         </li>

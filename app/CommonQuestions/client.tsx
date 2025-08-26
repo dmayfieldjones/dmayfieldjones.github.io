@@ -94,23 +94,11 @@ export default function ClientComponent() {
     <div className="content">
       <div className="post-title">
         <h1>
-          Common Questions About <span className="accent-color">7</span>
-          Sisters Great Danes
+          Common Questions About <span style={{ color: '#bf141c' }}>7</span>Sisters Great Danes
         </h1>
       </div>
-      
-      <section className="hero-section">
-        <img
-          src="/img/Colorlogo_nobackground.png"
-          alt="7Sisters Farm Logo"
-          width={300}
-          height="auto"
-          className="hero-logo"
-          loading="lazy"
-        />
-      </section>
-
-      <div className="accordion-container">
+      <main className="content-wrapper">
+        <div className="accordion-container">
         {questions.map((item, index) => (
           <div key={item.id} className="accordion-item">
             <button
@@ -129,7 +117,8 @@ export default function ClientComponent() {
             </div>
           </div>
         ))}
-      </div>
+        </div>
+      </main>
     </div>
   )
 }

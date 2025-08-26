@@ -119,7 +119,6 @@ nav ul li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
   background-color: #444;
   list-style: none;
   margin: 0;
@@ -127,6 +126,7 @@ nav ul li a:hover {
   z-index: 1001;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   min-width: 200px;
+  width: 100%;
   border-radius: 0 0 4px 4px;
 }
 

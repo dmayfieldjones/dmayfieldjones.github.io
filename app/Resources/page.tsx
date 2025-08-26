@@ -1,23 +1,20 @@
 import { Metadata } from 'next'
-import { getAllPosts } from '@/lib/api'
 import Link from 'next/link'
 import { Accordion } from './accordion'
 
 import './index.css'
 
 export const metadata: Metadata = {
-  title: '7Sisters - Litters',
+  title: 'Great Dane Resources',
   description:
-    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+    'Research tools and resources for Great Dane breeding and genetics at 7Sisters Farm',
 }
 
 export default async function ClientComponent() {
-  const posts = await getAllPosts()
-
   return (
     <div className="content">
       <div className="post-title ">
-        <h1>Research Resources</h1>
+        <h1>Great Dane Resources</h1>
       </div>
       <main className="content-wrapper">
         {/* Hero Section */}
@@ -58,25 +55,7 @@ export default async function ClientComponent() {
             <Accordion />
           </div>
         </section>
-        <section className="resource-section">
-          <h2 id="cbarq-title" className="section-title">
-            Blog posts
-          </h2>
-          <ul>
-            {posts.slice(0, 8).map(post => {
-              const { id, date, title } = post
-              return (
-                <li key={id}>
-                  <Link href={`/posts/${id}`}>
-                    {date} - {title}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
 
-          <Link href="/archive">More posts...</Link>
-        </section>
         {/* C-BARQ Section */}
         <section className="resource-section" aria-labelledby="cbarq-title">
           <h2 id="cbarq-title" className="section-title">
