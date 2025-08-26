@@ -19,7 +19,7 @@ export default function Contents() {
         <section className="about-section">
           <h2 className="section-title">About Us</h2>
           <p className="intro-text">
-            Meet Dustin and Karen, the passionate breeders behind 7Sisters Farm. Our journey into Great Dane breeding 
+            Meet Dustin and Karen, the passionate breeders behind <span style={{ color: '#bf141c' }}>7</span>Sisters Farm. Our journey into Great Dane breeding 
             began with a deep love for the breed and a commitment to excellence. We believe in responsible breeding 
             practices, ongoing education, and building lasting relationships with every family we serve.
           </p>
