@@ -8,6 +8,7 @@
   --font-family: Arial, sans-serif;
   --transition-speed: 0.3s;
 }
+
 .content-wrapper {
   max-width: 800px;
   margin: 0 auto;
@@ -17,9 +18,86 @@
   color: var(--text-color);
   background-color: var(--background-color);
 }
+
+/* About page sections */
+.about-section,
+.philosophy-section,
+.farm-section,
+.contact-section {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  padding: calc(var(--spacing-unit) * 2);
+  background-color: var(--accent-bg-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  font-weight: bold;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* Read more section */
+.read-more-section {
+  margin-top: calc(var(--spacing-unit) * 2);
+  text-align: center;
+}
+
+.read-more-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: calc(var(--spacing-unit) * 1.5);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  transition: all var(--transition-speed) ease;
+}
+
+.read-more-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(191, 20, 28, 0.3);
+}
+
+/* CTA sections */
+.cta-section {
+  margin-top: calc(var(--spacing-unit) * 2);
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  border-radius: 6px;
+  transition: all var(--transition-speed) ease;
+  border: 2px solid var(--primary-color);
+}
+
+.cta-button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(191, 20, 28, 0.3);
+}
+
+/* Legacy styles for backward compatibility */
 .hero-section {
   margin-bottom: calc(var(--spacing-unit) * 3);
 }
+
 .hero-image {
   width: 100%;
   height: auto;
@@ -27,66 +105,87 @@
   margin-bottom: var(--spacing-unit);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.intro-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-top: calc(var(--spacing-unit) * 2);
-}
-.section-title {
-  font-size: 1.75rem;
-  color: var(--primary-color);
-  margin-bottom: calc(var(--spacing-unit) * 0.5);
-}
+
 .author-credit {
   font-style: italic;
   color: #666;
   margin-bottom: calc(var(--spacing-unit) * 2);
 }
+
 .history-content {
   background-color: var(--accent-bg-color);
   padding: calc(var(--spacing-unit));
   border-radius: 8px;
 }
+
 .history-text p {
   margin-bottom: calc(var(--spacing-unit) * 1.5);
 }
+
 .parlor-image {
   margin-top: calc(var(--spacing-unit) * 2);
 }
+
 .parlor-image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .parlor-image figcaption {
   text-align: center;
   font-style: italic;
   color: #666;
   margin-top: calc(var(--spacing-unit) * 0.5);
 }
+
 .accent-color {
   color: var(--primary-color);
 }
+
 @media (max-width: 768px) {
   .content-wrapper {
     padding: var(--spacing-unit);
   }
+  
+  .about-section,
+  .philosophy-section,
+  .farm-section,
+  .contact-section {
+    padding: calc(var(--spacing-unit) * 1.5);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+  }
+  
   .history-content {
     padding: var(--spacing-unit);
   }
+  
   .section-title {
     font-size: 1.5rem;
   }
+  
+  .cta-button,
+  .read-more-link {
+    padding: calc(var(--spacing-unit) * 1.2) calc(var(--spacing-unit) * 2.5);
+    font-size: 0.95rem;
+  }
 }
+
 @media print {
   .history-content {
     background-color: transparent;
     padding: 0;
   }
+  
   .hero-image,
   .parlor-image img {
     max-width: 400px;
     margin: calc(var(--spacing-unit) * 2) auto;
+  }
+  
+  .cta-section,
+  .read-more-section {
+    display: none;
   }
 }

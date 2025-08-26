@@ -19,6 +19,8 @@ body {
   background-color: Canvas;
   color: CanvasText;
   color-scheme: light dark;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 .container {
@@ -84,6 +86,7 @@ hr.hr-line {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  overflow: visible;
 }
 
 .resource-image {
