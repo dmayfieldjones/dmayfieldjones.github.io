@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/api'
 
 export const metadata = {
-  title: 'Great Dane Blog - Educational Resources',
+  title: 'Great Dane Blog - Resources & Insights',
   description: 'Comprehensive guides and insights on Great Dane breeding, care, development, and ownership from 7Sisters Farm.',
 }
 
@@ -11,10 +11,10 @@ export default async function Page() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-full lg:max-w-5xl md:max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-8">Great Dane Educational Resources</h1>
+        <h1 className="text-3xl font-bold text-center mb-8">Great Dane Resources & Insights</h1>
         
         <p className="text-lg text-center text-gray-600 mb-12 max-w-4xl mx-auto">
-          Comprehensive guides and insights on Great Dane breeding, care, development, and ownership.
+          Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership.
         </p>
 
         <section className="space-y-1">
