@@ -3,6 +3,8 @@
 import './index.css'
 import './navbar.css'
 import { useState } from 'react'
+import { GoogleAnalytics } from '@next/third-parties/google'
+ 
 
 export default function RootLayout({
   children,
@@ -61,6 +63,7 @@ export default function RootLayout({
         </nav>
         <div className="wrapper">{children}</div>
       </body>
+      <GoogleAnalytics gaId="G-SDSX26JETX" />
     </html>
   )
 }

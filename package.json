@@ -12,6 +12,7 @@
     "postdeploy": "git push --follow-tags"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.1",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "ideogram": "^1.50.0",
