@@ -28,6 +28,22 @@ export default function Contents() {
             we've learned that great breeding is about more than just producing puppies—it's about stewardship, 
             mentorship, and community.
           </p>
+          
+          {/* Academic Credentials Section */}
+          <div className="credentials-section">
+            <p className="intro-text">
+              Dustin brings academic expertise to our breeding program, with research experience in genetics and 
+              genomics. View his <a 
+                href="https://scholar.google.com/citations?user=MkPrBuoAAAAJ&hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="scholar-link"
+              >
+                Google Scholar profile
+              </a> to learn more about his research contributions.
+            </p>
+          </div>
+          
           <div className="read-more-section">
             <Link href="/posts/2025-06-23-more-than-show-and-go" className="read-more-link">
               Read more about our journey →
