@@ -1,0 +1,128 @@
+import { Metadata } from 'next'
+import './index.css'
+import MakerspaceDirectory from './MakerspaceDirectory'
+
+export const metadata: Metadata = {
+  title: '7Sisters - Central Illinois Maker Network',
+  description:
+    'Connecting entrepreneurs, makers, and innovators across Central Illinois through The Central Illinois Entrepreneur Maker Network',
+}
+
+export default function MakerPage() {
+  return (
+    <div className="content">
+      <div className="post-title">
+        <h1>The Central Illinois <span style={{ color: '#bf141c' }}>Maker</span> Network</h1>
+        <p style={{ 
+          textAlign: 'center', 
+          color: '#666', 
+          fontSize: '1.1rem', 
+          marginTop: '0.5rem',
+          fontStyle: 'italic'
+        }}>
+          Connecting Entrepreneurs, Makers, and Innovators
+        </p>
+      </div>
+      
+      <main className="content-wrapper">
+        {/* Mission Section */}
+        <section className="maker-section">
+          <h2 className="section-title">About This Resource</h2>
+          <p className="intro-text">
+            As a maker in Central Illinois working to support entrepreneurship at a deep-tech business 
+            incubator, I've created this comprehensive directory to help entrepreneurs, makers, and 
+            innovators find the resources they need to bring their ideas to life. This curated collection 
+            of makerspaces, machine shops, and maker organizations represents the rich ecosystem of 
+            fabrication and innovation resources available in our region.
+          </p>
+          <p className="intro-text">
+            Whether you're a startup founder, a student, or an entrepreneur anywhere in Central Illinois, 
+            this resource is designed to connect you with the tools, facilities, and expertise you need 
+            to prototype, build, and scale your innovations.
+          </p>
+        </section>
+
+        {/* Value Proposition Section */}
+        <section className="maker-section">
+          <h2 className="section-title">Why This Matters</h2>
+          <div className="maker-grid">
+            <div className="maker-card">
+              <h3>🔍 Discover</h3>
+              <p>Find the right makerspace, machine shop, or facility for your specific project needs</p>
+            </div>
+            <div className="maker-card">
+              <h3>⚡ Accelerate</h3>
+              <p>Skip the research phase and get straight to building with verified, up-to-date information</p>
+            </div>
+            <div className="maker-card">
+              <h3>🤝 Connect</h3>
+              <p>Access the full spectrum of Central Illinois maker resources in one comprehensive directory</p>
+            </div>
+            <div className="maker-card">
+              <h3>🚀 Scale</h3>
+              <p>From prototyping to production, find resources that grow with your project's needs</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Background Section */}
+               <section className="maker-section">
+                 <h2 className="section-title">My Background</h2>
+                 <p className="intro-text">
+                   With over 15 years of experience in scientific research and having worked for a startup,
+                   I understand the challenges entrepreneurs face when trying to find the right resources for
+                   their projects. My background includes active participation in the Saint Louis maker and
+                   tech startup communities, including The Maker Group, Arch Reactor, and co-founding
+                   HAB.education, a STEAM education organization.
+                 </p>
+                 <p className="intro-text">
+                   Now working to support entrepreneurship at a deep-tech business incubator, I'm passionate
+                   about helping startup founders with their resource needs during critical periods of the
+                   incubation phase. This resource directory is my way of extending that support to the broader
+                   Central Illinois innovation community.
+                 </p>
+               </section>
+
+        {/* How to Use Section */}
+        <section className="maker-section">
+          <h2 className="section-title">How to Use This Resource</h2>
+          <ul className="maker-list">
+            <li><strong>Search by Need:</strong> Use the search function to find facilities with specific equipment or capabilities</li>
+            <li><strong>Filter by Category:</strong> Browse university makerspaces, community labs, commercial machine shops, or campus facilities</li>
+            <li><strong>Check Access Requirements:</strong> Each resource lists target audiences and access models to help you find the right fit</li>
+            <li><strong>Contact Directly:</strong> Use the provided contact information to reach out to facilities about your specific needs</li>
+            <li><strong>Plan Your Project:</strong> Review hours, specialties, and equipment lists to plan your prototyping or production timeline</li>
+            <li><strong>Stay Updated:</strong> This directory is regularly updated with new information and resources</li>
+          </ul>
+        </section>
+
+
+        {/* Resource Directory Section */}
+        <section className="maker-section">
+          <h2 className="section-title">Central Illinois Maker Resources</h2>
+          <p className="intro-text">
+            Discover the comprehensive network of makerspaces, machine shops, and maker organizations 
+            available to entrepreneurs and makers in Central Illinois. From university labs to community 
+            spaces, find the resources you need to bring your ideas to life.
+          </p>
+          <MakerspaceDirectory />
+        </section>
+
+        {/* Contact Section */}
+        <section className="maker-section">
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="intro-text">
+            Have questions about these maker resources or need guidance on finding the right facility 
+            for your project? I'm here to help entrepreneurs and makers navigate Central Illinois's 
+            innovation ecosystem.
+          </p>
+          <div className="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:dustin@mayfieldjones.com">dustin@mayfieldjones.com</a></p>
+            <p><strong>Location:</strong> Central Illinois</p>
+            <p><strong>Focus:</strong> Supporting entrepreneurship and maker communities</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
