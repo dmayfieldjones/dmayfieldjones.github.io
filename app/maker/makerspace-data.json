@@ -71,7 +71,7 @@
       "name": "EnterpriseWorks Makerspace",
       "category": "University Makerspace",
       "type": "Startup Incubator Lab",
-      "address": "University of Illinois Research Park, Champaign, IL",
+      "address": "EnterpriseWorks, 60 Hazelwood Drive, Champaign, IL 61820",
       "description": "Shared makerspace for startups and Research Park tenants",
       "facilities": [
         "3D printers",
@@ -80,7 +80,7 @@
         "Shared labs with casework",
         "Fume hoods"
       ],
-      "target_audience": "Research Park tenants, startups, EnterpriseWorks members",
+      "target_audience": "EnterpriseWorks tenants and affiliates",
       "access_model": "Free for Research Park companies and tenants",
       "mission": "Supporting startup development and corporate innovation",
       "website": "https://researchpark.illinois.edu/resource/makerspace/",
