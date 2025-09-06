@@ -1,7 +1,7 @@
 import React from 'react'
 import { Mail, Github } from 'lucide-react'
 import { Metadata } from 'next'
-// Force rebuild - September 6, 2025
+// Force rebuild - September 6, 2025 - Attempt 2
 
 export const metadata: Metadata = {
   title: '7Sisters - Home',
