@@ -42,6 +42,11 @@ const MayfieldJonesProfile = () => {
               <span className="text-red-600">7</span>Sisters Farm
             </a>
           </h3>
+          <h3>
+            <a href="/maker" className="btn btn-zoom hover:text-red-600">
+              Maker
+            </a>
+          </h3>
         </div>
 
         <div className="flex justify-center space-x-4 mb-4">
