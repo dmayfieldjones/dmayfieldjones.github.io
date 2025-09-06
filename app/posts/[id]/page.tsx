@@ -3,6 +3,7 @@ import Container from '@/components/container'
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug';
+import { getArticleCategory, getReadingTime } from '@/app/archive/utils'
 
 export async function generateMetadata({
   params,
@@ -10,9 +11,68 @@ export async function generateMetadata({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  const { title } = await getPostById(id)
+  const { title, date, content } = await getPostById(id)
+  
+  // Extract description from content (first 160 characters)
+  const description = content
+    .replace(/[#*`\[\]()]/g, '') // Remove markdown formatting
+    .replace(/\n/g, ' ') // Replace newlines with spaces
+    .trim()
+    .substring(0, 160) + '...'
+  
+  const category = getArticleCategory(id, title)
+  const readingTime = getReadingTime(id)
+  
+  // Generate keywords based on content and category
+  const keywords = [
+    'Great Dane',
+    'dog breeding',
+    'dog care',
+    category.toLowerCase(),
+    ...title.toLowerCase().split(' ').filter(word => word.length > 3)
+  ].join(', ')
+
   return {
-    title,
+    title: `${title} | 7Sisters Farm`,
+    description,
+    keywords,
+    authors: [{ name: 'Dustin Mayfield-Jones' }],
+    openGraph: {
+      title: `${title} | 7Sisters Farm`,
+      description,
+      type: 'article',
+      publishedTime: new Date(date).toISOString(),
+      authors: ['Dustin Mayfield-Jones'],
+      tags: [category, 'Great Dane', 'dog breeding'],
+      images: [
+        {
+          url: 'https://mayfieldjones.com/img/logo.png',
+          width: 200,
+          height: 200,
+          alt: '7Sisters Farm Logo',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | 7Sisters Farm`,
+      description,
+      images: ['https://mayfieldjones.com/img/logo.png'],
+    },
+    alternates: {
+      canonical: `https://mayfieldjones.com/posts/${id}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   }
 }
 
@@ -23,6 +83,42 @@ export default async function Post({
 }) {
   const { id } = await params
   const { content, title, date } = await getPostById(id)
+  
+  const category = getArticleCategory(id, title)
+  const readingTime = getReadingTime(id)
+  
+  // Generate structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": content.replace(/[#*`\[\]()]/g, '').replace(/\n/g, ' ').trim().substring(0, 160) + '...',
+    "image": "https://mayfieldjones.com/img/logo.png",
+    "author": {
+      "@type": "Person",
+      "name": "Dustin Mayfield-Jones",
+      "url": "https://mayfieldjones.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "7Sisters Farm",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mayfieldjones.com/img/logo.png"
+      }
+    },
+    "datePublished": new Date(date).toISOString(),
+    "dateModified": new Date(date).toISOString(),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://mayfieldjones.com/posts/${id}`
+    },
+    "articleSection": category,
+    "keywords": ["Great Dane", "dog breeding", "dog care", category.toLowerCase()],
+    "wordCount": content.split(' ').length,
+    "timeRequired": readingTime,
+    "inLanguage": "en-US"
+  }
   
   // Process content to replace 7Sisters with styled version
   // But avoid replacing inside Markdown links
@@ -47,13 +143,26 @@ export default async function Post({
   });
   
   return (
-    <div className="content">
-      <div className="post-title">
-        <h1>
-          {title}
-        </h1>
-        <h4 className="post-date">{date}</h4>
-      </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="content">
+        <div className="post-title">
+          <h1>
+            {title}
+          </h1>
+          <div className="post-meta">
+            <span className="post-date">{new Date(date).toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}</span>
+            <span className="post-category">{category}</span>
+            <span className="post-reading-time">{readingTime}</span>
+          </div>
+        </div>
       
       <main className="content-wrapper">
         <article className="blog-content">
@@ -72,6 +181,22 @@ export default async function Post({
           <a href="https://mayfieldjones.com/posts/2025-06-24-laying-the-foundation">
             Curious about our breeding philosophy and how we select our dogs? Read <strong>Laying the Foundation</strong>.
           </a>
+        </div>
+        
+        {/* Related Articles Section */}
+        <div className="related-articles" style={{ marginTop: '3rem', padding: '2rem', backgroundColor: '#f8f8f8', borderRadius: '8px' }}>
+          <h3 style={{ color: '#bf141c', marginBottom: '1rem' }}>Related Articles</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <a href="/posts/2025-06-25-choosing-a-great-dane-breeder" style={{ color: '#bf141c', textDecoration: 'none' }}>
+              → The Family's Guide to Choosing a Great Dane Breeder
+            </a>
+            <a href="/posts/2025-07-03-the-first-year" style={{ color: '#bf141c', textDecoration: 'none' }}>
+              → The First Year: A Comprehensive Guide to Great Dane Puppy Development
+            </a>
+            <a href="/posts/2025-06-24-laying-the-foundation" style={{ color: '#bf141c', textDecoration: 'none' }}>
+              → Laying the Foundation: Our Breeding Philosophy
+            </a>
+          </div>
         </div>
       </main>
       
@@ -113,11 +238,34 @@ export default async function Post({
               letter-spacing: 0.5px;
             }
             
+            .post-meta {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              justify-content: center;
+              align-items: center;
+              margin-top: 0.5rem;
+            }
+            
             .post-date {
               font-size: 1.1rem;
               color: #666;
               font-style: italic;
-              margin: 0;
+            }
+            
+            .post-category {
+              background-color: #bf141c;
+              color: white;
+              padding: 0.25rem 0.75rem;
+              border-radius: 1rem;
+              font-size: 0.9rem;
+              font-weight: 600;
+            }
+            
+            .post-reading-time {
+              color: #666;
+              font-size: 0.9rem;
+              font-style: italic;
             }
             
             .content-wrapper {
@@ -433,7 +581,8 @@ export default async function Post({
           `,
         }}
       />
-    </div>
+      </div>
+    </>
   )
 }
 
