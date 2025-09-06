@@ -24,7 +24,7 @@ export default function Contents() {
             practices, ongoing education, and building lasting relationships with every family we serve.
           </p>
           <p className="intro-text">
-            From our early days as newcomers to the Illini Great Dane Club to our current leadership roles, 
+            From our early days as newcomers to the Illini Great Dane Club to our deeper engagement, 
             we've learned that great breeding is about more than just producing puppies—it's about stewardship, 
             mentorship, and community.
           </p>
