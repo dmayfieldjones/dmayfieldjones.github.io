@@ -179,19 +179,19 @@ export default function MakerPage() {
           <h2 className="section-title">Why This Matters</h2>
           <div className="maker-grid">
             <div className="maker-card">
-              <h3>🔍 Discover</h3>
+              <h3>Discover</h3>
               <p>Find the right makerspace, machine shop, or facility for your specific project needs</p>
             </div>
             <div className="maker-card">
-              <h3>⚡ Accelerate</h3>
+              <h3>Accelerate</h3>
               <p>Skip the research phase and get straight to building with verified, up-to-date information</p>
             </div>
             <div className="maker-card">
-              <h3>🤝 Connect</h3>
+              <h3>Connect</h3>
               <p>Access the full spectrum of Central Illinois maker resources in one comprehensive directory</p>
             </div>
             <div className="maker-card">
-              <h3>🚀 Scale</h3>
+              <h3>Scale</h3>
               <p>From prototyping to production, find resources that grow with your project's needs</p>
             </div>
           </div>
