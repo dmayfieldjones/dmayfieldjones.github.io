@@ -14,7 +14,7 @@ interface Makerspace {
   services?: string[]
   target_audience: string
   access_model: string
-  mission: string
+  mission?: string
   website?: string
   hours?: string
   specialties: string[]
@@ -176,10 +176,12 @@ export default function MakerspaceDirectory() {
 
               {expandedCard === resource.id && (
                 <div className="expanded-details">
-                  <div className="mission-section">
-                    <h4>Mission</h4>
-                    <p>{resource.mission}</p>
-                  </div>
+                  {resource.mission && (
+                    <div className="mission-section">
+                      <h4>Mission</h4>
+                      <p>{resource.mission}</p>
+                    </div>
+                  )}
 
                   {resource.facilities && resource.facilities.length > 0 && (
                     <div className="facilities-section">
