@@ -159,20 +159,16 @@ export default function () {
               <p className="registration">
                 AKC Registration: WS80095602
               </p>
-              <div className="health-testing">
-                <h4 className="health-title">Health Testing</h4>
-                <p className="health-description">
-                  Health testing completed and verified through OFA
-                </p>
+              <p className="registration">
                 <a 
-                  href="https://ofa.org/advanced-search/?quicksearch=CH+Legado+N+Danekraaft%27s+How+Can+I+Tell+You" 
+                  href="https://ofa.org/advanced-search/?regnum=WS80095602" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="health-link"
+                  className="ofa-link"
                 >
-                  View Sean's Health Clearances on OFA →
+                  WS80095602
                 </a>
-              </div>
+              </p>
             </div>
             <div className="parent-card">
               <h3 className="parent-title">Dam</h3>
@@ -183,20 +179,16 @@ export default function () {
               <p className="registration">
                 AKC Registration: WS69691106
               </p>
-              <div className="health-testing">
-                <h4 className="health-title">Health Testing</h4>
-                <p className="health-description">
-                  Health testing completed and verified through OFA
-                </p>
+              <p className="registration">
                 <a 
-                  href="https://ofa.org/advanced-search/?quicksearch=CH+Legado+N+Danekraaft%27s+How+Can+I+Tell+You+Piper" 
+                  href="https://ofa.org/advanced-search/?regnum=WS69691106" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="health-link"
+                  className="ofa-link"
                 >
-                  View Piper's Health Clearances on OFA →
+                  WS69691106
                 </a>
-              </div>
+              </p>
             </div>
           </div>
         </section>
