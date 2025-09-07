@@ -206,7 +206,7 @@ export default function () {
             <p className="tiktok-note">
               Follow our puppy success stories on{' '}
               <a 
-                href="https://tiktok.com/@7sistersfarm" 
+                href="https://www.tiktok.com/@7sistersgreatdanes" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="tiktok-link"
