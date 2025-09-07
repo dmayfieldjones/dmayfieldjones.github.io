@@ -54,7 +54,7 @@ export default function Contents() {
                 fontSize: '12px',
                 margin: '0'
               }}>
-                Dustin and Karen with Kitty and Aubrey in their wedding tuxedos
+                Dustin and Karen with Kitty and Aubrey in their wedding tuxedos (2012)
               </p>
             </div>
           </div>
