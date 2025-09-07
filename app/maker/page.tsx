@@ -170,9 +170,7 @@ export default function MakerPage() {
           <p className="intro-text">
             Whether you're a startup founder, a student, or an entrepreneur anywhere in Central Illinois, 
             this resource is designed to connect you with the tools, facilities, and expertise you need 
-            to prototype, build, and scale your innovations. When I'm not supporting makers and entrepreneurs, 
-            I'm applying these same principles of careful research, community building, and excellence to 
-            <a href="/7Sisters" style={{ textDecoration: 'none' }}> breeding Great Danes at 7Sisters Farm</a>.
+            to prototype, build, and scale your innovations.
           </p>
         </section>
 
@@ -245,10 +243,9 @@ export default function MakerPage() {
             Now working to support entrepreneurship at a deep-tech business incubator, I'm passionate
             about helping startup founders with their resource needs during critical periods of the
             incubation phase. This resource directory is my way of extending that support to the broader
-            Central Illinois innovation community. The same principles of rigorous research, community 
-            building, and excellence that drive my work with entrepreneurs also guide my approach to 
-            <a href="/BreedingPhilosophy" style={{ textDecoration: 'none' }}> ethical Great Dane breeding</a> 
-            and <a href="/about" style={{ textDecoration: 'none' }}> responsible stewardship of the breed</a>.
+            Central Illinois innovation community.             I bring the same commitment to research, community 
+            building, and excellence to all my work, including my involvement in 
+            <a href="/BreedingPhilosophy" style={{ textDecoration: 'none', color: 'inherit' }}> ethical Great Dane breeding</a> and <a href="/about" style={{ textDecoration: 'none', color: 'inherit' }}> responsible stewardship of the breed</a>.
           </p>
         </section>
 
@@ -258,13 +255,12 @@ export default function MakerPage() {
           <p className="intro-text">
             Have questions about these maker resources or need guidance on finding the right facility 
             for your project? I'm here to help entrepreneurs and makers navigate Central Illinois's 
-            innovation ecosystem. I'm also happy to discuss <a href="/CommonQuestions" style={{ textDecoration: 'none' }}> Great Dane breeding questions</a> 
-            or share insights about <a href="/7Sisters" style={{ textDecoration: 'none' }}> our breeding program</a>.
+            innovation ecosystem.             I'm also happy to discuss <a href="/CommonQuestions" style={{ textDecoration: 'none', color: 'inherit' }}> Great Dane breeding questions</a> or share insights about <a href="/7Sisters" style={{ textDecoration: 'none', color: 'inherit' }}> our breeding program</a>.
           </p>
           <div className="contact-info">
             <p><strong>Email:</strong> <a href="mailto:dustin@mayfieldjones.com">dustin@mayfieldjones.com</a></p>
             <p><strong>Location:</strong> Central Illinois</p>
-            <p><strong>Focus:</strong> Supporting entrepreneurship, maker communities, and ethical Great Dane breeding</p>
+            <p><strong>Focus:</strong> Supporting entrepreneurship and maker communities</p>
           </div>
         </section>
       </main>
