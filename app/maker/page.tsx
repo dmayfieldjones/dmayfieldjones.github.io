@@ -161,8 +161,7 @@ export default function MakerPage() {
         <section className="maker-section" itemScope itemType="https://schema.org/WebPageElement">
           <h2 className="section-title" itemProp="name">About This Resource</h2>
           <p className="intro-text">
-            As a maker in Central Illinois working to support entrepreneurship at a deep-tech business 
-            incubator, I've created this comprehensive directory to help entrepreneurs, makers, and 
+            I've created this comprehensive directory to help entrepreneurs, makers, and 
             innovators find the resources they need to bring their ideas to life. This curated collection 
             of makerspaces, machine shops, and maker organizations represents the rich ecosystem of 
             fabrication and innovation resources available in our region.
@@ -247,6 +246,7 @@ export default function MakerPage() {
             <a href="/BreedingPhilosophy" style={{ textDecoration: 'none', color: 'inherit' }}> ethical Great Dane breeding</a> and <a href="/about" style={{ textDecoration: 'none', color: 'inherit' }}> responsible stewardship of the breed</a>.
           </p>
         </section>
+
 
         {/* Contact Section */}
         <section className="maker-section">
