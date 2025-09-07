@@ -18,30 +18,40 @@ export default function Contents() {
         {/* About Us Section */}
         <section className="about-section">
           <h2 className="section-title">About Us</h2>
-          <p className="intro-text">
-            Meet Dustin and Karen, the passionate breeders behind <span style={{ color: '#bf141c' }}>7</span>Sisters Farm. Our journey into Great Dane breeding 
-            began with a deep love for the breed and a commitment to excellence. We believe in responsible breeding 
-            practices, ongoing education, and building lasting relationships with every family we serve.
-          </p>
-          <p className="intro-text">
-            From our early days as newcomers to the Illini Great Dane Club to our deeper engagement, 
-            we've learned that great breeding is about more than just producing puppies—it's about stewardship, 
-            mentorship, and community.
+          
+          {/* Hook */}
+          <p className="intro-text hook-text">
+            We believe Great Dane breeding is about more than just puppies—it's about stewardship, mentorship, and building a community that spans generations.
           </p>
           
-          {/* Academic Credentials Section */}
-          <div className="credentials-section">
-            <p className="intro-text">
-              Dustin brings academic expertise to our breeding program, with research experience in genetics and 
-              genomics. View his <a 
-                href="https://scholar.google.com/citations?user=MkPrBuoAAAAJ&hl=en" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="scholar-link"
-              >
-                Google Scholar profile
-              </a> to learn more about his research contributions.
-            </p>
+          {/* Individual Expertise */}
+          <div className="expertise-section">
+            <div className="expertise-grid">
+              <div className="expertise-item">
+                <h4 className="expertise-name">Dustin</h4>
+                <p className="expertise-text">
+                  A plant biologist turned startup facilities manager, I fell in love with Great Danes at age 10 in an Iowa BBQ joint. My background in genetics and computational biology keeps me busy with cutting-edge breeding science, while my work with entrepreneurs has taught me the value of hands-on mentorship.
+                </p>
+                <a 
+                  href="https://scholar.google.com/citations?user=MkPrBuoAAAAJ&hl=en" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="expertise-link"
+                >
+                  View Research Profile →
+                </a>
+              </div>
+              
+              <div className="expertise-item">
+                <h4 className="expertise-name">Karen</h4>
+                <p className="expertise-text">
+                  A litigation attorney with lifelong dog experience—from growing up with dachshund breeders to 4-H obedience shows and veterinary clinic work. My legal training ensures ethical, transparent practices with solid contracts that protect both families and our dogs.
+                </p>
+                <p className="expertise-text">
+                  I've dedicated over 20 years to Blood Cancer United, learning that meaningful change comes through sustained commitment and attention to detail—the same approach I bring to breeding.
+                </p>
+              </div>
+            </div>
           </div>
           
           <div className="read-more-section">
@@ -53,10 +63,6 @@ export default function Contents() {
 
         {/* Breeding Philosophy Section */}
         <section className="philosophy-section">
-          <h2 className="section-title">Breeding Philosophy</h2>
-          <p className="intro-text">
-            Health, temperament, and breed preservation guide every breeding decision we make.
-          </p>
           <div className="cta-section">
             <Link href="/BreedingPhilosophy" className="cta-button">
               Learn More About Our Philosophy
@@ -66,10 +72,6 @@ export default function Contents() {
 
         {/* Farm Section */}
         <section className="farm-section">
-          <h2 className="section-title">Our Farm</h2>
-          <p className="intro-text">
-            A historic Illinois property with deep roots and a story spanning generations.
-          </p>
           <div className="cta-section">
             <Link href="/Farm" className="cta-button">
               Discover Our Farm's Story
@@ -79,10 +81,6 @@ export default function Contents() {
 
         {/* Contact Section */}
         <section className="contact-section">
-          <h2 className="section-title">Get In Touch</h2>
-          <p className="intro-text">
-            Questions about our Great Danes or breeding program? We'd love to hear from you.
-          </p>
           <div className="cta-section">
             <Link href="/contact" className="cta-button">
               Contact Us
