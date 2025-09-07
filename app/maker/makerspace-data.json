@@ -71,17 +71,19 @@
       "name": "EnterpriseWorks Makerspace",
       "category": "University Makerspace",
       "type": "Startup Incubator Lab",
-      "address": "EnterpriseWorks, 60 Hazelwood Drive, Champaign, IL 61820",
+      "address": "EnterpriseWorks, Room #143, 60 Hazelwood Drive, Champaign, IL 61820",
       "description": "Shared makerspace for startups and Research Park tenants",
       "facilities": [
+        "180W CO₂ Laser",
+        "Laguna Swift 4'x4' CNC Router",
+        "Mill/Drill Press",
+        "Lathe",
         "3D printers",
-        "Table saws", 
-        "Laser cutters",
-        "Shared labs with casework",
-        "Fume hoods"
+        "Saws (various)",
+        "Power tools"
       ],
-      "target_audience": "EnterpriseWorks tenants and affiliates",
-      "access_model": "Free for Research Park companies and tenants",
+      "target_audience": "EnterpriseWorks community and affiliates",
+      "access_model": "24/7 access for EnterpriseWorks community",
       "mission": "Supporting startup development and corporate innovation",
       "website": "https://researchpark.illinois.edu/resource/makerspace/",
       "contact": {
