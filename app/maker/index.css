@@ -424,6 +424,42 @@
   }
 }
 
+/* Materials Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(var(--spacing-unit) * 2);
+  margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.materials-card {
+  background: white;
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.materials-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 20, 28, 0.2);
+}
+
+.materials-card h3 {
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 1);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.materials-card p {
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 @media print {
   .maker-section {
     background-color: transparent;
@@ -432,6 +468,11 @@
   }
   
   .maker-card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  .materials-card {
     border: 1px solid #ccc;
     box-shadow: none;
   }
