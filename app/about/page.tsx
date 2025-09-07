@@ -34,7 +34,11 @@ export default function Contents() {
             <div style={{ 
               flex: '0 0 auto', 
               textAlign: 'center',
-              minWidth: '250px'
+              minWidth: '250px',
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
             }}>
               <img 
                 src="/img/wedding.png" 
