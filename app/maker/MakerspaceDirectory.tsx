@@ -21,6 +21,7 @@ interface Makerspace {
   contact?: {
     phone?: string
     email?: string
+    email2?: string
     supervisor?: string
     staff?: Array<{
       name: string
@@ -82,6 +83,7 @@ export default function MakerspaceDirectory() {
     const contactItems = []
     if (contact.phone) contactItems.push(`📞 ${contact.phone}`)
     if (contact.email) contactItems.push(`✉️ ${contact.email}`)
+    if (contact.email2) contactItems.push(`✉️ ${contact.email2}`)
     if (contact.supervisor) contactItems.push(`👤 ${contact.supervisor}`)
     
     return contactItems.length > 0 ? contactItems.join(' • ') : null
