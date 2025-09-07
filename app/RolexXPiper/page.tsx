@@ -175,7 +175,7 @@ export default function () {
                   Health testing completed and verified through OFA
                 </p>
                 <a 
-                  href="https://ofa.org/advanced-search/?regnum=WS69691106" 
+                  href="https://ofa.org/advanced-search/?quicksearch=CH+Legado+N+Danekraaft%27s+How+Can+I+Tell+You+Piper" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="health-link"
