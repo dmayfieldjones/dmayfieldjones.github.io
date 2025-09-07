@@ -4,9 +4,47 @@ import { Metadata } from 'next'
 // Force rebuild - September 6, 2025 - Attempt 2
 
 export const metadata: Metadata = {
-  title: '7Sisters - Home',
+  title: 'Illinois Great Dane Breeders | 7Sisters Farm - Central Illinois',
   description:
-    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+    'Premier Illinois Great Dane breeders at 7Sisters Farm in Central Illinois. AKC registered Great Danes, health tested, family raised. Serving Illinois and surrounding states.',
+  keywords: [
+    'Illinois Great Dane breeders',
+    'Illinois dogs',
+    'Illinois breeders',
+    'Great Dane breeders Illinois',
+    'Central Illinois Great Danes',
+    'AKC Great Danes Illinois',
+    'Illinois dog breeders',
+    'Great Dane puppies Illinois',
+    '7Sisters Farm',
+    'Champaign Illinois breeders',
+    'Urbana Illinois dogs',
+    'Illinois Great Dane kennel'
+  ],
+  openGraph: {
+    title: 'Illinois Great Dane Breeders | 7Sisters Farm',
+    description: 'Premier Illinois Great Dane breeders in Central Illinois. AKC registered, health tested, family raised Great Danes.',
+    type: 'website',
+    url: 'https://dmayfieldjones.github.io',
+    siteName: '7Sisters Farm',
+    images: [
+      {
+        url: 'https://dmayfieldjones.github.io/img/wedding.png',
+        width: 300,
+        height: 300,
+        alt: 'Dustin and Karen - Illinois Great Dane Breeders',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Illinois Great Dane Breeders | 7Sisters Farm',
+    description: 'Premier Illinois Great Dane breeders in Central Illinois. AKC registered, health tested, family raised.',
+    images: ['https://dmayfieldjones.github.io/img/wedding.png'],
+  },
+  alternates: {
+    canonical: 'https://dmayfieldjones.github.io',
+  },
 }
 
 const MayfieldJonesProfile = () => {
@@ -28,7 +66,8 @@ const MayfieldJonesProfile = () => {
         <div className="mb-4">
           <p className="text-lg">Dustin and Karen Mayfield-Jones</p>
           <hr className="my-2 border-gray-100" />
-          <p className="text-base">Central Illinois</p>
+          <p className="text-base">Great Dane Breeders at <span className="text-red-600">7</span>Sisters</p>
+          <p className="text-sm text-gray-600">Central Illinois • Champaign-Urbana Area</p>
           <hr className="my-2 border-gray-100" />
         </div>
 
