@@ -254,6 +254,37 @@
   ],
   "machine_shops": [
     {
+      "id": "matrics-inc",
+      "name": "MATRICS Inc.",
+      "category": "Commercial Machine Shop",
+      "type": "Design and Engineering Services",
+      "address": "MATRICS Inc., 60 Hazelwood Drive, Champaign, IL 61820",
+      "description": "Design and engineering services specializing in CNC machining for startups and small companies",
+      "facilities": [
+        "CNC machining",
+        "Design services",
+        "Engineering consulting",
+        "Manufacturing services",
+        "Prototype development"
+      ],
+      "target_audience": "Startups, small companies, independent creators, entrepreneurs",
+      "access_model": "Commercial services - contact for quotes",
+      "mission": "Providing quick, accurate and affordable manufacturing services for startups and small companies",
+      "website": "https://www.matrics-inc.com/about",
+      "contact": {
+        "email": "richard.mauge@matrics-inc.com",
+        "email2": "robert.mauge@matrics-inc.com"
+      },
+      "specialties": [
+        "CNC machining",
+        "Startup manufacturing",
+        "Prototype development",
+        "Design and engineering",
+        "Custom manufacturing solutions"
+      ],
+      "notes": "Graduate of EnterpriseWorks in Research Park. Founded by UIUC mechanical engineering graduates Richard and Robert Mauge who built their own CNC machines to meet startup manufacturing needs."
+    },
+    {
       "id": "wagner-machine",
       "name": "Wagner Machine Co.",
       "category": "Commercial Machine Shop",
