@@ -157,7 +157,6 @@ export default function () {
                 <span className="call-name">"Sean"</span>
               </p>
               <p className="registration">
-                AKC Registration: 
                 <a 
                   href="https://ofa.org/advanced-search/?regnum=WS80095602" 
                   target="_blank" 
@@ -175,7 +174,6 @@ export default function () {
                 <span className="call-name">"Piper"</span>
               </p>
               <p className="registration">
-                AKC Registration: 
                 <a 
                   href="https://ofa.org/advanced-search/?regnum=WS69691106" 
                   target="_blank" 
