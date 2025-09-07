@@ -1,9 +1,57 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Great Dane Litters',
+  title: 'Great Dane Puppies & Litters | Available & Previous Litters | 7Sisters Farm',
   description:
-    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+    'View our Great Dane puppies and litters. Health-tested parents, ethical breeding practices, and lifetime support. Located in Central Illinois.',
+  keywords: [
+    'Great Dane puppies',
+    'Great Dane litters',
+    'Great Dane puppies for sale',
+    'Illinois Great Dane puppies',
+    'available Great Dane puppies',
+    'Great Dane puppies Illinois',
+    'ethical Great Dane breeders',
+    'health tested Great Dane puppies',
+    'Central Illinois Great Dane puppies',
+    'Champaign Great Dane puppies',
+    'Urbana Great Dane puppies'
+  ],
+  openGraph: {
+    title: 'Great Dane Puppies & Litters | Available & Previous Litters | 7Sisters Farm',
+    description: 'View our Great Dane puppies and litters. Health-tested parents, ethical breeding practices, and lifetime support.',
+    type: 'website',
+    url: 'https://mayfieldjones.com/Litters',
+    siteName: '7Sisters Farm',
+    images: [
+      {
+        url: 'https://mayfieldjones.com/img/SeanXPiper.jpg',
+        width: 400,
+        height: 300,
+        alt: '7Sisters Farm Great Dane Puppies',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Great Dane Puppies & Litters | Available & Previous Litters | 7Sisters Farm',
+    description: 'View our Great Dane puppies and litters. Health-tested parents, ethical breeding practices, and lifetime support.',
+    images: ['https://mayfieldjones.com/img/SeanXPiper.jpg'],
+  },
+  alternates: {
+    canonical: 'https://mayfieldjones.com/Litters',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function () {
