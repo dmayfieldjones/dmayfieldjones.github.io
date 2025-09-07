@@ -70,7 +70,7 @@ export default function Navigation() {
           </button>
           <ul className={`submenu ${openSubmenu === 'resources' ? 'show' : ''}`}>
             <li><a href="/Resources">Great Dane Resources</a></li>
-            <li><a href="/archive">Articles</a></li>
+            <li><a href="/archive">7Sisters Articles</a></li>
             <li><a href="/CommonQuestions">Common Questions</a></li>
           </ul>
         </li>
