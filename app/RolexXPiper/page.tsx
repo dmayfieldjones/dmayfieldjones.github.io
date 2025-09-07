@@ -152,11 +152,10 @@ export default function () {
               </p>
               <p className="registration">
                 <a 
-                  href="https://ofa.org/advanced-search/" 
+                  href="https://ofa.org/advanced-search/?appnum=WS66273805" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="ofa-link"
-                  title="Search for WS66273805 on OFA"
                 >
                   WS66273805
                 </a>
@@ -170,11 +169,10 @@ export default function () {
               </p>
               <p className="registration">
                 <a 
-                  href="https://ofa.org/advanced-search/" 
+                  href="https://ofa.org/advanced-search/?appnum=WS69691106" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="ofa-link"
-                  title="Search for WS69691106 on OFA"
                 >
                   WS69691106
                 </a>
