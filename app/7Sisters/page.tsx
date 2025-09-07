@@ -77,6 +77,15 @@ export default function () {
             Our Great Danes are family members. They are sacred. Great Danes are
             not for everyone. Choosing a breeder you can trust is critical.
           </p>
+          <p style={{ textAlign: 'center', marginTop: '20px' }}>
+            <a href="/posts/2025-06-25-choosing-a-great-dane-breeder" style={{ 
+              color: '#bf141c', 
+              textDecoration: 'underline',
+              fontWeight: 'bold'
+            }}>
+              Read our Complete Guide to Choosing a Great Dane Breeder →
+            </a>
+          </p>
         </section>
         {/* Family Section */}
         <section className="family-section">

@@ -1,7 +1,7 @@
 ---
-title: "The Family's Guide to Choosing a Great Dane Breeder: Questions That Matter"
+title: "How to Find Ethical Great Dane Breeders: Complete Guide to Responsible Breeder Selection"
 date: 2025-06-25
-description: "Choosing a Great Dane breeder: health testing, responsible breeding, and tips for selecting the right puppy for your family."
+description: "Complete guide to finding ethical Great Dane breeders. Learn what questions to ask, health testing requirements, and how to identify responsible breeders vs puppy mills."
 ---
 
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
