@@ -151,14 +151,16 @@ export default function () {
                 <span className="call-name">"Rolex"</span>
               </p>
               <p className="registration">
-                AKC Registration: WS66273805
+                <a 
+                  href="https://ofa.org/advanced-search/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="ofa-link"
+                  title="Search for WS66273805 on OFA"
+                >
+                  WS66273805
+                </a>
               </p>
-              <div className="health-testing">
-                <h4 className="health-title">Health Testing</h4>
-                <p className="health-description">
-                  From Mexico with health testing completed through Mexican veterinary standards and international protocols. Health clearances not available on OFA database.
-                </p>
-              </div>
             </div>
             <div className="parent-card">
               <h3 className="parent-title">Dam</h3>
@@ -168,10 +170,11 @@ export default function () {
               </p>
               <p className="registration">
                 <a 
-                  href="https://ofa.org/advanced-search/?regnum=WS69691106" 
+                  href="https://ofa.org/advanced-search/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="ofa-link"
+                  title="Search for WS69691106 on OFA"
                 >
                   WS69691106
                 </a>
