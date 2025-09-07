@@ -215,8 +215,7 @@ export default function MakerPage() {
                <section className="maker-section">
                  <h2 className="section-title">Central Illinois Maker Resources Directory</h2>
                  <p className="intro-text">
-                   Discover the comprehensive network of <strong>20+ makerspaces, machine shops, and maker organizations</strong>
-                   available to entrepreneurs and makers in Central Illinois. From university labs to community
+                   Discover the comprehensive network of <strong>20+ makerspaces, machine shops, and maker organizations</strong> available to entrepreneurs and makers in Central Illinois. From university labs to community
                    spaces, find the resources you need to bring your ideas to life. This directory includes:
                  </p>
                  <ul className="maker-list">
