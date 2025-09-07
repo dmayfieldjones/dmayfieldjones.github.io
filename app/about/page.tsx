@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { useState } from 'react'
 import './index.css'
 
+// Note: Metadata can't be exported from client components
+// We'll need to add this to a layout file or convert to server component
+
 export default function Contents() {
   const [dustinExpanded, setDustinExpanded] = useState(false)
   const [karenExpanded, setKarenExpanded] = useState(false)

@@ -1,6 +1,7 @@
 import './index.css'
 import './navbar.css'
 import Navigation from '../components/Navigation'
+import LocalBusinessSchema from './schema'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function RootLayout({
@@ -10,6 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <LocalBusinessSchema />
+      </head>
       <body>
         <Navigation />
         <div className="wrapper">{children}</div>

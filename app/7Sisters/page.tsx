@@ -1,4 +1,47 @@
 import './index.css'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Illinois Great Danes | 7Sisters Farm - AKC Registered Great Danes',
+  description:
+    'Illinois Great Danes at 7Sisters Farm. AKC registered, health tested Great Danes in Central Illinois. 35+ generation bloodlines, family raised, serving Illinois and surrounding states.',
+  keywords: [
+    'Illinois Great Danes',
+    'Great Danes Illinois',
+    'Illinois Great Dane breeders',
+    'Central Illinois Great Danes',
+    'AKC Great Danes Illinois',
+    'Great Dane puppies Illinois',
+    '7Sisters Farm Great Danes',
+    'Illinois dog breeders',
+    'Champaign Illinois Great Danes',
+    'Urbana Illinois Great Danes'
+  ],
+  openGraph: {
+    title: 'Illinois Great Danes | 7Sisters Farm',
+    description: 'Illinois Great Danes at 7Sisters Farm. AKC registered, health tested Great Danes in Central Illinois.',
+    type: 'website',
+    url: 'https://dmayfieldjones.github.io/7Sisters',
+    siteName: '7Sisters Farm',
+    images: [
+      {
+        url: 'https://dmayfieldjones.github.io/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Illinois Great Dane - 7Sisters Farm',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Illinois Great Danes | 7Sisters Farm',
+    description: 'Illinois Great Danes at 7Sisters Farm. AKC registered, health tested Great Danes in Central Illinois.',
+    images: ['https://dmayfieldjones.github.io/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg'],
+  },
+  alternates: {
+    canonical: 'https://dmayfieldjones.github.io/7Sisters',
+  },
+}
 
 export default function () {
   return (

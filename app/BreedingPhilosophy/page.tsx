@@ -1,9 +1,29 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Breeding Philosophy',
+  title: 'Ethical Great Dane Breeding Philosophy | 7Sisters Farm - Responsible Breeders',
   description:
-    'Our mission and approach to breeding exceptional Great Danes at 7Sisters Farm',
+    'Our ethical Great Dane breeding philosophy at 7Sisters Farm. Responsible breeding practices, health testing, and commitment to breed betterment.',
+  keywords: [
+    'ethical Great Dane breeding philosophy',
+    'responsible Great Dane breeders',
+    'Great Dane breeding philosophy',
+    'ethical dog breeding',
+    'responsible dog breeding',
+    'Great Dane breeder mission',
+    'breed betterment Great Danes',
+    'ethical breeding practices'
+  ],
+  openGraph: {
+    title: 'Ethical Great Dane Breeding Philosophy | 7Sisters Farm',
+    description: 'Our ethical Great Dane breeding philosophy at 7Sisters Farm. Responsible breeding practices and commitment to breed betterment.',
+    type: 'website',
+    url: 'https://dmayfieldjones.github.io/BreedingPhilosophy',
+    siteName: '7Sisters Farm',
+  },
+  alternates: {
+    canonical: 'https://dmayfieldjones.github.io/BreedingPhilosophy',
+  },
 }
 
 export default function BreedingPhilosophy() {
