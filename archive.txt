@@ -8,12 +8,140 @@ a:I[6213,[],"MetadataBoundary"]
 c:I[6213,[],"ViewportBoundary"]
 e:I[4835,[],""]
 :HL["/_next/static/css/a1264266a959eeb8.css","style"]
-2:T91f,{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://dmayfieldjones.github.io/#business","name":"7Sisters Farm","alternateName":"7Sisters Great Danes","description":"Premier Illinois Great Dane breeders at 7Sisters Farm in Central Illinois. AKC registered Great Danes, health tested, family raised.","url":"https://dmayfieldjones.github.io","telephone":"dustin@mayfieldjones.com","email":"dustin@mayfieldjones.com","address":{"@type":"PostalAddress","addressLocality":"Champaign","addressRegion":"IL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":"40.1164","longitude":"-88.2434"},"areaServed":[{"@type":"State","name":"Illinois"},{"@type":"State","name":"Indiana"},{"@type":"State","name":"Iowa"},{"@type":"State","name":"Missouri"},{"@type":"State","name":"Wisconsin"}],"serviceType":"Great Dane Breeding","priceRange":"$$","paymentAccepted":"Cash, Check","currenciesAccepted":"USD","openingHours":"Mo-Su 09:00-18:00","image":["https://dmayfieldjones.github.io/img/wedding.png","https://dmayfieldjones.github.io/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg","https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png"],"logo":"https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png","sameAs":["https://www.tiktok.com/@7sistersgreatdanes"],"founder":[{"@type":"Person","name":"Dustin Mayfield-Jones","jobTitle":"Great Dane Breeder"},{"@type":"Person","name":"Karen Mayfield-Jones","jobTitle":"Great Dane Breeder"}],"keywords":["Illinois Great Dane breeders","Illinois dogs","Illinois breeders","Great Dane breeders Illinois","Central Illinois Great Danes","AKC Great Danes Illinois","Illinois dog breeders","Great Dane puppies Illinois","7Sisters Farm","Champaign Illinois breeders","Urbana Illinois dogs","Illinois Great Dane kennel"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Great Dane Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Great Dane Puppies","description":"AKC registered Great Dane puppies, health tested, family raised"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Great Dane Breeding Consultation","description":"Expert advice on Great Dane breeding, health testing, and care"}}]},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"1","bestRating":"5","worstRating":"1"}}0:{"P":null,"b":"GN-9NmR9x8vL8yBXTLRI7","p":"","c":["","archive"],"i":false,"f":[[["",{"children":["archive",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a1264266a959eeb8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"children":[["$","$L3",null,{}],["$","div",null,{"className":"wrapper","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}],["$","$L6",null,{"gaId":"G-SDSX26JETX"}]]}]]}],{"children":["archive",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","archive","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":"$L9"}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","cptjpLudTWhmT_StfIMPD",{"children":[["$","$La",null,{"children":"$Lb"}],["$","$Lc",null,{"children":"$Ld"}],null]}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+2:T91f,{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://dmayfieldjones.github.io/#business","name":"7Sisters Farm","alternateName":"7Sisters Great Danes","description":"Premier Illinois Great Dane breeders at 7Sisters Farm in Central Illinois. AKC registered Great Danes, health tested, family raised.","url":"https://dmayfieldjones.github.io","telephone":"dustin@mayfieldjones.com","email":"dustin@mayfieldjones.com","address":{"@type":"PostalAddress","addressLocality":"Champaign","addressRegion":"IL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":"40.1164","longitude":"-88.2434"},"areaServed":[{"@type":"State","name":"Illinois"},{"@type":"State","name":"Indiana"},{"@type":"State","name":"Iowa"},{"@type":"State","name":"Missouri"},{"@type":"State","name":"Wisconsin"}],"serviceType":"Great Dane Breeding","priceRange":"$$","paymentAccepted":"Cash, Check","currenciesAccepted":"USD","openingHours":"Mo-Su 09:00-18:00","image":["https://dmayfieldjones.github.io/img/wedding.png","https://dmayfieldjones.github.io/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg","https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png"],"logo":"https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png","sameAs":["https://www.tiktok.com/@7sistersgreatdanes"],"founder":[{"@type":"Person","name":"Dustin Mayfield-Jones","jobTitle":"Great Dane Breeder"},{"@type":"Person","name":"Karen Mayfield-Jones","jobTitle":"Great Dane Breeder"}],"keywords":["Illinois Great Dane breeders","Illinois dogs","Illinois breeders","Great Dane breeders Illinois","Central Illinois Great Danes","AKC Great Danes Illinois","Illinois dog breeders","Great Dane puppies Illinois","7Sisters Farm","Champaign Illinois breeders","Urbana Illinois dogs","Illinois Great Dane kennel"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Great Dane Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Great Dane Puppies","description":"AKC registered Great Dane puppies, health tested, family raised"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Great Dane Breeding Consultation","description":"Expert advice on Great Dane breeding, health testing, and care"}}]},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"1","bestRating":"5","worstRating":"1"}}0:{"P":null,"b":"OC6Gnfg7eh-vKQ7x4QDLd","p":"","c":["","archive"],"i":false,"f":[[["",{"children":["archive",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a1264266a959eeb8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"children":[["$","$L3",null,{}],["$","div",null,{"className":"wrapper","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}],["$","$L6",null,{"gaId":"G-SDSX26JETX"}]]}]]}],{"children":["archive",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","archive","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":"$L9"}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","AcG7w8fwYEMHkJHcfu-tR",{"children":[["$","$La",null,{"children":"$Lb"}],["$","$Lc",null,{"children":"$Ld"}],null]}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
 d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 b:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Great Dane Articles and Insights"}],["$","meta","2",{"name":"description","content":"Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership."}]]
 9:null
-f:I[352,["173","static/chunks/173-811fbd62acfad52a.js","635","static/chunks/app/archive/page-a08f2a48add0d3d7.js"],"default"]
-10:T7cab,
+f:I[352,["173","static/chunks/173-811fbd62acfad52a.js","635","static/chunks/app/archive/page-3ade7a29291ef57b.js"],"default"]
+10:T34d1,
+# Breeding for Temperament: What Current Research Tools Tell Us (And What They Don't)
+
+As preservationist breeders, we make complex decisions based on three fundamental pillars: conformation, health, and temperament. All three are essential to producing dogs that fulfill their breed's purpose and thrive as modern companions.
+
+When evaluating conformation, we have more established tools and terminology at our disposal. I can put my hands on a potential stud dog and assess his structural fit for my dams. We have detailed breed standards, standardized terminology, and generations of documented pedigree data. We know what constitutes a conformational fault and would never deliberately double down on structural weaknesses that compromise function or soundness.
+
+Yet when it comes to temperament – equally crucial to breeding decisions – we're working with far less precise tools. We lack standardized assessment methods, consistent terminology, and reliable ways to share behavioral information across breeding programs. This disparity creates a significant gap in our ability to make informed decisions about one of the most important aspects of our dogs.
+
+Interestingly, many of the same limitations we see in temperament assessment tools also apply to health testing. Most health tests provide snapshots in time rather than definitive genetic predictions, and environmental factors like injuries can affect results without representing heritable traits. This suggests that the challenge of meaningful assessment isn't unique to temperament; it's a broader issue in breeding decision-making.
+
+As breeders, we're often asked about temperament. Puppy buyers want to know if their future dog will be good with children, how they'll handle apartment living, or whether they'll excel in specific activities. When we turn to scientific research for temperament assessment guidance, we discover that even the most advanced tools serve clinical and research purposes, not breeding selection.
+
+## The Current Assessment Landscape
+
+Several assessment approaches dominate how we evaluate canine behavior and temperament:
+
+**C-BARQ** represents the gold standard, using 100 validated questions to evaluate 14 behavioral factors plus 22 additional behavioral measures. A shortened version, C-BARQ(S), with 42 questions, was created to be a more convenient tool for assessing behavioral problems in dogs, especially those in shelter environments. Both versions focus on behavioral problems rather than personality traits, using owner reports of how dogs respond to everyday situations. They're scientifically rigorous but designed for clinical and research purposes, not breeding selection.
+
+**Other questionnaires** like the Monash Behavioral Questionnaire and Dog Personality Questionnaire rely heavily on owner interpretation without clear definitions, making results highly subjective and inconsistent between owners.
+
+**Performance titles** demonstrate specific skills under controlled conditions but don't predict general temperament or home suitability.
+
+## Why Existing Tools Fall Short for Breeders
+
+**The Interpretation Problem**
+Many assessment tools ask owners to make judgments without providing clear definitions. When the Monash behavioral questionnaire asks about "aggressive" behavior, one owner might consider any barking aggressive while another reserves the term for actual biting. This inconsistency makes data nearly useless for breeding decisions where precision matters.
+
+**They Focus on Problems, Not Potential**
+The C-BARQ excels at identifying behavioral issues – separation anxiety, aggression, fearfulness. While valuable for clinical purposes, breeders need to understand the full spectrum of temperament, including positive traits that make dogs wonderful companions. A questionnaire designed to diagnose problems tells us little about breeding for desirable characteristics.
+
+**Performance Doesn't Equal Suitability**
+Trial success demonstrates specific skills under controlled conditions, not general temperament or home suitability. These tools measure narrow performance windows, not the broad adaptability that makes a good family companion.
+
+**They Measure Current Reality, Not Genetic Potential**
+All these questionnaires assess how individual dogs behave right now, in their current environments, with their current owners. Breeding decisions require understanding which traits are heritable and how they might express across different contexts and generations.
+
+**They Don't Account for "Fit"**
+A dog that scores high for "excitability" might be problematic for an elderly owner but perfect for an active family. Current tools measure traits in isolation, without helping match genetic potential to appropriate homes or lifestyles.
+
+**They're Backwards-Looking**
+Most assessment tools evaluate adult dogs who've already developed their behavioral patterns through the complex interaction of genetics, early experience, and training. Breeders need to predict how puppies will develop based on parental traits and breeding program goals.
+
+## What These Tools Can Teach Us
+
+Despite their limitations for breeding applications, current research offers valuable insights:
+
+**Behavioral Traits Cluster in Predictable Ways**
+The C-BARQ's factor analysis reveals that certain behaviors group together. Dogs high in stranger-directed fear often show nonsocial fear as well. This suggests we should think about temperament as interconnected systems rather than isolated traits – a crucial insight for breeding decisions.
+
+**Owner Perception Shapes Success**
+The MDORS research demonstrates that a "good" temperament isn't just about what the dog does – it's about whether the owner finds those behaviors acceptable and manageable. A high-energy dog isn't inherently problematic; they're only problematic if they don't match their owner's lifestyle and expectations.
+
+**Context Shapes Expression**
+All assessment tools demonstrate that behavior is highly situational. The same dog might be confident at home but fearful in new environments. This reinforces the critical importance of early socialization and environmental consistency in expressing genetic potential.
+
+**Specific Scenarios Trump General Labels**
+The C-BARQ's strength lies in asking about concrete situations: "How does your dog respond when approached by an unfamiliar child while on-leash?" This approach proves far more useful than asking whether a dog is "good with kids" or "friendly" – terms that mean different things to different people.
+
+**Performance Has Narrow Predictive Value**
+While obedience titles don't predict home suitability, they do indicate specific capacities: focus, stress tolerance in novel environments, and responsiveness to handler cues. These traits matter for some breeding goals, even if they don't guarantee general temperament quality.
+
+## What Are We Actually Selecting For?
+
+Current research tools often focus on problems to avoid rather than positive traits to cultivate. Key temperament considerations include:
+
+- **Resilience and recovery ability** - bouncing back from negative experiences
+- **Biddability and trainability** - genuine interest in working with people  
+- **Stable reactivity** - proportional responses to stimuli
+- **Appropriate social interest** - friendly but controlled interactions
+- **Environmental confidence** - curiosity rather than fear in new situations
+- **Impulse control** - ability to wait and settle appropriately
+- **Handling tolerance** - accepting necessary care with minimal stress
+- **Size-appropriate behavior** - especially crucial for large breeds like Great Danes
+
+No universal "perfect" temperament exists – only temperaments that fit well with their intended roles and families.
+
+## Practical Applications for Breeders
+
+Current research offers immediate guidance for improving our temperament assessment: ask specific questions about concrete situations rather than general traits, observe breeding dogs across varied contexts, and track long-term outcomes with puppy buyers to understand how your lines develop over time.
+
+The research tools show us that better assessment is possible – with clearer definitions, specific scenarios, and standardized terminology. But we're not using these tools to their greatest power because we as individual breeders don't have teams of scientists at our disposal. The real opportunity lies in better data collection, organization, and changing how we think about temperament assessment rather than waiting for new tools.
+
+Scientists are already collecting this data through projects like Darwin's Ark and the Dog Aging Project, but as the Functional Breeding Podcast recently discussed, applying these clinical research tools to practical breeding decisions remains extremely challenging. Even with large-scale data collection, translating research findings into actionable breeding decisions is far more complex than simply having better assessment tools.
+
+## The Great Dane Breeder's Challenge
+
+As Great Dane breeders, we face unique challenges in temperament assessment. Our dogs' size means temperament problems that might be manageable in smaller breeds can become serious safety concerns. A fearful 20-pound dog might hide under furniture; a fearful 140-pound Great Dane might panic and cause injury.
+
+We need temperament assessment tools that account for:
+- **Size-appropriate behavior**: How dogs handle their physical presence
+- **Breed-specific social roles**: Guardian instincts vs. companion needs
+- **Modern living requirements**: Adaptability to urban/suburban environments
+- **Safety considerations**: Predictable responses to common situations
+
+The stakes are higher with Great Danes – we're not just breeding for temperament, we're breeding for safe, appropriate behavior in a large, powerful breed that will share homes with families, children, and other pets.
+
+The research discussed in this blog post highlights both the problem and potential solutions. Just as we wouldn't breed two dogs with the same conformational weakness, we shouldn't unknowingly concentrate negative temperament traits that compromise a dog's ability to succeed in their intended role. But without better assessment and communication tools, we risk doing exactly that.
+
+Imagine if we had temperament assessment tools as refined as our conformation evaluation methods. We could systematically identify and select for positive traits while avoiding the concentration of problematic behaviors. We could share detailed, standardized temperament information with the same precision we use for hip scores or genetic test results. Puppy buyers could make informed decisions based on reliable behavioral predictions, not just hopes and general descriptions.
+
+## The Road Forward
+
+The science is catching up to what thoughtful breeders have always known – temperament is complex, heritable, and profoundly important. Current assessment tools offer valuable methodological insights: the importance of specific behavioral description, the need for clear definitions, and the recognition that temperament exists within the context of human-dog relationships.
+
+Responsible breeders have always been geneticists and behaviorists, making complex decisions about temperament with limited tools. We can apply lessons from current research while continuing to develop our own observation skills and breeding judgment.
+
+## Sources
+
+**Primary Research Papers:**
+
+Hsu, Y., & Serpell, J. A. (2003). Development and validation of a questionnaire for measuring behavior and temperament traits in pet dogs. *Journal of the American Veterinary Medical Association*, 223(9), 1293-1300. [DOI: 10.2460/javma.2003.223.1293](https://doi.org/10.2460/javma.2003.223.1293)
+
+Wilkins, V., Evans, J., Park, C., The Dog Aging Project Consortium, Fitzpatrick, A. L., Creevy, K. E., & Ruple, A. (2024). Validation of the shortened version of the Canine Behavioral Assessment and Research Questionnaire (C-BARQ) using participants from the Dog Aging Project. *PLoS ONE*, 19(4), e0299973. [DOI: 10.1371/journal.pone.0299973](https://doi.org/10.1371/journal.pone.0299973)
+
+Dwyer, F., Bennett, P. C., & Coleman, G. J. (2006). Development of the Monash Dog Owner Relationship Scale (MDORS). *Anthrozoös*, 19(3), 243-256. [DOI: 10.2752/089279306785415592](https://doi.org/10.2752/089279306785415592)
+
+**Additional Discussion:**
+
+Functional Breeding Podcast. (2025, March 4). "Hekman and Stremming: New paper on prevalence of behavior problems in dogs in the US." [Podcast episode](https://functionalbreeding.podbean.com/e/hekman-and-stremming-new-paper-on-prevalence-of-behavior-problems-in-dogs-in-the-us/)
+
+**Related Resources:**
+
+C-BARQ questionnaire information and access: Available through the University of Pennsylvania School of Veterinary Medicine at [https://vetapps.vet.upenn.edu/cbarq/](https://vetapps.vet.upenn.edu/cbarq/)
+
+Darwin's Ark Project: Large-scale citizen science project collecting behavioral and genetic data from companion dogs at [https://darwinsark.org/darwins-dogs](https://darwinsark.org/darwins-dogs)
+
+**Note:** This article synthesizes information from multiple sources to provide practical guidance for breeders. While the research papers cited provide the scientific foundation for understanding behavioral assessment, the applications and recommendations for breeding programs represent interpretation and practical application of this research rather than direct recommendations from the original studies.
+11:T7cab,
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
 
@@ -638,7 +766,7 @@ To learn more about our approach to Great Dane breeding and our current litters,
 
 • **The Dog Cancer Survival Guide** by Demian Dressler, DVM & Susan Ettinger, DVM (2011) — Nutrition, supplements, and holistic care for long-term health, not just for cancer.
 
-11:T541b,
+12:T541b,
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
 
@@ -982,7 +1110,7 @@ The Association of American Feed Control Officials (AAFCO) sets ingredient and s
 Comprehensive educational resources for breeders and puppy owners, including films, courses, and training materials focused on modern puppy rearing and behavioral development.  
 [https://shoppuppyculture.com/](https://shoppuppyculture.com/)
 
-</details> 12:T55da,
+</details> 13:T55da,
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
 
@@ -1437,7 +1565,7 @@ To learn more about our approach to Great Dane breeding and our current litters,
 </details>
 
 Curious about what to expect after bringing your puppy home? Read our [first year with a Great Dane guide](/posts/2025-07-03-the-first-year).
-13:T4332,
+14:T4332,
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
 
@@ -1714,7 +1842,7 @@ To learn more about our current litters and meet our dogs, visit [7Sisters Farm]
 - Karen Martin of Danemark Danes. <a href="https://danemarkdanes.com/" target="_blank">danemarkdanes.com</a>
 - Frankie Camacho & Jaye Dubman of Legado Danes. <a href="https://www.legadodanes.com/" target="_blank">legadodanes.com</a>
 - American Kennel Club. "Titles and Abbreviations." <a href="https://www.akc.org/sports/titles-and-abbreviations/" target="_blank">akc.org</a>
-</details> 14:T26fe,
+</details> 15:T26fe,
 [← Back to Blog Archive](https://mayfieldjones.com/archive)
 
 
@@ -1823,4 +1951,4 @@ To learn more about our Great Danes and philosophy, visit [7Sisters Farm](/7Sist
 
 • **Worth, Cooper.** "Iowa dog Bing, Great Dane in 'The Friend' movie with Bill Murray." *Des Moines Register*, April 8, 2025. <a href="https://www.desmoinesregister.com/story/entertainment/movies/2025/04/08/iowa-dog-bing-great-dane-the-friend-movie-bill-murray/82872298007/" target="_blank">desmoinesregister.com</a>
 
-</details> 7:["$","div",null,{"className":"content","children":[["$","div",null,{"className":"post-title","children":[["$","h1",null,{"children":"Great Dane Articles and Insights"}],["$","p",null,{"className":"text-center text-gray-600 mt-2 text-sm","children":"Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership."}]]}],["$","$Lf",null,{"posts":[{"title":"Feeding Your Growing Great Dane: A Nutritional Deep Dive","date":"2025-07-17","description":"Comprehensive guide to Great Dane nutrition, feeding strategies, and growth management for every life stage, from puppy to adult.","id":"2025-07-17-feeding-your-growing-great-dane","content":"$10"},{"title":"The First Year: A Month-by-Month Guide to Early Great Dane Development","date":"2025-07-03","description":"Comprehensive guide to Great Dane puppy development, socialization, feeding, and training tips for new owners from birth to one year.","id":"2025-07-03-the-first-year","content":"$11"},{"title":"How to Find Ethical Great Dane Breeders: Complete Guide to Responsible Breeder Selection","date":"2025-06-25","description":"Complete guide to finding ethical Great Dane breeders. Learn what questions to ask, health testing requirements, and how to identify responsible breeders vs puppy mills.","id":"2025-06-25-choosing-a-great-dane-breeder","content":"$12"},{"title":"Laying the Foundation: Science, Mentorship, and Our First 7Sisters Litters","date":"2025-06-24","description":"Great Dane breeding philosophy: science, mentorship, and early puppy development for healthy, well-adjusted dogs and families.","id":"2025-06-24-laying-the-foundation","content":"$13"},{"title":"More Than Show and Go: Our Journey into the Illini Great Dane Club","date":"2025-06-23","description":"Our journey into the Illini Great Dane Club: community, responsible breeding, and show experiences for Great Dane enthusiasts.","id":"2025-06-23-more-than-show-and-go","content":"$14"}]}]]}]
+</details> 7:["$","div",null,{"className":"content","children":[["$","div",null,{"className":"post-title","children":[["$","h1",null,{"children":"Great Dane Articles and Insights"}],["$","p",null,{"className":"text-center text-gray-600 mt-2 text-sm","children":"Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership."}]]}],["$","$Lf",null,{"posts":[{"title":"Breeding for Temperament: What Current Research Tools Tell Us (And What They Don't)","description":"Explore the limitations of current temperament assessment tools for Great Dane breeders and discover what scientific research reveals about selecting for better temperament in large breed dogs.","date":"2025-09-12","categories":["Breeding","Temperament","Research"],"tags":["Great Dane temperament","breeding decisions","behavioral assessment","C-BARQ","temperament testing","breeding science","research","breeder education","large breed dogs","dog behavior research","temperament assessment tools","responsible breeding"],"featured":true,"id":"2025-09-12-breeding-for-temperament-research-tools","content":"$10"},{"title":"Feeding Your Growing Great Dane: A Nutritional Deep Dive","date":"2025-07-17","description":"Comprehensive guide to Great Dane nutrition, feeding strategies, and growth management for every life stage, from puppy to adult.","id":"2025-07-17-feeding-your-growing-great-dane","content":"$11"},{"title":"The First Year: A Month-by-Month Guide to Early Great Dane Development","date":"2025-07-03","description":"Comprehensive guide to Great Dane puppy development, socialization, feeding, and training tips for new owners from birth to one year.","id":"2025-07-03-the-first-year","content":"$12"},{"title":"How to Find Ethical Great Dane Breeders: Complete Guide to Responsible Breeder Selection","date":"2025-06-25","description":"Complete guide to finding ethical Great Dane breeders. Learn what questions to ask, health testing requirements, and how to identify responsible breeders vs puppy mills.","id":"2025-06-25-choosing-a-great-dane-breeder","content":"$13"},{"title":"Laying the Foundation: Science, Mentorship, and Our First 7Sisters Litters","date":"2025-06-24","description":"Great Dane breeding philosophy: science, mentorship, and early puppy development for healthy, well-adjusted dogs and families.","id":"2025-06-24-laying-the-foundation","content":"$14"},{"title":"More Than Show and Go: Our Journey into the Illini Great Dane Club","date":"2025-06-23","description":"Our journey into the Illini Great Dane Club: community, responsible breeding, and show experiences for Great Dane enthusiasts.","id":"2025-06-23-more-than-show-and-go","content":"$15"}]}]]}]
