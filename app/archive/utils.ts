@@ -16,6 +16,9 @@ export const getArticleCategory = (id: string, title: string) => {
   if (id === '2025-07-17-feeding-your-growing-great-dane') {
     return 'Nutrition & Feeding'
   }
+  if (id === '2025-09-12-breeding-for-temperament-research-tools') {
+    return 'Breeding Science'
+  }
   
   // Fallback for any future articles
   return 'General Care'
@@ -28,7 +31,8 @@ export const getReadingTime = (id: string) => {
     '2025-06-24-laying-the-foundation': '11 min read',     // 2,418 words  
     '2025-06-25-choosing-a-great-dane-breeder': '14 min read', // 3,101 words
     '2025-07-03-the-first-year': '12 min read',            // 2,747 words
-    '2025-07-17-feeding-your-growing-great-dane': '20 min read' // 4,397 words
+    '2025-07-17-feeding-your-growing-great-dane': '20 min read', // 4,397 words
+    '2025-09-12-breeding-for-temperament-research-tools': '8 min read' // ~1,871 words
   }
   return readingTimes[id] || '5 min read'
 }
