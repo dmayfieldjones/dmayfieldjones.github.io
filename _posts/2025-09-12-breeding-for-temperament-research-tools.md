@@ -31,6 +31,8 @@ Several assessment approaches dominate how we evaluate canine behavior and tempe
 
 **Performance titles** demonstrate specific skills under controlled conditions but don't predict general temperament or home suitability.
 
+**Hands-on temperament tests** like the UKC SPOT program and ATTS Temperament Test offer practical, standardized evaluations. The SPOT program tests 10 basic exercises to demonstrate community-appropriate behavior, while ATTS evaluates stability, shyness, aggressiveness, and friendliness through simulated real-world situations. These tests provide objective, standardized assessments but are limited by their specific testing environments and the handler's influence on the dog's performance.
+
 ## Why Existing Tools Fall Short for Breeders
 
 **The Interpretation Problem**
@@ -134,5 +136,9 @@ Functional Breeding Podcast. (2025, March 4). "Hekman and Stremming: New paper o
 C-BARQ questionnaire information and access: Available through the University of Pennsylvania School of Veterinary Medicine at [https://vetapps.vet.upenn.edu/cbarq/](https://vetapps.vet.upenn.edu/cbarq/)
 
 Darwin's Ark Project: Large-scale citizen science project collecting behavioral and genetic data from companion dogs at [https://darwinsark.org/darwins-dogs](https://darwinsark.org/darwins-dogs)
+
+UKC SPOT Program: Practical temperament testing program for community-appropriate behavior at [https://www.ukcdogs.com/spot-participants](https://www.ukcdogs.com/spot-participants)
+
+ATTS Temperament Test: Standardized hands-on evaluation of stability, shyness, aggressiveness, and friendliness at [https://atts.org/tt-test-description/](https://atts.org/tt-test-description/)
 
 **Note:** This article synthesizes information from multiple sources to provide practical guidance for breeders. While the research papers cited provide the scientific foundation for understanding behavioral assessment, the applications and recommendations for breeding programs represent interpretation and practical application of this research rather than direct recommendations from the original studies.
