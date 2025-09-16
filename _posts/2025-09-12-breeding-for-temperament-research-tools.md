@@ -7,7 +7,9 @@ tags: ["Great Dane temperament", "breeding decisions", "behavioral assessment", 
 featured: true
 ---
 
-# Breeding for Temperament: What Current Research Tools Tell Us (And What They Don't)
+[← Back to Blog Archive](https://mayfieldjones.com/archive)
+
+
 
 As preservationist breeders, we make complex decisions based on three fundamental pillars: conformation, health, and temperament. All three are essential to producing dogs that fulfill their breed's purpose and thrive as modern companions.
 
