@@ -36,16 +36,16 @@ Several assessment approaches dominate how we evaluate canine behavior and tempe
 ## Why Existing Tools Fall Short for Breeders
 
 **The Interpretation Problem**
-Many assessment tools ask owners to make judgments without providing clear definitions. When the Monash behavioral questionnaire asks about "aggressive" behavior, one owner might consider any barking aggressive while another reserves the term for actual biting. This inconsistency makes data nearly useless for breeding decisions where precision matters.
+Many questionnaire-based tools ask owners to make judgments without providing clear definitions. When the Monash behavioral questionnaire asks about "aggressive" behavior, one owner might consider any barking aggressive while another reserves the term for actual biting. This inconsistency makes data nearly useless for breeding decisions where precision matters.
 
 **They Focus on Problems, Not Potential**
-The C-BARQ excels at identifying behavioral issues – separation anxiety, aggression, fearfulness. While valuable for clinical purposes, breeders need to understand the full spectrum of temperament, including positive traits that make dogs wonderful companions. A questionnaire designed to diagnose problems tells us little about breeding for desirable characteristics.
+Research questionnaires like C-BARQ excel at identifying behavioral issues – separation anxiety, aggression, fearfulness. While valuable for clinical purposes, breeders need to understand the full spectrum of temperament, including positive traits that make dogs wonderful companions. Tools designed to diagnose problems tell us little about breeding for desirable characteristics.
 
-**Performance Doesn't Equal Suitability**
-Trial success demonstrates specific skills under controlled conditions, not general temperament or home suitability. These tools measure narrow performance windows, not the broad adaptability that makes a good family companion.
+**Single-Day Snapshots**
+Both questionnaire and hands-on tests (like UKC SPOT and ATTS) provide assessments at one moment in time. A dog might perform well on a temperament test day but struggle in different environments or with different handlers. These snapshots don't capture the consistency and adaptability that breeders need to evaluate.
 
 **They Measure Current Reality, Not Genetic Potential**
-All these questionnaires assess how individual dogs behave right now, in their current environments, with their current owners. Breeding decisions require understanding which traits are heritable and how they might express across different contexts and generations.
+All assessment tools evaluate how individual dogs behave right now, in their current environments, with their current owners or handlers. Breeding decisions require understanding which traits are heritable and how they might express across different contexts and generations.
 
 **They Don't Account for "Fit"**
 A dog that scores high for "excitability" might be problematic for an elderly owner but perfect for an active family. Current tools measure traits in isolation, without helping match genetic potential to appropriate homes or lifestyles.
