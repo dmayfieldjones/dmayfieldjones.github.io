@@ -14,13 +14,11 @@ export default function Contents() {
   return (
     <div className="content">
       <div className="post-title">
-        <h1>About <span style={{ color: '#bf141c' }}>7</span>Sisters Farm</h1>
+        <h1>About Us</h1>
       </div>
       <main className="content-wrapper">
         {/* About Us Section */}
         <section className="about-section">
-          <h2 className="section-title">About Us</h2>
-          
           {/* Hook with Photo */}
           <div style={{ 
             display: 'flex', 
@@ -29,11 +27,6 @@ export default function Contents() {
             margin: '30px 0',
             flexWrap: 'wrap'
           }}>
-            <div style={{ flex: '1', minWidth: '300px' }}>
-              <p className="intro-text hook-text" style={{ margin: '0' }}>
-                We believe Great Dane breeding is about more than just puppies—it's about stewardship, mentorship, and building a community that spans generations.
-              </p>
-            </div>
             <div style={{ 
               flex: '0 0 auto', 
               textAlign: 'center',
