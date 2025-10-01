@@ -15,6 +15,17 @@ When you look into your dog's eyes, you're looking at the culmination of a 20,00
 
 But here's why this matters for you as a dog owner or breeder: understanding this deep history provides crucial insights into genetic diversity, breeding decisions, and what makes dogs truly special. The research shows us what genetic diversity looked like throughout most of dog history, why some breeds face health challenges, and how we can make more informed decisions for our dogs' future.
 
+<details>
+<summary><span class="accent-color">About the Author</span></summary>
+<div>
+
+I had the pleasure of attending the Woods Hole Workshop on Molecular Evolution with Laurent Frantz in 2012. At the time, I was studying what my advisor called "The Dogs of the Plant World" primarily because just one species—*Brassica oleracea*—the wild cabbage species that humans have selectively bred into cabbage, broccoli, cauliflower, kale, Brussels sprouts, collard greens, and kohlrabi—demonstrates the same remarkable diversity through artificial selection that we see in dogs. The parallels between our work highlight how human selection has shaped both plants and animals.
+
+This background in evolutionary biology and domestication has given me a deep appreciation for the research that continues to uncover the complex history of our relationship with dogs. I love reading what Laurent is up to—he's first author on the 2016 study and a key contributor to the 2020 study, plus an author on several other studies cited in this post, including the 2018 Ní Leathlobhair et al. study on American dogs, the 2021 Perri et al. study, and the 2025 Manin et al. study on dog dispersal in the Americas. Learn more about Laurent's research at [https://www.animal-palaeogenomics.com/](https://www.animal-palaeogenomics.com/).
+
+</div>
+</details>
+
 ## Our Ancient Bond
 
 Dogs weren't just domesticated—they were co-evolved with humans in one of the most successful interspecies partnerships in history. [A 2021 study](https://doi.org/10.1073/pnas.2010083118) proposes this happened around 23,000 years ago during the Last Glacial Maximum, when both humans and wolves were pushed into isolated refugia by extreme climate conditions.
@@ -130,7 +141,3 @@ Callaway, E. (2020). Ancient dog DNA reveals 11,000 years of canine evolution. *
 **Suggested Reading:**
 
 Shipman, P. (2021). *Our Oldest Companions: The Story of the First Dogs*. Harvard University Press.
-
-**Personal Note:**
-
-I had the pleasure of attending the Woods Hole Workshop on Molecular Evolution with Laurent Frantz in 2012. At the time, I was studying what my advisor called "The Dogs of the Plant World" primarily because just one species—*Brassica oleracea*—the wild cabbage species that humans have selectively bred into cabbage, broccoli, cauliflower, kale, Brussels sprouts, collard greens, and kohlrabi—demonstrates the same remarkable diversity through artificial selection that we see in dogs. The parallels between our work highlight how human selection has shaped both plants and animals. This background in evolutionary biology and domestication has given me a deep appreciation for the research that continues to uncover the complex history of our relationship with dogs. I love reading what Laurent is up to—he's first author on the 2016 study and a key contributor to the 2020 study, plus an author on several other studies cited in this post, including the 2018 Ní Leathlobhair et al. study on American dogs, the 2021 Perri et al. study, and the 2025 Manin et al. study on dog dispersal in the Americas. Learn more about Laurent's research at [https://www.animal-palaeogenomics.com/](https://www.animal-palaeogenomics.com/).

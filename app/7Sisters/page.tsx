@@ -136,14 +136,16 @@ export default function () {
             humans is unique.
           </p>
           <p>
-            Both highly social group hunters, humans and dogs likely began to
-            co-evolve as hunting partners. While there are no anatomical markers
-            to differentiate dogs from wolves, dogs' definitive trait is
-            behavioral: loyalty. Wolves and dogs descended from a wolf-like
-            common ancestor 20,000-40,000 years ago. The earliest archaeological
-            evidence suggests dogs had a special place in our hearts by ~14,000
-            years ago when a Nautifian woman was buried alongside a dog. Our
-            relationship is ancient and deep.
+            Both highly social species, humans and dogs began to co-evolve during
+            the Last Glacial Maximum around 23,000 years ago, when both species
+            were pushed into isolated refugia by extreme climate conditions. While
+            there are no anatomical markers to differentiate dogs from wolves,
+            dogs' definitive trait is behavioral: loyalty. Wolves and dogs
+            descended from a wolf-like common ancestor, with dogs emerging as a
+            distinct lineage that spread across the world with human agricultural
+            expansion. The earliest archaeological evidence suggests dogs had a
+            special place in our hearts by ~14,000 years ago when a Nautifian
+            woman was buried alongside a dog. Our relationship is ancient and deep.
           </p>
         </section>
         {/* Social Media Section */}
