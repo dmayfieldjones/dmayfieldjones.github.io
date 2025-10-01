@@ -20,6 +20,8 @@ export async function getPostById(id: string) {
     id: realId,
     date: date.toISOString().slice(0, 10),
     content,
+    tags: data.tags || [],
+    categories: data.categories || [],
   }
 }
 

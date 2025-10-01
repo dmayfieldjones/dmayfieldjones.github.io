@@ -9,6 +9,8 @@ interface Post {
   date: string
   title: string
   content: string
+  tags?: string[]
+  categories?: string[]
 }
 
 interface ArchiveClientProps {
@@ -119,11 +121,29 @@ export default function ArchiveClient({ posts }: ArchiveClientProps) {
             <article key={id} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all duration-200 bg-white">
               <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
                 <div className="flex-1">
-                  {/* Category Badge */}
+                  {/* Tags */}
                   <div className="mb-3">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
-                      {category}
-                    </span>
+                    {post.tags && post.tags.length > 0 ? (
+                      <div className="flex flex-wrap gap-2">
+                        {post.tags.slice(0, 5).map((tag, index) => (
+                          <span 
+                            key={index}
+                            className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {post.tags.length > 5 && (
+                          <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-200 text-red-700">
+                            +{post.tags.length - 5} more
+                          </span>
+                        )}
+                      </div>
+                    ) : (
+                      <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                        {category}
+                      </span>
+                    )}
                   </div>
                   
                   {/* Article Link */}
