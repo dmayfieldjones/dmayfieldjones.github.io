@@ -82,7 +82,7 @@ export default async function Post({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  const { content, title, date } = await getPostById(id)
+  const { content, title, date, tags } = await getPostById(id)
   
   const category = getArticleCategory(id, title)
   const readingTime = getReadingTime(id)
@@ -159,7 +159,15 @@ export default async function Post({
               month: 'long', 
               day: 'numeric' 
             })}</span>
-            <span className="post-category">{category}</span>
+            {tags && tags.length > 0 ? (
+              <div className="post-tags">
+                {tags.map((tag, index) => (
+                  <span key={index} className="post-tag">{tag}</span>
+                ))}
+              </div>
+            ) : (
+              <span className="post-category">{category}</span>
+            )}
             <span className="post-reading-time">{readingTime}</span>
           </div>
         </div>
@@ -254,6 +262,22 @@ export default async function Post({
             }
             
             .post-category {
+              background-color: #bf141c;
+              color: white;
+              padding: 0.25rem 0.75rem;
+              border-radius: 1rem;
+              font-size: 0.9rem;
+              font-weight: 600;
+            }
+            
+            .post-tags {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+              justify-content: center;
+            }
+            
+            .post-tag {
               background-color: #bf141c;
               color: white;
               padding: 0.25rem 0.75rem;

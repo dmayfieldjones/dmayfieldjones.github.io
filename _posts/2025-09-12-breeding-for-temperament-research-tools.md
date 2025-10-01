@@ -3,7 +3,7 @@ title: "Breeding for Temperament: What Current Research Tools Tell Us (And What 
 description: "Explore the limitations of current temperament assessment tools for Great Dane breeders and discover what scientific research reveals about selecting for better temperament in large breed dogs."
 date: 2025-09-12
 categories: ["Breeding", "Temperament", "Research"]
-tags: ["Great Dane temperament", "breeding decisions", "behavioral assessment", "C-BARQ", "temperament testing", "breeding science", "research", "breeder education", "large breed dogs", "dog behavior research", "temperament assessment tools", "responsible breeding"]
+tags: ["Breeding Science"]
 featured: true
 ---
 
