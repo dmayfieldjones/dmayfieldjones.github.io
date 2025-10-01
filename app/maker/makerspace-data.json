@@ -332,6 +332,178 @@
         "email": "office@illinoisvalleymachine.com"
       },
       "specialties": ["Emergency services", "Mobile machining", "Large manufacturer clients"]
+    },
+    {
+      "id": "shapemaster",
+      "name": "ShapeMaster, Inc.",
+      "category": "Commercial Machine Shop",
+      "type": "Plastics Manufacturing & Prototyping",
+      "address": "108 E. Main Street, Ogden, IL 61859",
+      "description": "Full-service plastics manufacturer specializing in thermoforming, injection molding, CNC machining, and custom fabrication from concept to production",
+      "services": [
+        "Injection molding",
+        "Vacuum forming/Thermoforming",
+        "CNC machining and tooling",
+        "Custom fabrication",
+        "Prototyping and rapid prototyping",
+        "Guarding and clean room fabrication",
+        "Fabricated tanks",
+        "Reverse engineering",
+        "Powder coating",
+        "Project management",
+        "Drape forming",
+        "Tool/mold building",
+        "Product assembly",
+        "Engineering/design assistance"
+      ],
+      "products": [
+        "Multi-cavity trays",
+        "Plastic trays",
+        "PTFE silicon wafer dippers",
+        "PTFE evaporation dishes",
+        "Sneeze guard protective retail panels"
+      ],
+      "materials": "ABS, PETG, CAB, UHMW, HDPE, PTFE, aluminum, stainless steel, wood, foam, various resins",
+      "target_audience": "Engineers, designers, inventors, startups, manufacturers, medical/pharmaceutical, semiconductor, retail",
+      "access_model": "Commercial services - prototype to production runs",
+      "website": "https://www.shape-master.com/",
+      "contact": {
+        "phone": "(217) 582-2638",
+        "email": "sales@shape-master.com"
+      },
+      "specialties": [
+        "Vacuum/thermoforming",
+        "Injection molding",
+        "Rapid prototyping",
+        "Clean room fabrication",
+        "PTFE components",
+        "ISO 9001 certified"
+      ],
+      "notes": "In business since 1990. Production capacity: 1 to thousands of parts. Located approximately 20 miles east of UIUC campus in Ogden, IL."
+    },
+    {
+      "id": "h3-manufacturing-group",
+      "name": "H3 Manufacturing Group, LLC",
+      "category": "Commercial Machine Shop",
+      "type": "Precision CNC & Manufacturing",
+      "address": "2110 Round Barn Rd, Champaign, IL 61821",
+      "description": "Full-service precision manufacturing company specializing in CNC machining, sheet metal fabrication, complex weldments, assembly, and finishing services",
+      "services": [
+        "CNC Machining",
+        "Sheet Metal Fabrication", 
+        "Complex Weldments",
+        "Assembly",
+        "Finishing",
+        "Swiss Machining",
+        "Wire EDM",
+        "Turn/Mill Multi-Tasking"
+      ],
+      "equipment": [
+        "29 Milling Machines (21 Vertical, 8 Horizontal)",
+        "3, 4 & Full 5 Axis CNC Mills",
+        "10 Turn/Mill Multi-Tasking Centers",
+        "5 Axis & Live Tooling",
+        "Swiss Machining Centers",
+        "Wire EDM Equipment"
+      ],
+      "capabilities": {
+        "milling": "Up to 5th axis programming, 360° rotation, 240° tilt",
+        "turning": "1/16\" to 13.5\" diameter with 4th and 5th axis",
+        "conventional_turning": "1/64\" to 24\" diameter",
+        "length_capacity": "Up to 50\" length, 18\" diameter"
+      },
+      "target_audience": "Manufacturers, engineers, entrepreneurs needing precision machining and fabrication services",
+      "access_model": "Commercial services",
+      "website": "https://h3mfggroup.com/",
+      "contact": {
+        "phone": "(217) 398-6881"
+      },
+      "hours": "Monday-Friday: 8:00am-5:00pm",
+      "specialties": [
+        "Precision CNC machining",
+        "Multi-axis programming",
+        "Complex geometry parts",
+        "Sheet metal fabrication",
+        "Swiss machining",
+        "Wire EDM",
+        "Team-oriented work environment"
+      ],
+      "notes": "Highly rated manufacturing company (5.0/5.0 from 4 reviews) with extensive CNC capabilities including 5-axis machining, Swiss machining, and wire EDM. Known for challenging work and great team atmosphere. Located in Champaign near UIUC campus."
+    },
+    {
+      "id": "creative-thermal-solutions",
+      "name": "Creative Thermal Solutions Inc",
+      "category": "Commercial Machine Shop",
+      "type": "Thermal Engineering & Testing",
+      "address": "2209 North Willow Road, Urbana, IL 61802",
+      "description": "Global leaders in advanced and green technologies for HVAC & refrigeration since 2004, specializing in thermal engineering, testing, and prototype fabrication",
+      "services": [
+        "Product Development/Design",
+        "Testing Services",
+        "Brazing and Metallurgical Investigations",
+        "Education Services",
+        "Prototype Fabrication/Brazing",
+        "Thermal Testing",
+        "Fluids Testing",
+        "Durability Testing",
+        "Endurance Testing",
+        "Refrigerant Leakage Testing",
+        "Concentration Measurement",
+        "Thermal Modeling",
+        "Systems Modeling"
+      ],
+      "specializations": [
+        "Low GWP replacement refrigerants",
+        "SEER improvement",
+        "Energy efficiency improvement",
+        "Microchannel heat exchangers",
+        "Heat pump systems",
+        "Air conditioning and Refrigeration",
+        "Electric vehicle range improvement",
+        "Battery thermal management",
+        "Battery cooling",
+        "A/C compressor",
+        "Controls",
+        "Electronic expansion valve",
+        "Expansion work recovery",
+        "Ejector systems",
+        "Heat transfer",
+        "Defrost systems",
+        "Visualization",
+        "Air cooled condensers",
+        "Power plant systems"
+      ],
+      "industries_served": [
+        "Automotive",
+        "Commercial",
+        "Industrial",
+        "Transport",
+        "Residential",
+        "Medical and Pharmaceutical",
+        "Electronics",
+        "Data Centers"
+      ],
+      "testing_standards": [
+        "AHRI 210/240",
+        "SAE J2765"
+      ],
+      "target_audience": "Engineers, researchers, manufacturers in HVAC&R, automotive, electronics, medical, and data center industries",
+      "access_model": "Commercial consulting and testing services",
+      "website": "https://www.creativethermalsolutions.com/",
+      "contact": {
+        "phone": "(217) 344-7663",
+        "email": "info@creativethermalsolutions.com"
+      },
+      "specialties": [
+        "Thermal engineering",
+        "HVAC&R testing",
+        "Prototype fabrication",
+        "Brazing technology",
+        "Energy efficiency",
+        "Green technologies",
+        "Confidential research"
+      ],
+      "notes": "Established 2004. Global leaders in advanced thermal technologies with extensive testing facilities and prototype fabrication capabilities. Specializes in confidential research and development for energy transformation technologies."
     }
   ],
   "campus_machine_shops": [
