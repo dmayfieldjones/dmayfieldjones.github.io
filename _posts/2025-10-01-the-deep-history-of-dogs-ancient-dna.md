@@ -93,7 +93,7 @@ Understanding this deep history provides important context for dog breeding and 
 
 The debate about dog domestication continues. More ancient genomes are being sequenced. New statistical methods are being developed. The story will keep evolving with new discoveries.
 
-What we know for certain is that when you look into your dog's eyes, you're looking at the culmination of an epic that spans continents and millennia. A partnership forged in ice age challenges. A collaboration so successful that humans may have invented it twice. A living connection to ancient wolf populations and historical human movements.
+What we know for certain is that when you look into your dog's eyes, you're looking at the culmination of an epic that spans continents and millennia. A partnership forged in ice age challenges. A collaboration so successful that it transformed both species forever. A living connection to ancient wolf populations and historical human movements.
 
 You're looking at a living testament to one of the longest partnerships in human history.
 
