@@ -103,6 +103,8 @@ As we continue to sequence more ancient genomes, we're not just uncovering the p
 
 **Research Papers:**
 
+Frantz, L. A. F., Mullin, V. E., Pionnier-Capitan, M., Lebrasseur, O., Ollivier, M., Perri, A., ... & Larson, G. (2016). Genomic and archaeological evidence suggest a dual origin of domestic dogs. *Science*, 352(6290), 1228-1231. [DOI: 10.1126/science.aaf3161](https://doi.org/10.1126/science.aaf3161)
+
 Bergström, A., Frantz, L., Schmidt, R., Ersmark, E., Lebrasseur, O., Girdland-Flink, L., ... & Skoglund, P. (2020). Origins and genetic legacy of prehistoric dogs. *Science*, 370(6516), 557-564. [DOI: 10.1126/science.aba9572](https://doi.org/10.1126/science.aba9572)
 
 Meadows, J. R. S., Kidd, A. G., Wang, G. D., Parker, H. G., Schall, E. I., Bianchi, M., ... & Ostrander, E. A. (2023). Genome sequencing of 2000 canids by the Dog10K consortium advances the understanding of demography, genome function and architecture. *Genome Biology*, 24(1), 187. [DOI: 10.1186/s13059-023-03023-7](https://doi.org/10.1186/s13059-023-03023-7)
