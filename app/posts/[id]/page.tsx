@@ -186,8 +186,8 @@ export default async function Post({
           </Markdown>
         </article>
         <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <a href="https://mayfieldjones.com/posts/2025-06-24-laying-the-foundation">
-            Curious about our breeding philosophy and how we select our dogs? Read <strong>Laying the Foundation</strong>.
+          <a href="/BreedingPhilosophy">
+            Curious about our breeding philosophy and how we select our dogs? Visit our <strong>Breeding Philosophy</strong> page.
           </a>
         </div>
         
