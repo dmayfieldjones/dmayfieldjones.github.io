@@ -161,7 +161,7 @@ export default async function Post({
             })}</span>
             {tags && tags.length > 0 ? (
               <div className="post-tags">
-                {tags.map((tag, index) => (
+                {tags.map((tag: string, index: number) => (
                   <span key={index} className="post-tag">{tag}</span>
                 ))}
               </div>
