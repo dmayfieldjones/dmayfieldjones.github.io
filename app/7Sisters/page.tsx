@@ -129,7 +129,7 @@ export default function () {
               color: '#bf141c', 
               textDecoration: 'underline',
               fontWeight: 'bold'
-            }}>domesticated millennia before any other known species</a>. Unlike these
+            }}> domesticated millennia before any other known species</a>. Unlike these
             others, dogs reside in our homes and live up to the name
             domesticate, coming from the Latin domicile, meaning home. Also,
             unlike other domesticates, dogs chose us. The bond between dogs and
