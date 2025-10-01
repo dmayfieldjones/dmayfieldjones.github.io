@@ -125,7 +125,11 @@ export default function () {
           <p>
             Early scientists focused more on artificial selection of livestock
             and crops, but it was in fact our beloved dog companions that were
-            domesticated millennia before any other known species. Unlike these
+            domesticated millennia before any other known species. <a href="/posts/2025-10-01-the-deep-history-of-dogs-ancient-dna" style={{ 
+              color: '#bf141c', 
+              textDecoration: 'underline',
+              fontWeight: 'bold'
+            }}>Recent ancient DNA research has revealed the fascinating story of this 20,000-year partnership</a>. Unlike these
             others, dogs reside in our homes and live up to the name
             domesticate, coming from the Latin domicile, meaning home. Also,
             unlike other domesticates, dogs chose us. The bond between dogs and

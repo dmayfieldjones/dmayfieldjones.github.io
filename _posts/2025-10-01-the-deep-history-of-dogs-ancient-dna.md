@@ -51,9 +51,9 @@ This represents a significant shift from ancient patterns. Rather than the relat
 
 *For those interested in exploring this genetic data firsthand, we've built a [Canine Genome Browser](https://dmayfieldjones.github.io/GreatDaneGenomeBrowser) that provides access to Dog10K project data, including SNPs (single nucleotide polymorphisms), structural variants, and inversions across over 300 dog breeds and thousands of dogs and canine relatives.*
 
-## Parallel Evolution: How Dogs and Humans Adapted Together
+## Convergent Evolution: How Dogs and Humans Adapted Together
 
-One of the most fascinating aspects of the human-dog relationship is how our species have evolved in parallel. As we changed each other's environments, we also changed each other's genes.
+One of the most fascinating aspects of the human-dog relationship is how our species have evolved convergently. As we changed each other's environments, we also changed each other's genes.
 
 Consider starch digestion. Humans developed extra copies of salivary amylase genes compared to our chimpanzee relatives, allowing us to better process starchy foods—perhaps even before agriculture began. Dogs, in turn, evolved extra copies of pancreatic amylase genes compared to wolves, enabling them to digest the same starchy foods that became central to human diets.
 
