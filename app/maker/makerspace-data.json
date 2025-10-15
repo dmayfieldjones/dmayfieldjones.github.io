@@ -110,6 +110,96 @@
       "specialties": ["Medical device development", "Healthcare solutions", "Cross-disciplinary collaboration"]
     },
     {
+      "id": "jackson-innovation-studio",
+      "name": "Jackson Innovation Studio",
+      "category": "University Makerspace",
+      "type": "Departmental Makerspace",
+      "address": "Sidney Lu Mechanical Engineering Building, UIUC Campus, Urbana, IL",
+      "description": "MechSE MakerWorks facility with machines, hand tools, and collaboration space for mechanical engineering students and makers",
+      "facilities": [
+        "20 LulzBot Taz 6 3D printers",
+        "3 Ultimaker S3 3D printers with dual extrusion",
+        "1 Dremel Digilab 3D printer",
+        "Laser cutters",
+        "Hand tools and collaboration space",
+        "Storeroom with materials and hardware"
+      ],
+      "target_audience": "All students, staff, faculty, donors, and community members",
+      "access_model": "Open 11:00-8:00 Monday-Friday to all visitors; 24/7 access for MechSE MakerWorks Club volunteers",
+      "mission": "Provide machines, hand tools, collaboration space, and engineers who love to help each other learn and innovate",
+      "website": "https://mechse.illinois.edu/undergraduate/makerworks/jackson-innovation-studio",
+      "hours": "Monday-Friday: 11:00am-8:00pm",
+      "contact": {
+        "email": "mechse-makerworks@illinois.edu"
+      },
+      "pricing": {
+        "3d_printing": {
+          "PLA": "$0.03/g",
+          "ABS": "$0.03/g", 
+          "PVA": "$0.15/g",
+          "TPU": "$0.10/g"
+        },
+        "laser_cutting": "No fee - provide own materials",
+        "volunteers": "Free up to $50/semester"
+      },
+      "specialties": ["3D printing", "Laser cutting", "Mechanical engineering projects", "Undergraduate curriculum support", "Community making"]
+    },
+    {
+      "id": "citl-innovation-spaces",
+      "name": "CITL Innovation Spaces",
+      "category": "University Makerspace",
+      "type": "Educational Technology Lab",
+      "address": "Armory Building, First Floor East Side, UIUC Campus, Champaign, IL 61820",
+      "description": "Four interconnected innovation spaces designed to enhance student learning through hands-on exploration of emerging technologies",
+      "facilities": [
+        "Innovation Studio (172 Armory) - 25-seat space with VR headsets, gaming computers, 3D printers, video wall, laser cutter, robots, drones, AI tools",
+        "Virtual Reality Lab (173 Armory) - Research and design lab with green screen and streaming station",
+        "CITL IDEASpace (182 Armory) - Experimental teaching space for innovative pedagogy",
+        "Media Hub and Learning Lounge (156 Armory) - Multi-use space for media hardware and course development"
+      ],
+      "target_audience": "Faculty, students, staff, and campus units exploring innovative teaching and learning technologies",
+      "access_model": "Free and open to all; reservations available for classes and events",
+      "mission": "Explore, learn, and inspire through hands-on exploration of future technologies to enhance student learning",
+      "website": "https://citl.illinois.edu/citl-101/instructional-spaces-technologies/armory-innovation-spaces",
+      "contact": {
+        "phone": "217-333-1462",
+        "email": "citl-info@illinois.edu",
+        "address": "249 Armory Building, 505 East Armory Avenue, Champaign, IL 61820"
+      },
+      "specialties": ["Virtual Reality", "Artificial Intelligence", "Gaming", "Media production", "Innovative pedagogy", "3D printing", "Laser cutting", "Educational technology"]
+    },
+    {
+      "id": "architecture-digifab-shop",
+      "name": "Architecture DigiFab Shop",
+      "category": "University Makerspace",
+      "type": "Departmental Makerspace",
+      "address": "Architecture Annex, UIUC Campus, Champaign, IL",
+      "description": "Comprehensive digital fabrication facility for architecture, landscape architecture, and urban planning students with laser cutting, 3D printing, and advanced fabrication capabilities",
+      "facilities": [
+        "Laser Lab - 4 Universal Laser Systems (3x VLS6.60, 1x 150W model, 18\"x32\" bed size)",
+        "3D Print Lab - 5 Bambu Labs P1S multi-filament printers (10\"x10\"x10\" build volume)",
+        "Fabrication Lab - Onsrud 98C18 8'x5' dual bed CNC router, Fanuc 2000iA/165R industrial robot with milling head, Wazer desktop waterjet cutter, Crossfire CNC plasma cutter, Formech 1250 vacuum forming machine, Hobart Handler 140 welder, various metal working equipment"
+      ],
+      "target_audience": "Students, staff, and faculty from Architecture, Landscape Architecture, and Urban Planning departments",
+      "access_model": "Student staff operated; file submission and material drop-off required for laser cutting and 3D printing",
+      "mission": "Laser cutting, 3D printing, and advanced fabrication support for architectural design and model making",
+      "website": "https://arch.illinois.edu/culture/resources-for-current-students/digifab-shop/",
+      "hours": "Monday-Thursday: 9am-9pm, Friday: 9am-5pm, Saturday-Sunday: 12pm-5pm (Fall 2025: 8/25/25-12/10/25)",
+      "contact": {
+        "laser_cutting": "arch-lasercutting@illinois.edu",
+        "3d_printing": "arch-3dprinting@illinois.edu",
+        "fabrication": "arch-fabrication@illinois.edu"
+      },
+      "pricing": {
+        "laser_cutting": "$3.00 for first 15 minutes, prorated by total time after",
+        "3d_printing": "$1/hour and $0.05/gram",
+        "cnc_router": "$30/hour for students/staff/faculty, $75/hour for personal/non-university jobs"
+      },
+      "approved_materials": ["Acrylic", "Basswood", "Bristol Board", "Chipboard", "Cork", "Cardboard", "Matboard", "Museum Board", "Paper", "Strathmore Board", "Plywood (Blackline Supply only)", "HDF (Blackline Supply only)"],
+      "prohibited_materials": ["Corrugated Plastics", "Masonite", "Styrene", "Foam", "Foamcore", "MDF"],
+      "specialties": ["Laser cutting", "3D printing", "CNC routing", "Industrial robotics", "Waterjet cutting", "Plasma cutting", "Vacuum forming", "Architectural modeling", "Metal fabrication"]
+    },
+    {
       "id": "cu-community-fab-lab",
       "name": "Champaign-Urbana Community Fab Lab",
       "category": "Community Makerspace",
