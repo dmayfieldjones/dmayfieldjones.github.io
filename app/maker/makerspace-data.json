@@ -202,33 +202,6 @@
       "specialties": ["Public access", "Creative workshops", "Recording capabilities"]
     },
     {
-      "id": "imagine-lab",
-      "name": "Imagine Lab",
-      "category": "Library Makerspace", 
-      "type": "County Library Makerspace",
-      "address": "Champaign County Library (location TBD)",
-      "description": "Makerspace established in memory of Karen Kerns Dresser offering public access to technology and DIY equipment",
-      "facilities": [
-        "3D printers",
-        "Heat press",
-        "Wide format printer",
-        "Sewing equipment", 
-        "Coding robots",
-        "Hands-on technology kits",
-        "Media conversion equipment"
-      ],
-      "target_audience": "Public with valid Champaign County Library card",
-      "access_model": "Appointment only, signed release form required",
-      "mission": "Support lifelong learning and community interaction through technology access",
-      "website": "https://www.champaigncountylibrary.org/imagine-lab",
-      "contact": {
-        "phone": "937-653-3811",
-        "email": "imagine@champaigncountylibrary.org"
-      },
-      "hours": "By appointment, normally 10am to one hour before library closing",
-      "specialties": ["Public technology access", "Learning support", "Appointment-based instruction"]
-    },
-    {
       "id": "teen-open-lab",
       "name": "Teen Open Lab",
       "category": "Library Makerspace",
