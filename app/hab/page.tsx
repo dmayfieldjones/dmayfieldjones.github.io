@@ -93,14 +93,6 @@ export default function HABEducationPage() {
             <p>Interactive tools for analyzing balloon flight data and atmospheric measurements</p>
           </div>
           <div className="maker-card">
-            <h3><a href="/hab/projects" className="btn btn-zoom hover:text-red-600">Projects</a></h3>
-            <p>Student projects, experiments, and hands-on learning activities</p>
-          </div>
-          <div className="maker-card">
-            <h3><a href="/hab/resources" className="btn btn-zoom hover:text-red-600">Resources</a></h3>
-            <p>Educational materials, guides, and tools for STEAM education</p>
-          </div>
-          <div className="maker-card">
             <h3><a href="/hab/events" className="btn btn-zoom hover:text-red-600">Events</a></h3>
             <p>Regular meetings, workshops, and special events for the HAB community</p>
           </div>
@@ -109,8 +101,16 @@ export default function HABEducationPage() {
             <p>Stories and insights from educators, students, and researchers</p>
           </div>
           <div className="maker-card">
+            <h3><a href="/hab/projects" className="btn btn-zoom hover:text-red-600">Projects</a></h3>
+            <p>Student projects, experiments, and hands-on learning activities</p>
+          </div>
+          <div className="maker-card">
             <h3><a href="/hab/archive" className="btn btn-zoom hover:text-red-600">Articles</a></h3>
             <p>Browse the HAB.education blog archive (2015–2017)</p>
+          </div>
+          <div className="maker-card">
+            <h3><a href="/hab/resources" className="btn btn-zoom hover:text-red-600">Resources</a></h3>
+            <p>Educational materials, guides, and tools for STEAM education</p>
           </div>
         </div>
       </section>
