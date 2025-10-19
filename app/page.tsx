@@ -87,6 +87,11 @@ const MayfieldJonesProfile = () => {
               Maker
             </a>
           </h3>
+        <h3>
+          <a href="/hab" className="btn btn-zoom hover:text-red-600">
+            Our STEAM Education Initiative
+          </a>
+        </h3>
         </div>
 
         <div className="flex justify-center space-x-4 mb-4">
