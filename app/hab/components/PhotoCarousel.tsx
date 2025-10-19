@@ -128,11 +128,6 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({
                 className="carousel-image"
                 loading={index === currentIndex ? 'eager' : 'lazy'}
               />
-              {image.caption && (
-                <div className="carousel-caption">
-                  <p>{image.caption}</p>
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -171,6 +166,28 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({
           </div>
         )}
       </div>
+      
+      {/* Caption Carousel */}
+      {images.some(img => img.caption) && (
+        <div className="caption-carousel">
+          <div className="caption-slides">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`caption-slide ${index === currentIndex ? 'active' : ''}`}
+                style={{
+                  transform: `translateX(-${currentIndex * 100}%)`,
+                  transition: isTransitioning ? 'transform 0.3s ease-in-out' : 'none'
+                }}
+              >
+                {image.caption && (
+                  <p className="caption-text">{image.caption}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
