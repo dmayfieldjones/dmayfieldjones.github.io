@@ -73,7 +73,7 @@ const MayfieldJonesProfile = () => {
 
         <div className="space-y-2 mb-4">
           <h3>
-            <a href="/7Sisters" className="btn btn-zoom hover:text-red-600">
+            <a href="https://7SistersGreatDanes.com" className="btn btn-zoom hover:text-red-600" target="_blank" rel="noopener noreferrer">
               Great Danes
             </a>
           </h3>

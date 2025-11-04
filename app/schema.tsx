@@ -49,7 +49,6 @@ export default function LocalBusinessSchema() {
     "openingHours": "Mo-Su 09:00-18:00",
     "image": [
       "https://dmayfieldjones.github.io/img/wedding.png",
-      "https://dmayfieldjones.github.io/img/2021_5pt_BOW_BOBOH_Waukesha_Mimi_Kim.jpg",
       "https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png"
     ],
     "logo": "https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png",

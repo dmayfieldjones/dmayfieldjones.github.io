@@ -2,25 +2,22 @@ import { getAllPosts } from '@/lib/api'
 import ArchiveClient from './ArchiveClient'
 
 export const metadata = {
-  title: 'Great Dane Articles and Insights',
-  description: 'Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership.',
+  title: '7Sisters Articles',
+  description: 'Articles and insights from 7Sisters Farm.',
 }
 
 export default async function Page() {
   const allPosts = await getAllPosts()
-  // Exclude HAB.education posts from the main Great Dane archive
-  const dogPosts = allPosts.filter(p => !p.categories?.includes('HAB.education'))
+  // Show all posts (HAB.education posts are the remaining content)
+  const posts = allPosts.filter(p => p.categories?.includes('HAB.education'))
 
   return (
     <div className="content">
       <div className="post-title">
-        <h1>Great Dane Articles and Insights</h1>
-        <p className="text-center text-gray-600 mt-2 text-sm">
-          Comprehensive guides and practical knowledge on Great Dane breeding, care, development, and ownership.
-        </p>
+        <h1>7Sisters Articles</h1>
       </div>
       
-      <ArchiveClient posts={dogPosts} />
+      <ArchiveClient posts={posts} />
     </div>
   )
 }

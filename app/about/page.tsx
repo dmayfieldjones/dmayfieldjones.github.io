@@ -153,20 +153,6 @@ export default function Contents() {
             </div>
           </div>
           
-          <div className="read-more-section">
-            <Link href="/posts/2025-06-23-more-than-show-and-go" className="read-more-link">
-              Read more about our journey →
-            </Link>
-          </div>
-        </section>
-
-        {/* Breeding Philosophy Section */}
-        <section className="philosophy-section">
-          <div className="cta-section">
-            <Link href="/BreedingPhilosophy" className="cta-button">
-              Learn More About Our Philosophy
-            </Link>
-          </div>
         </section>
 
         {/* Farm Section */}
