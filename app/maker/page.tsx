@@ -152,13 +152,24 @@ export default function MakerPage() {
           marginTop: '0.5rem',
           fontStyle: 'italic'
         }}>
-          Last updated: October 2025
+          Last updated: December 2025
         </p>
       </div>
       
       <main className="content-wrapper">
+        {/* Table of Contents */}
+        <section className="maker-section" style={{ backgroundColor: 'transparent', borderLeft: 'none', padding: '1rem 0', textAlign: 'center' }}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a href="#maker-directory" className="cta-button">
+              Central Illinois Maker Resources Directory
+            </a>
+            <a href="#startup-software" className="cta-button">
+              Startup Software & Resources
+            </a>
+          </div>
+        </section>
         {/* Mission Section */}
-        <section className="maker-section" itemScope itemType="https://schema.org/WebPageElement">
+        <section id="about-resource" className="maker-section" itemScope itemType="https://schema.org/WebPageElement">
           <h2 className="section-title" itemProp="name">About This Resource</h2>
           <p className="intro-text">
             I've created this comprehensive directory to help entrepreneurs, makers, and 
@@ -174,7 +185,7 @@ export default function MakerPage() {
         </section>
 
         {/* Value Proposition Section */}
-        <section className="maker-section">
+        <section id="why-matters" className="maker-section">
           <h2 className="section-title">Why This Matters</h2>
           <div className="maker-grid">
             <div className="maker-card">
@@ -197,7 +208,7 @@ export default function MakerPage() {
         </section>
 
         {/* How to Use Section */}
-        <section className="maker-section">
+        <section id="how-to-use" className="maker-section">
           <h2 className="section-title">How to Use This Resource</h2>
           <ul className="maker-list">
             <li><strong>Search by Need:</strong> Use the search function to find facilities with specific equipment or capabilities</li>
@@ -211,7 +222,7 @@ export default function MakerPage() {
 
 
                {/* Resource Directory Section */}
-               <section className="maker-section">
+               <section id="maker-directory" className="maker-section">
                  <h2 className="section-title">Central Illinois Maker Resources Directory</h2>
                  <p className="intro-text">
                    Discover the comprehensive network of <strong>20+ makerspaces, machine shops, and maker organizations</strong> available to entrepreneurs and makers in Central Illinois. From university labs to community
@@ -227,8 +238,113 @@ export default function MakerPage() {
                  <MakerspaceDirectory />
                </section>
 
+        {/* Startup Software & Resources Section */}
+        <section id="startup-software" className="maker-section">
+          <h2 className="section-title">Startup Software & Resources</h2>
+          <p className="intro-text">
+            Many major software companies offer free or discounted programs specifically for startups. 
+            These resources can significantly reduce your initial costs and help you scale faster. 
+            Here's a curated list of startup programs from leading technology companies:
+          </p>
+
+          <div className="maker-grid">
+            <div className="maker-card">
+              <h3>Cloud & Infrastructure</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://aws.amazon.com/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Amazon AWS Activate</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.microsoft.com/en-us/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Microsoft for Startups</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://cloud.google.com/startup" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Google for Startups Cloud Program</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="maker-card">
+              <h3>Design & Engineering</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.solidworks.com/solution/solidworks-for-startups-program" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>SolidWorks for Entrepreneurs</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.autodesk.com/products/fusion-360/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Autodesk Startup Program</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.altium.com/solutions/academic-programs/incubator-partner" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Altium Startup Program</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="maker-card">
+              <h3>Technical Computing</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.mathworks.com/products/startups.html" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>MATLAB & Simulink for Startups</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.wolfram.com/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Wolfram Emerging Innovators Program</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="maker-card">
+              <h3>Software Development</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://github.com/enterprise/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>GitHub for Startups</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://about.gitlab.com/solutions/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>GitLab for Startups</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.jetbrains.com/store/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>JetBrains Startup Program</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="maker-card">
+              <h3>Data Science & AI</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.databricks.com/product/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Databricks for Startups</a>
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>NVIDIA Inception</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="maker-card">
+              <h3>Business & Operations</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.hubspot.com/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>HubSpot for Startups</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="maker-card">
+              <h3>Hardware Development</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://www.cadence.com/en_US/home/company/cadence-academic-network/entrepreneurs.html" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Cadence Startup Program</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="intro-text" style={{ marginTop: '2rem', fontSize: '0.95rem', fontStyle: 'italic', color: '#666' }}>
+            <strong>Note:</strong> Eligibility requirements vary by program. Most require proof of startup status 
+            (e.g., accelerator/incubator acceptance, funding, or incorporation). Check each program's website 
+            for current terms and application details.
+          </p>
+        </section>
+
         {/* Background Section */}
-        <section className="maker-section">
+        <section id="background" className="maker-section">
           <h2 className="section-title">My Background</h2>
           <p className="intro-text">
             With over 15 years of experience in scientific research and having worked for a startup,
@@ -249,7 +365,7 @@ export default function MakerPage() {
 
 
         {/* Contact Section */}
-        <section className="maker-section">
+        <section id="contact" className="maker-section">
           <h2 className="section-title">Get In Touch</h2>
           <p className="intro-text">
             Have questions about these maker resources or need guidance on finding the right facility 

@@ -17,6 +17,7 @@
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
+  scroll-padding-top: 100px;
 }
 
 /* Maker page sections */
@@ -27,6 +28,7 @@
   border-radius: 8px;
   border-left: 4px solid var(--primary-color);
   transition: all var(--transition-speed) ease;
+  scroll-margin-top: 80px;
 }
 
 .maker-section:hover {
