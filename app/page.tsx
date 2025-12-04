@@ -92,6 +92,11 @@ const MayfieldJonesProfile = () => {
             Our STEAM Education Initiative
           </a>
         </h3>
+        <h3>
+          <a href="/interests" className="btn btn-zoom hover:text-red-600">
+            Interests
+          </a>
+        </h3>
         </div>
 
         <div className="flex justify-center space-x-4 mb-4">
