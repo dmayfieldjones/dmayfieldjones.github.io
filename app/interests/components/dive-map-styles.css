@@ -1,0 +1,64 @@
+/* Dive Map Styles */
+.custom-dive-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-dive-marker div {
+  transition: all 0.3s ease;
+}
+
+.custom-dive-marker:hover div {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+/* Leaflet popup styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+}
+
+/* Map container enhancements */
+.dive-map-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.dive-map-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(191, 20, 28, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .dive-map-container {
+    height: 400px !important;
+  }
+  
+  .leaflet-popup-content {
+    margin: 8px !important;
+    font-size: 14px !important;
+  }
+  
+  .leaflet-popup-content h3 {
+    font-size: 14px !important;
+  }
+}
