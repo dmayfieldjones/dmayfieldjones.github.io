@@ -66,37 +66,32 @@ const MayfieldJonesProfile = () => {
         <div className="mb-4">
           <p className="text-lg">Dustin and Karen Mayfield-Jones</p>
           <hr className="my-2 border-gray-100" />
-          <p className="text-base">Great Dane Breeders at <span className="text-red-600">7</span>Sisters</p>
+          <p className="text-base">Innovation, Inspiration & Maker Resources</p>
           <p className="text-sm text-gray-600">Central Illinois • Champaign-Urbana Area</p>
           <hr className="my-2 border-gray-100" />
         </div>
 
         <div className="space-y-2 mb-4">
           <h3>
-            <a href="https://7SistersGreatDanes.com" className="btn btn-zoom hover:text-red-600" target="_blank" rel="noopener noreferrer">
-              Great Danes
-            </a>
-          </h3>
-          <h3>
-            <a href="/about" className="btn btn-zoom">
-              <span className="text-red-600">7</span>Sisters Farm
-            </a>
-          </h3>
-          <h3>
             <a href="/maker" className="btn btn-zoom hover:text-red-600">
               Maker
             </a>
           </h3>
-        <h3>
-          <a href="/hab" className="btn btn-zoom hover:text-red-600">
-            Our STEAM Education Initiative
-          </a>
-        </h3>
-        <h3>
-          <a href="/interests" className="btn btn-zoom hover:text-red-600">
-            Interests
-          </a>
-        </h3>
+          <h3>
+            <a href="/hab" className="btn btn-zoom hover:text-red-600">
+              Our STEAM Education Initiative
+            </a>
+          </h3>
+          <h3>
+            <a href="/interests" className="btn btn-zoom hover:text-red-600">
+              Interests
+            </a>
+          </h3>
+          <h3>
+            <a href="https://7SistersGreatDanes.com" className="btn btn-zoom hover:text-red-600" target="_blank" rel="noopener noreferrer">
+              Great Danes
+            </a>
+          </h3>
         </div>
 
         <div className="flex justify-center space-x-4 mb-4">
@@ -116,20 +111,6 @@ const MayfieldJonesProfile = () => {
           >
             <Github className="w-6 h-6" />
           </a>
-        </div>
-
-        <hr className="my-2 border-gray-300" />
-
-        <div className="text-center">
-          <p>
-            <span className="text-red-600">7</span>Sisters Social Media
-          </p>
-          <iframe
-            src="https://www.tiktok.com/embed/@7sistersgreatdanes"
-            className="w-full max-w-md mx-auto"
-            height="458"
-            title="7 Sisters Great Danes TikTok"
-          />
         </div>
       </div>
     </div>
