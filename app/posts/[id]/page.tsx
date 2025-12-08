@@ -25,25 +25,25 @@ export async function generateMetadata({
   
   // Generate keywords based on content and category
   const keywords = [
-    'Great Dane',
-    'dog breeding',
-    'dog care',
     category.toLowerCase(),
+    'STEAM education',
+    'innovation',
+    'maker resources',
     ...title.toLowerCase().split(' ').filter(word => word.length > 3)
   ].join(', ')
 
   return {
-    title: `${title} | 7Sisters Farm`,
+    title: `${title} | Mayfield Jones`,
     description,
     keywords,
     authors: [{ name: 'Dustin Mayfield-Jones' }],
     openGraph: {
-      title: `${title} | 7Sisters Farm`,
+      title: `${title} | Mayfield Jones`,
       description,
       type: 'article',
       publishedTime: new Date(date).toISOString(),
       authors: ['Dustin Mayfield-Jones'],
-      tags: [category, 'Great Dane', 'dog breeding'],
+      tags: [category, 'STEAM education', 'innovation'],
       images: [
         {
           url: 'https://mayfieldjones.com/img/logo.png',
@@ -55,7 +55,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | 7Sisters Farm`,
+      title: `${title} | Mayfield Jones`,
       description,
       images: ['https://mayfieldjones.com/img/logo.png'],
     },
@@ -102,7 +102,7 @@ export default async function Post({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "7Sisters Farm",
+      "name": "Mayfield Jones",
       "logo": {
         "@type": "ImageObject",
         "url": "https://mayfieldjones.com/img/logo.png"
@@ -115,7 +115,7 @@ export default async function Post({
       "@id": `https://mayfieldjones.com/posts/${id}`
     },
     "articleSection": category,
-    "keywords": ["Great Dane", "dog breeding", "dog care", category.toLowerCase()],
+    "keywords": ["STEAM education", "innovation", "maker resources", category.toLowerCase()],
     "wordCount": content.split(' ').length,
     "timeRequired": readingTime,
     "inLanguage": "en-US"

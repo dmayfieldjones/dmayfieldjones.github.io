@@ -1,28 +1,28 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Illinois Great Dane Breeders | 7Sisters Farm - Central Illinois',
+  title: 'Contact | Dustin Mayfield-Jones',
   description:
-    'Contact 7Sisters Farm, premier Illinois Great Dane breeders in Central Illinois. Get in touch about AKC Great Danes, health testing, and available puppies.',
+    'Get in touch about maker resources, startup support, STEAM education, or collaboration opportunities in Central Illinois.',
   keywords: [
-    'contact Illinois Great Dane breeders',
-    'Illinois Great Dane breeders contact',
-    '7Sisters Farm contact',
-    'Central Illinois Great Dane breeders',
-    'Illinois dog breeders contact',
-    'Great Dane breeders Illinois contact',
-    'Champaign Illinois breeders contact',
-    'Urbana Illinois breeders contact'
+    'contact',
+    'maker resources',
+    'startup support',
+    'entrepreneurship',
+    'innovation',
+    'STEAM education',
+    'Central Illinois',
+    'collaboration'
   ],
   openGraph: {
-    title: 'Contact Illinois Great Dane Breeders | 7Sisters Farm',
-    description: 'Contact 7Sisters Farm, premier Illinois Great Dane breeders in Central Illinois.',
+    title: 'Contact | Dustin Mayfield-Jones',
+    description: 'Get in touch about maker resources, startup support, or collaboration opportunities.',
     type: 'website',
-    url: 'https://dmayfieldjones.github.io/contact',
-    siteName: '7Sisters Farm',
+    url: 'https://mayfieldjones.com/contact',
+    siteName: 'Mayfield Jones',
   },
   alternates: {
-    canonical: 'https://dmayfieldjones.github.io/contact',
+    canonical: 'https://mayfieldjones.com/contact',
   },
 }
 
