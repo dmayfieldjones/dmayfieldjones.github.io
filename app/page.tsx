@@ -4,46 +4,48 @@ import { Metadata } from 'next'
 // Force rebuild - September 6, 2025 - Attempt 2
 
 export const metadata: Metadata = {
-  title: 'Illinois Great Dane Breeders | 7Sisters Farm - Central Illinois',
+  title: 'Dustin Mayfield-Jones | Innovation, Inspiration & Maker Resources',
   description:
-    'Premier Illinois Great Dane breeders at 7Sisters Farm in Central Illinois. AKC registered Great Danes, health tested, family raised. Serving Illinois and surrounding states.',
+    'Portfolio and resources for entrepreneurs, makers, and innovators in Central Illinois. Makerspace directory, startup software resources, STEAM education initiatives, and personal adventures.',
   keywords: [
-    'Illinois Great Dane breeders',
-    'Illinois dogs',
-    'Illinois breeders',
-    'Great Dane breeders Illinois',
-    'Central Illinois Great Danes',
-    'AKC Great Danes Illinois',
-    'Illinois dog breeders',
-    'Great Dane puppies Illinois',
-    '7Sisters Farm',
-    'Champaign Illinois breeders',
-    'Urbana Illinois dogs',
-    'Illinois Great Dane kennel'
+    'maker resources',
+    'makerspace directory',
+    'startup resources',
+    'entrepreneurship',
+    'innovation',
+    'Central Illinois makerspace',
+    'Champaign Urbana makerspace',
+    'STEAM education',
+    'high altitude balloons',
+    'maker network',
+    'startup software',
+    'innovation resources',
+    'Dustin Mayfield-Jones',
+    'Karen Mayfield-Jones'
   ],
   openGraph: {
-    title: 'Illinois Great Dane Breeders | 7Sisters Farm',
-    description: 'Premier Illinois Great Dane breeders in Central Illinois. AKC registered, health tested, family raised Great Danes.',
+    title: 'Dustin Mayfield-Jones | Innovation, Inspiration & Maker Resources',
+    description: 'Portfolio and resources for entrepreneurs, makers, and innovators in Central Illinois.',
     type: 'website',
-    url: 'https://dmayfieldjones.github.io',
-    siteName: '7Sisters Farm',
+    url: 'https://mayfieldjones.com',
+    siteName: 'Mayfield Jones',
     images: [
       {
-        url: 'https://dmayfieldjones.github.io/img/wedding.png',
-        width: 300,
-        height: 300,
-        alt: 'Dustin and Karen - Illinois Great Dane Breeders',
+        url: 'https://mayfieldjones.com/img/logo.png',
+        width: 200,
+        height: 200,
+        alt: 'Mayfield Jones Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Illinois Great Dane Breeders | 7Sisters Farm',
-    description: 'Premier Illinois Great Dane breeders in Central Illinois. AKC registered, health tested, family raised.',
-    images: ['https://dmayfieldjones.github.io/img/wedding.png'],
+    title: 'Dustin Mayfield-Jones | Innovation, Inspiration & Maker Resources',
+    description: 'Portfolio and resources for entrepreneurs, makers, and innovators in Central Illinois.',
+    images: ['https://mayfieldjones.com/img/logo.png'],
   },
   alternates: {
-    canonical: 'https://dmayfieldjones.github.io',
+    canonical: 'https://mayfieldjones.com',
   },
 }
 

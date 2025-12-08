@@ -1,13 +1,12 @@
-export default function LocalBusinessSchema() {
+export default function PersonSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://dmayfieldjones.github.io/#business",
-    "name": "7Sisters Farm",
-    "alternateName": "7Sisters Great Danes",
-    "description": "Premier Illinois Great Dane breeders at 7Sisters Farm in Central Illinois. AKC registered Great Danes, health tested, family raised.",
-    "url": "https://dmayfieldjones.github.io",
-    "telephone": "dustin@mayfieldjones.com",
+    "@type": "Person",
+    "@id": "https://mayfieldjones.com/#person",
+    "name": "Dustin Mayfield-Jones",
+    "alternateName": "Dustin Mayfield Jones",
+    "description": "Supporting entrepreneurship, innovation, and maker communities in Central Illinois. Resources for makerspaces, startup software, and STEAM education.",
+    "url": "https://mayfieldjones.com",
     "email": "dustin@mayfieldjones.com",
     "address": {
       "@type": "PostalAddress",
@@ -15,100 +14,40 @@ export default function LocalBusinessSchema() {
       "addressRegion": "IL",
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.1164",
-      "longitude": "-88.2434"
-    },
-    "areaServed": [
-      {
-        "@type": "State",
-        "name": "Illinois"
-      },
-      {
-        "@type": "State", 
-        "name": "Indiana"
-      },
-      {
-        "@type": "State",
-        "name": "Iowa"
-      },
-      {
-        "@type": "State",
-        "name": "Missouri"
-      },
-      {
-        "@type": "State",
-        "name": "Wisconsin"
-      }
+    "jobTitle": "Entrepreneurship & Innovation Support",
+    "knowsAbout": [
+      "Entrepreneurship",
+      "Innovation",
+      "Maker Resources",
+      "Makerspaces",
+      "Startup Incubation",
+      "STEAM Education",
+      "High Altitude Balloons",
+      "Scientific Research"
     ],
-    "serviceType": "Great Dane Breeding",
-    "priceRange": "$$",
-    "paymentAccepted": "Cash, Check",
-    "currenciesAccepted": "USD",
-    "openingHours": "Mo-Su 09:00-18:00",
-    "image": [
-      "https://dmayfieldjones.github.io/img/wedding.png",
-      "https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png"
-    ],
-    "logo": "https://dmayfieldjones.github.io/img/Colorlogo_nobackground.png",
     "sameAs": [
-      "https://www.tiktok.com/@7sistersgreatdanes"
+      "https://github.com/dmayfieldjones"
     ],
-    "founder": [
-      {
-        "@type": "Person",
-        "name": "Dustin Mayfield-Jones",
-        "jobTitle": "Great Dane Breeder"
-      },
-      {
-        "@type": "Person", 
-        "name": "Karen Mayfield-Jones",
-        "jobTitle": "Great Dane Breeder"
-      }
-    ],
+    "image": "https://mayfieldjones.com/img/logo.png",
     "keywords": [
-      "Illinois Great Dane breeders",
-      "Illinois dogs",
-      "Illinois breeders", 
-      "Great Dane breeders Illinois",
-      "Central Illinois Great Danes",
-      "AKC Great Danes Illinois",
-      "Illinois dog breeders",
-      "Great Dane puppies Illinois",
-      "7Sisters Farm",
-      "Champaign Illinois breeders",
-      "Urbana Illinois dogs",
-      "Illinois Great Dane kennel"
+      "maker resources",
+      "makerspace directory",
+      "startup resources",
+      "entrepreneurship",
+      "innovation",
+      "Central Illinois makerspace",
+      "STEAM education",
+      "high altitude balloons",
+      "maker network"
     ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Great Dane Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Great Dane Puppies",
-            "description": "AKC registered Great Dane puppies, health tested, family raised"
-          }
-        },
-        {
-          "@type": "Offer", 
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Great Dane Breeding Consultation",
-            "description": "Expert advice on Great Dane breeding, health testing, and care"
-          }
-        }
-      ]
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "1",
-      "bestRating": "5",
-      "worstRating": "1"
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Entrepreneurship & Innovation Support",
+      "occupationLocation": {
+        "@type": "City",
+        "name": "Champaign",
+        "addressRegion": "IL"
+      }
     }
   }
 
