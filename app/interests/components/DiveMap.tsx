@@ -63,7 +63,14 @@ const diveSites: DiveSite[] = [
     { location: "Puerto Morelos - Cenote Zapote", latitude: 20.9, longitude: -87.05, dive_count: 1, region: "Mexico", notes: "Hell's Bells formations" },
     { location: "Puerto Morelos - Cenote Maravilla", latitude: 20.85, longitude: -87.08, dive_count: 1, region: "Mexico", notes: "Bell-shaped stalactites, hydrogen sulfide layer, 60m depth" },
     { location: "Puerto Morelos - Maravilla Reef", latitude: 20.848, longitude: -86.85, dive_count: 1, region: "Mexico", notes: "Caribbean reef dive" },
-    { location: "Nuclear Missile Silo Complex, Washington", latitude: 46.908, longitude: -119.756, dive_count: 2, region: "USA", notes: "Cold War missile silo complex, near Royal City, WA" }
+    { location: "Nuclear Missile Silo Complex, Washington", latitude: 46.908, longitude: -119.756, dive_count: 2, region: "USA", notes: "Cold War missile silo complex, near Royal City, WA" },
+    { location: "Galapagos - Mosquera", latitude: -0.350, longitude: -90.270, dive_count: 2, region: "Ecuador", notes: "Garden eels, reef shark cleaning station, eagle rays" },
+    { location: "Galapagos - Baltra North", latitude: -0.420, longitude: -90.270, dive_count: 2, region: "Ecuador", notes: "Check dives, rays, fish schools" },
+    { location: "Galapagos - Wolf Island - El Derrumbe", latitude: 1.380, longitude: -91.810, dive_count: 3, region: "Ecuador", notes: "SE side, boulder slope landslide, schooling hammerheads, Galapagos sharks" },
+    { location: "Galapagos - Wolf Island - Shark Bay", latitude: 1.390, longitude: -91.820, dive_count: 3, region: "Ecuador", notes: "North side, shallower start ~10m, hammerhead walls, sea lions" },
+    { location: "Galapagos - Wolf Island - The Cave", latitude: 1.385, longitude: -91.810, dive_count: 2, region: "Ecuador", notes: "East side, caverns and swim-throughs, white soft coral, hammerheads" },
+    { location: "Galapagos - Darwin's Arch (Towers)", latitude: 1.660, longitude: -91.990, dive_count: 4, region: "Ecuador", notes: "The Theatre, arch collapsed 2021, whale sharks, massive hammerhead schools" },
+    { location: "Galapagos - Cousin's Rock", latitude: -0.220, longitude: -90.570, dive_count: 2, region: "Ecuador", notes: "NE of Santiago, macro diving, seahorses, black coral, sea lions" }
   ]
 
 const DiveMap: React.FC = () => {
@@ -88,7 +95,8 @@ const DiveMap: React.FC = () => {
         const regionColors: { [key: string]: string } = {
           'Mexico': '#bf141c',
           'USA': '#2563eb', 
-          'Vietnam': '#16a34a'
+          'Vietnam': '#16a34a',
+          'Ecuador': '#9333ea'
         }
 
         // Array to store all markers for bounds calculation
@@ -205,6 +213,7 @@ const DiveMap: React.FC = () => {
           <span><span style={{ color: '#bf141c' }}>●</span> Mexico</span>
           <span><span style={{ color: '#2563eb' }}>●</span> USA</span>
           <span><span style={{ color: '#16a34a' }}>●</span> Vietnam</span>
+          <span><span style={{ color: '#9333ea' }}>●</span> Ecuador</span>
         </div>
         <div style={{ marginTop: '4px', fontSize: '11px', color: '#666' }}>
           Marker size = number of dives
