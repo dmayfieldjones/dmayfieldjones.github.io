@@ -123,7 +123,7 @@ export default function MakerPage() {
       "name": "Dustin Mayfield-Jones",
       "url": "https://mayfieldjones.com/about"
     },
-    "dateModified": "2025-10-15",
+    "dateModified": "2026-07-15",
     "inLanguage": "en-US"
   }
 
@@ -152,7 +152,7 @@ export default function MakerPage() {
           marginTop: '0.5rem',
           fontStyle: 'italic'
         }}>
-          Last updated: December 2025
+          Last updated: July 2026
         </p>
       </div>
       
