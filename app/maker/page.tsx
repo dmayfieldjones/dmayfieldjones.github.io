@@ -334,6 +334,18 @@ export default function MakerPage() {
                 </li>
               </ul>
             </div>
+
+            <div className="maker-card">
+              <h3>Production & Manufacturing</h3>
+              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="https://makersrow.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Maker&apos;s Row</a>
+                  <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                    Find verified U.S. manufacturers when you&apos;re ready to move from prototyping to production
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <p className="intro-text" style={{ marginTop: '2rem', fontSize: '0.95rem', fontStyle: 'italic', color: '#666' }}>
