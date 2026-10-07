@@ -1,7 +1,7 @@
 {
   "title": "Connecting Makerspaces Across Central Illinois - UIUC Focus",
   "description": "Comprehensive list of makerspaces, machine shops, and maker organizations for entrepreneurs and makers at the University of Illinois Urbana-Champaign and surrounding area",
-  "lastUpdated": "2026-07-15",
+  "lastUpdated": "2026-10-07",
   "makerspaces": [
     {
       "id": "siebel-center-shop",
@@ -245,6 +245,41 @@
       "mission": "Provide an open community lab where people can learn, teach, tinker, collaborate, share, innovate, socialize, and create",
       "website": "https://makerspaceurbana.org/",
       "specialties": ["Arts and humanities integration", "Community building", "Open access"]
+    },
+    {
+      "id": "champaign-woodworkers-club",
+      "name": "Champaign Woodworkers Club",
+      "category": "Community Makerspace",
+      "type": "Member-Run Woodworking Shop",
+      "address": "1302 Parkland Ct., Champaign, IL 61821",
+      "description": "14,000 sq ft member-run shared woodshop with dedicated finishing and glue-up areas, a library/classroom, and a lounge",
+      "facilities": [
+        "SawStop table saws",
+        "Planers (up to 24\")",
+        "Jointers (up to 12\")",
+        "Band saws",
+        "Lathes",
+        "Drill presses",
+        "Mortiser",
+        "Scroll saws",
+        "Compound sliding miter saws",
+        "Router tables",
+        "Sanders (belt, drum, spindle, disk)",
+        "CNC routers",
+        "Laser engravers",
+        "Power hand tools",
+        "Work benches, clamps, jigs, and sharpening tools",
+        "Shop-wide dust collection",
+        "Woodworking library"
+      ],
+      "target_audience": "Hobbyist woodworkers 18 and older seeking long-term membership (no commercial or for-profit work)",
+      "access_model": "Dues-based membership with 24/7 shop access after mandatory safety training; Standard $125/month, Premium $250/month (permanent work area), plus $100 application fee and monthly service hours. No short-term access or public classes",
+      "mission": "A group of woodworkers pooling resources to create a shared workshop with a vast collection of top-quality tools",
+      "website": "https://champaignwoodworkers.club/",
+      "contact": {
+        "email": "champaignwoodworkersclub@gmail.com"
+      },
+      "specialties": ["Woodworking", "Woodturning", "Digital woodworking (CNC and laser)"]
     }
   ],
   "student_organizations": [
