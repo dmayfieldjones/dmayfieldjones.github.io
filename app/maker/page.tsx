@@ -123,7 +123,7 @@ export default function MakerPage() {
       "name": "Dustin Mayfield-Jones",
       "url": "https://mayfieldjones.com/about"
     },
-    "dateModified": "2026-10-07",
+    "dateModified": "2026-11-19",
     "inLanguage": "en-US"
   }
 
@@ -152,7 +152,7 @@ export default function MakerPage() {
           marginTop: '0.5rem',
           fontStyle: 'italic'
         }}>
-          Last updated: October 2026
+          Last updated: November 2026
         </p>
       </div>
       
@@ -241,6 +241,10 @@ export default function MakerPage() {
         {/* Startup Software & Resources Section */}
         <section id="startup-software" className="maker-section">
           <h2 className="section-title">Startup Software & Resources</h2>
+          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: '#666', fontStyle: 'italic', marginTop: '-0.5rem' }}>
+            Last updated: November 19, 2026
+          </p>
+
           <p className="intro-text">
             Many major software companies offer free or discounted programs specifically for startups. 
             These resources can significantly reduce your initial costs and help you scale faster. 
@@ -248,105 +252,291 @@ export default function MakerPage() {
           </p>
 
           <div className="maker-grid">
-            <div className="maker-card">
-              <h3>Cloud & Infrastructure</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://aws.amazon.com/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Amazon AWS Activate</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.microsoft.com/en-us/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Microsoft for Startups</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://cloud.google.com/startup" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Google for Startups Cloud Program</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Design & Engineering</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.solidworks.com/solution/solidworks-for-startups-program" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>SolidWorks for Entrepreneurs</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.autodesk.com/products/fusion-360/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Autodesk Startup Program</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.altium.com/solutions/academic-programs/incubator-partner" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Altium Startup Program</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Technical Computing</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.mathworks.com/products/startups.html" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>MATLAB & Simulink for Startups</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.wolfram.com/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Wolfram Emerging Innovators Program</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Software Development</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://github.com/enterprise/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>GitHub for Startups</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://about.gitlab.com/solutions/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>GitLab for Startups</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.jetbrains.com/store/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>JetBrains Startup Program</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Data Science & AI</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.databricks.com/product/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Databricks for Startups</a>
-                </li>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>NVIDIA Inception</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Business & Operations</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.hubspot.com/startups" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>HubSpot for Startups</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Hardware Development</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://www.cadence.com/en_US/home/company/cadence-academic-network/entrepreneurs.html" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Cadence Startup Program</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="maker-card">
-              <h3>Production & Manufacturing</h3>
-              <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="https://makersrow.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#bf141c', textDecoration: 'none' }}>Maker&apos;s Row</a>
-                  <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
-                    Find verified U.S. manufacturers when you&apos;re ready to move from prototyping to production
-                  </span>
-                </li>
-              </ul>
-            </div>
+          <div className="maker-card">
+            <h3>Design &amp; Engineering (CAD/CAM)</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.onshape.com/en/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Onshape for Startups</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  5 free seats of Onshape Professional, reapply each year. PDM, simulation and rendering built in; runs in a browser. New customers only; service providers aren&apos;t eligible.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://resources.sw.siemens.com/en-US/solid-edge-for-startups/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Solid Edge for Startups (Siemens)</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Free for one year, with no application fee. For legal entities in business three years or less with under $1M in funding and under $1M in annual revenue.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.solidworks.com/solution/solidworks-for-startups-program"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >SOLIDWORKS for Startups</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  12 months at no cost for up to 5 users per role, then discounted options for up to 36 months total depending on eligibility. Must be designing and building a physical product to sell; funding and revenue limits and regional availability apply.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.autodesk.com/products/fusion-360/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Autodesk Fusion for Startups (discounted)</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  $150 per user for three years. Service providers, contract manufacturers, consultants and design agencies aren&apos;t eligible. Not renewable.
+                </span>
+              </li>
+            </ul>
           </div>
+
+          <div className="maker-card">
+            <h3>Electronics &amp; PCB</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.kicad.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >KiCad (free and open source)</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  No subscription, license or feature limits, and commercial use is allowed.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.cadence.com/en_US/home/company/cadence-academic-network/entrepreneurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Cadence Academic Network for Entrepreneurs</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Cadence&apos;s page for entrepreneurs, from its Academic Network. Chip/IC design tools, so relevant to only a few makers.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="maker-card">
+            <h3>Production &amp; Manufacturing</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://makersrow.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Maker&apos;s Row</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Connects brands with verified U.S. custom manufacturers. Strongest for soft goods and apparel.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.pcbway.com/project/sponsor/crowdfunding.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >PCBWay Crowdfunding Sponsorship</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Special pricing for crowdfunded projects, from prototype through production run.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="maker-card">
+            <h3>Technical Computing</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.mathworks.com/products/startups.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >MATLAB &amp; Simulink for Startups</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Discounted startup licenses, plus up to 12 months free through partner accelerators.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.wolfram.com/startups/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Wolfram Startup Licensing</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  In-kind technology grants that cut licensing and consulting costs.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="maker-card">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://aws.amazon.com/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >AWS Activate</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  $1,000 in credits for self-funded startups; up to $200,000 with an Org ID from an Activate Provider (accelerator, angel investor or VC).
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://cloud.google.com/startup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Google for Startups Cloud Program</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Credits scale with your stage, up to $350,000. The entry tier is for pre-funded startups.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.microsoft.com/en-us/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Microsoft for Startups</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Up to $150,000 in Azure credits.
+                </span>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.cloudflare.com/startups/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Cloudflare for Startups</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Up to $350,000 in credits for a year. The entry tier is $10,000, with no minimum funding required for bootstrapped or self-funded startups.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="maker-card">
+            <h3>Software Development</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://github.com/enterprise/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >GitHub for Startups</a
+                >
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://about.gitlab.com/solutions/startups/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >GitLab for Startups</a
+                >
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.jetbrains.com/startups/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >JetBrains Startup Program</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  50% off JetBrains tools for up to five years.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="maker-card">
+            <h3>Data Science &amp; AI</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.nvidia.com/en-us/startups/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >NVIDIA Inception</a
+                >
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.databricks.com/product/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Databricks for Startups</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div className="maker-card">
+            <h3>Business &amp; Operations</h3>
+            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.hubspot.com/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >HubSpot for Startups</a
+                >
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a
+                  href="https://www.atlassian.com/software/startups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#bf141c', textDecoration: 'none' }}
+                  >Atlassian for Startups</a
+                >
+                <span style={{ display: 'block', fontSize: '0.9rem', color: '#666', marginTop: '0.25rem' }}>
+                  Premium editions of Jira, Confluence and related tools free for 12 months for up to 50 users, for eligible startups.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
           <p className="intro-text" style={{ marginTop: '2rem', fontSize: '0.95rem', fontStyle: 'italic', color: '#666' }}>
             <strong>Note:</strong> Eligibility requirements vary by program. Most require proof of startup status 
